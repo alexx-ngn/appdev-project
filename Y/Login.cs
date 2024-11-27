@@ -16,5 +16,13 @@ namespace Y
         {
             InitializeComponent();
         }
+
+        private void registerLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Register register = new Register();
+            register.ShowDialog();
+            this.Close();
+        }
     }
 }

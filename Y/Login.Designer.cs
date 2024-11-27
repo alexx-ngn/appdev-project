@@ -34,14 +34,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.enterButton = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.registerLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // YLabel
             // 
             this.YLabel.AutoSize = true;
             this.YLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YLabel.Location = new System.Drawing.Point(339, 4);
+            this.YLabel.Location = new System.Drawing.Point(341, 74);
             this.YLabel.Name = "YLabel";
             this.YLabel.Size = new System.Drawing.Size(123, 135);
             this.YLabel.TabIndex = 0;
@@ -50,7 +50,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(282, 160);
+            this.usernameTextBox.Location = new System.Drawing.Point(284, 230);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(237, 38);
             this.usernameTextBox.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(278, 139);
+            this.usernameLabel.Location = new System.Drawing.Point(280, 209);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(91, 20);
             this.usernameLabel.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(278, 201);
+            this.label1.Location = new System.Drawing.Point(280, 271);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 4;
@@ -78,7 +78,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(282, 220);
+            this.passwordTextBox.Location = new System.Drawing.Point(284, 290);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(237, 38);
@@ -86,29 +86,30 @@
             // 
             // enterButton
             // 
-            this.enterButton.Location = new System.Drawing.Point(441, 274);
+            this.enterButton.Location = new System.Drawing.Point(443, 344);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(78, 33);
             this.enterButton.TabIndex = 5;
             this.enterButton.Text = "Enter";
             this.enterButton.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // registerLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(279, 261);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(132, 16);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Not a user? Register!";
+            this.registerLabel.AutoSize = true;
+            this.registerLabel.Location = new System.Drawing.Point(281, 331);
+            this.registerLabel.Name = "registerLabel";
+            this.registerLabel.Size = new System.Drawing.Size(132, 16);
+            this.registerLabel.TabIndex = 6;
+            this.registerLabel.TabStop = true;
+            this.registerLabel.Text = "Not a user? Register!";
+            this.registerLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerLabel_LinkClicked);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.registerLabel);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passwordTextBox);
@@ -130,7 +131,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button enterButton;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel registerLabel;
     }
 }
 
