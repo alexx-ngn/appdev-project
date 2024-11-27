@@ -37,7 +37,7 @@
             this.YLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateOfBirthPicker = new System.Windows.Forms.DateTimePicker();
             this.dateOfBirthLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -128,12 +128,12 @@
             this.textBox1.Size = new System.Drawing.Size(237, 38);
             this.textBox1.TabIndex = 14;
             // 
-            // dateTimePicker1
+            // dateOfBirthPicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(284, 282);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(237, 22);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dateOfBirthPicker.Location = new System.Drawing.Point(284, 282);
+            this.dateOfBirthPicker.Name = "dateOfBirthPicker";
+            this.dateOfBirthPicker.Size = new System.Drawing.Size(237, 22);
+            this.dateOfBirthPicker.TabIndex = 16;
             // 
             // dateOfBirthLabel
             // 
@@ -151,7 +151,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dateOfBirthLabel);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateOfBirthPicker);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.loginLabel);
@@ -179,7 +179,7 @@
         private System.Windows.Forms.Label YLabel;
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateOfBirthPicker;
         private System.Windows.Forms.Label dateOfBirthLabel;
     }
 }
