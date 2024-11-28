@@ -38,7 +38,7 @@
             this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportButton.Location = new System.Drawing.Point(550, 145);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(75, 23);
+            this.reportButton.Size = new System.Drawing.Size(75, 32);
             this.reportButton.TabIndex = 5;
             this.reportButton.Text = "Report";
             this.reportButton.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@
             this.reportRichTextBox.TabIndex = 3;
             this.reportRichTextBox.Text = "";
             // 
-            // NewReport
+            // NewUserReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,7 +70,7 @@
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.newReportLabel);
             this.Controls.Add(this.reportRichTextBox);
-            this.Name = "NewReport";
+            this.Name = "NewUserReport";
             this.Text = "New Report";
             this.ResumeLayout(false);
             this.PerformLayout();
