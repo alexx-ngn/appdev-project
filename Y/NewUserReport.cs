@@ -10,27 +10,24 @@ using System.Windows.Forms;
 
 namespace Y
 {
-    public partial class Post : UserControl
+    public partial class NewUserReport : Form
     {
-        public Post()
+        public NewUserReport()
         {
             InitializeComponent();
         }
 
-        private void likeButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void likeCounterLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void reportButton_Click(object sender, EventArgs e)
         {
-            NewUserReport report = new NewUserReport();
-            report.ShowDialog();
+            if (reportRichTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter your message.");
+            }
+            else
+            {
+                MessageBox.Show("Report submitted.");
+                this.Close();
+            }
         }
     }
 }

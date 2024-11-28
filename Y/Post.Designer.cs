@@ -37,6 +37,7 @@
             this.repostButton = new System.Windows.Forms.Button();
             this.repostCounterLabel = new System.Windows.Forms.Label();
             this.postContentLabel = new System.Windows.Forms.Label();
+            this.reportButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -118,12 +119,24 @@
             this.postContentLabel.TabIndex = 8;
             this.postContentLabel.Text = resources.GetString("postContentLabel.Text");
             // 
+            // reportButton
+            // 
+            this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportButton.Location = new System.Drawing.Point(3, 107);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Size = new System.Drawing.Size(33, 32);
+            this.reportButton.TabIndex = 10;
+            this.reportButton.Text = "⚠️";
+            this.reportButton.UseVisualStyleBackColor = true;
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
+            // 
             // Post
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.reportButton);
             this.Controls.Add(this.postContentLabel);
             this.Controls.Add(this.repostCounterLabel);
             this.Controls.Add(this.repostButton);
@@ -149,5 +162,6 @@
         private System.Windows.Forms.Button repostButton;
         private System.Windows.Forms.Label repostCounterLabel;
         private System.Windows.Forms.Label postContentLabel;
+        private System.Windows.Forms.Button reportButton;
     }
 }

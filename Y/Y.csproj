@@ -52,6 +52,18 @@
     <Compile Include="NewPost.Designer.cs">
       <DependentUpon>NewPost.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewUserReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserReport.Designer.cs">
+      <DependentUpon>NewUserReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Overview.Designer.cs">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Post.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +96,12 @@
     <EmbeddedResource Include="NewPost.resx">
       <DependentUpon>NewPost.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewUserReport.resx">
+      <DependentUpon>NewUserReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Overview.resx">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Post.resx">
       <DependentUpon>Post.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,12 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Overview\Overview.csproj">
-      <Project>{93be0152-b71b-4448-904e-07c0e67fde58}</Project>
-      <Name>Overview</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

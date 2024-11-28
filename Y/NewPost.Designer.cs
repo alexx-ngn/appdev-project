@@ -53,6 +53,7 @@
             // 
             // postButton
             // 
+            this.postButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.postButton.Location = new System.Drawing.Point(544, 143);
             this.postButton.Name = "postButton";
             this.postButton.Size = new System.Drawing.Size(75, 23);

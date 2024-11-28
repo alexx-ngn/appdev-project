@@ -15,8 +15,6 @@ namespace Y
         public Login()
         {
             InitializeComponent();
-            UserOverview userOverview = new UserOverview();
-            userOverview.ShowDialog();
         }
 
         private void registerLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -25,6 +23,19 @@ namespace Y
             Register register = new Register();
             register.ShowDialog();
             this.Close();
+        }
+
+        public void loadUserOverview()
+        {
+            this.Hide();
+            UserOverview overview = new UserOverview();
+            overview.ShowDialog();
+            this.Close();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            //loadUserOverview();
         }
     }
 }
