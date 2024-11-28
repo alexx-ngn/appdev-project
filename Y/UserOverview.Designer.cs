@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Home");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Search");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("My Profile");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Home");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Search");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("My Profile");
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.postButton = new System.Windows.Forms.Button();
             this.sideListView = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
             this.overviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -41,31 +41,32 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.postButton);
             this.panel1.Controls.Add(this.sideListView);
             this.panel1.Location = new System.Drawing.Point(12, 147);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(123, 409);
             this.panel1.TabIndex = 7;
             // 
-            // button2
+            // postButton
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.Location = new System.Drawing.Point(0, 386);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Post";
-            this.button2.UseVisualStyleBackColor = true;
+            this.postButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.postButton.Location = new System.Drawing.Point(0, 386);
+            this.postButton.Name = "postButton";
+            this.postButton.Size = new System.Drawing.Size(123, 23);
+            this.postButton.TabIndex = 2;
+            this.postButton.Text = "Post";
+            this.postButton.UseVisualStyleBackColor = true;
+            this.postButton.Click += new System.EventHandler(this.postButton_Click);
             // 
             // sideListView
             // 
             this.sideListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideListView.HideSelection = false;
             this.sideListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
             this.sideListView.Location = new System.Drawing.Point(0, 0);
             this.sideListView.Name = "sideListView";
             this.sideListView.Size = new System.Drawing.Size(123, 409);
@@ -114,7 +115,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView sideListView;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button postButton;
         private System.Windows.Forms.FlowLayoutPanel overviewFlowLayoutPanel;
     }
 }
