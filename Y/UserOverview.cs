@@ -21,12 +21,17 @@ namespace Y
                 Post post = new Post();
                 overviewFlowLayoutPanel.Controls.Add(post);
             }
+            for (int i = 0; i < 5 ; i++) {
+                MyPost post = new MyPost();
+                MyPostsFlowLayoutPanel.Controls.Add(post);
+            }
         }
 
-        private void hidePanels()
+        private void hideTabs()
         {
-            //homePanel.Hide();
-            searchPanel.Hide();
+            OverviewTabControl.TabPages.Remove(homeTab);
+            OverviewTabControl.TabPages.Remove(searchTab);
+            OverviewTabControl.TabPages.Remove(profileTab);
         }
 
         private void postButton_Click(object sender, EventArgs e)
@@ -38,7 +43,7 @@ namespace Y
         private void UserOverview_Load(object sender, EventArgs e)
         {
             loadPosts();
-            hidePanels();
+            //hideTabs();
         }
 
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,16 +54,15 @@ namespace Y
                 switch (item.Text)
                 {
                     case "Home":
-                        searchPanel.Hide();
-                        homePanel.Show();
+                        OverviewTabControl.SelectedTab = homeTab;
                         break;
                     case "Search":
-                        homePanel.Hide();
-                        searchPanel.Show();
+                        OverviewTabControl.SelectedTab = searchTab;
                         break;
                     case "My Profile":
-                        homePanel.Hide();
-                        searchPanel.Hide();
+                        OverviewTabControl.SelectedTab = profileTab;
+                        break;
+                    default:
                         break;
                 }
             }

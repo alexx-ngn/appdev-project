@@ -46,12 +46,13 @@
             // followButton
             // 
             this.followButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.followButton.Location = new System.Drawing.Point(561, 10);
+            this.followButton.Location = new System.Drawing.Point(527, 10);
             this.followButton.Name = "followButton";
-            this.followButton.Size = new System.Drawing.Size(84, 38);
+            this.followButton.Size = new System.Drawing.Size(118, 38);
             this.followButton.TabIndex = 10;
             this.followButton.Text = "Follow";
             this.followButton.UseVisualStyleBackColor = true;
+            this.followButton.Click += new System.EventHandler(this.followButton_Click);
             // 
             // usernameLinkLabel
             // 

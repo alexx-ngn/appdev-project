@@ -16,5 +16,17 @@ namespace Y
         {
             InitializeComponent();
         }
+
+        private void followButton_Click(object sender, EventArgs e)
+        {
+            if (followButton.Text == "Follow")
+            {
+                followButton.Text = "Unfollow";
+            }
+            else
+            {
+                followButton.Text = "Follow";
+            }
+        }
     }
 }

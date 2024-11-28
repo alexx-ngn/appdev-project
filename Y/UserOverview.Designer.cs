@@ -31,7 +31,7 @@
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Home");
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Search");
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("My Profile");
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.sideviewPanel = new System.Windows.Forms.Panel();
             this.postButton = new System.Windows.Forms.Button();
             this.sideListView = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,20 +46,32 @@
             this.searchPanel = new System.Windows.Forms.Panel();
             this.homePanel = new System.Windows.Forms.Panel();
             this.overviewLabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.profilePanel = new System.Windows.Forms.Panel();
+            this.MyPostsLabel = new System.Windows.Forms.Label();
+            this.MyPostsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.OverviewTabControl = new System.Windows.Forms.TabControl();
+            this.homeTab = new System.Windows.Forms.TabPage();
+            this.searchTab = new System.Windows.Forms.TabPage();
+            this.profileTab = new System.Windows.Forms.TabPage();
+            this.sideviewPanel.SuspendLayout();
             this.searchFlowLayoutPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.homePanel.SuspendLayout();
+            this.profilePanel.SuspendLayout();
+            this.OverviewTabControl.SuspendLayout();
+            this.homeTab.SuspendLayout();
+            this.searchTab.SuspendLayout();
+            this.profileTab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // sideviewPanel
             // 
-            this.panel1.Controls.Add(this.postButton);
-            this.panel1.Controls.Add(this.sideListView);
-            this.panel1.Location = new System.Drawing.Point(12, 147);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(123, 409);
-            this.panel1.TabIndex = 7;
+            this.sideviewPanel.Controls.Add(this.postButton);
+            this.sideviewPanel.Controls.Add(this.sideListView);
+            this.sideviewPanel.Location = new System.Drawing.Point(12, 147);
+            this.sideviewPanel.Name = "sideviewPanel";
+            this.sideviewPanel.Size = new System.Drawing.Size(123, 409);
+            this.sideviewPanel.TabIndex = 7;
             // 
             // postButton
             // 
@@ -94,7 +106,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(0, 386);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 23);
+            this.button1.Size = new System.Drawing.Size(100, 100);
             this.button1.TabIndex = 0;
             this.button1.Text = "Post";
             this.button1.UseVisualStyleBackColor = true;
@@ -102,10 +114,10 @@
             // overviewFlowLayoutPanel
             // 
             this.overviewFlowLayoutPanel.AutoScroll = true;
-            this.overviewFlowLayoutPanel.Location = new System.Drawing.Point(0, 113);
+            this.overviewFlowLayoutPanel.Location = new System.Drawing.Point(0, 45);
             this.overviewFlowLayoutPanel.Name = "overviewFlowLayoutPanel";
             this.overviewFlowLayoutPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.overviewFlowLayoutPanel.Size = new System.Drawing.Size(725, 412);
+            this.overviewFlowLayoutPanel.Size = new System.Drawing.Size(725, 480);
             this.overviewFlowLayoutPanel.TabIndex = 9;
             // 
             // searchFlowLayoutPanel
@@ -115,9 +127,9 @@
             this.searchFlowLayoutPanel.Controls.Add(this.profile1);
             this.searchFlowLayoutPanel.Controls.Add(this.profile2);
             this.searchFlowLayoutPanel.Controls.Add(this.profile3);
-            this.searchFlowLayoutPanel.Location = new System.Drawing.Point(4, 108);
+            this.searchFlowLayoutPanel.Location = new System.Drawing.Point(4, 40);
             this.searchFlowLayoutPanel.Name = "searchFlowLayoutPanel";
-            this.searchFlowLayoutPanel.Size = new System.Drawing.Size(721, 409);
+            this.searchFlowLayoutPanel.Size = new System.Drawing.Size(721, 477);
             this.searchFlowLayoutPanel.TabIndex = 10;
             // 
             // profile1
@@ -145,7 +157,7 @@
             // 
             this.searchLabel.AutoSize = true;
             this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchLabel.Location = new System.Drawing.Point(3, 72);
+            this.searchLabel.Location = new System.Drawing.Point(-2, 0);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(119, 32);
             this.searchLabel.TabIndex = 11;
@@ -154,7 +166,7 @@
             // searchTextBox
             // 
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox.Location = new System.Drawing.Point(119, 73);
+            this.searchTextBox.Location = new System.Drawing.Point(123, 3);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(177, 30);
             this.searchTextBox.TabIndex = 12;
@@ -162,7 +174,7 @@
             // searchEnterButton
             // 
             this.searchEnterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchEnterButton.Location = new System.Drawing.Point(302, 72);
+            this.searchEnterButton.Location = new System.Drawing.Point(306, 2);
             this.searchEnterButton.Name = "searchEnterButton";
             this.searchEnterButton.Size = new System.Drawing.Size(32, 32);
             this.searchEnterButton.TabIndex = 13;
@@ -173,52 +185,130 @@
             // searchPanel
             // 
             this.searchPanel.Controls.Add(this.searchLabel);
-            this.searchPanel.Controls.Add(this.searchFlowLayoutPanel);
             this.searchPanel.Controls.Add(this.searchTextBox);
             this.searchPanel.Controls.Add(this.searchEnterButton);
-            this.searchPanel.Location = new System.Drawing.Point(146, 34);
+            this.searchPanel.Controls.Add(this.searchFlowLayoutPanel);
+            this.searchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchPanel.Location = new System.Drawing.Point(3, 3);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(769, 522);
+            this.searchPanel.Size = new System.Drawing.Size(878, 539);
             this.searchPanel.TabIndex = 14;
             // 
             // homePanel
             // 
             this.homePanel.Controls.Add(this.overviewLabel);
             this.homePanel.Controls.Add(this.overviewFlowLayoutPanel);
-            this.homePanel.Location = new System.Drawing.Point(146, 34);
+            this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homePanel.Location = new System.Drawing.Point(3, 3);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(769, 525);
+            this.homePanel.Size = new System.Drawing.Size(878, 539);
             this.homePanel.TabIndex = 15;
             // 
             // overviewLabel
             // 
             this.overviewLabel.AutoSize = true;
             this.overviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.overviewLabel.Location = new System.Drawing.Point(3, 80);
+            this.overviewLabel.Location = new System.Drawing.Point(3, 10);
             this.overviewLabel.Name = "overviewLabel";
             this.overviewLabel.Size = new System.Drawing.Size(140, 32);
             this.overviewLabel.TabIndex = 10;
             this.overviewLabel.Text = "Overview";
             // 
+            // profilePanel
+            // 
+            this.profilePanel.Controls.Add(this.MyPostsLabel);
+            this.profilePanel.Controls.Add(this.MyPostsFlowLayoutPanel);
+            this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profilePanel.Location = new System.Drawing.Point(0, 0);
+            this.profilePanel.Name = "profilePanel";
+            this.profilePanel.Size = new System.Drawing.Size(884, 545);
+            this.profilePanel.TabIndex = 16;
+            // 
+            // MyPostsLabel
+            // 
+            this.MyPostsLabel.AutoSize = true;
+            this.MyPostsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyPostsLabel.Location = new System.Drawing.Point(3, 0);
+            this.MyPostsLabel.Name = "MyPostsLabel";
+            this.MyPostsLabel.Size = new System.Drawing.Size(137, 32);
+            this.MyPostsLabel.TabIndex = 12;
+            this.MyPostsLabel.Text = "My Posts";
+            // 
+            // MyPostsFlowLayoutPanel
+            // 
+            this.MyPostsFlowLayoutPanel.AutoScroll = true;
+            this.MyPostsFlowLayoutPanel.Location = new System.Drawing.Point(0, 35);
+            this.MyPostsFlowLayoutPanel.Name = "MyPostsFlowLayoutPanel";
+            this.MyPostsFlowLayoutPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MyPostsFlowLayoutPanel.Size = new System.Drawing.Size(725, 510);
+            this.MyPostsFlowLayoutPanel.TabIndex = 11;
+            // 
+            // OverviewTabControl
+            // 
+            this.OverviewTabControl.Controls.Add(this.homeTab);
+            this.OverviewTabControl.Controls.Add(this.searchTab);
+            this.OverviewTabControl.Controls.Add(this.profileTab);
+            this.OverviewTabControl.Location = new System.Drawing.Point(141, 8);
+            this.OverviewTabControl.Name = "OverviewTabControl";
+            this.OverviewTabControl.SelectedIndex = 0;
+            this.OverviewTabControl.Size = new System.Drawing.Size(892, 574);
+            this.OverviewTabControl.TabIndex = 17;
+            // 
+            // homeTab
+            // 
+            this.homeTab.Controls.Add(this.homePanel);
+            this.homeTab.Location = new System.Drawing.Point(4, 25);
+            this.homeTab.Name = "homeTab";
+            this.homeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.homeTab.Size = new System.Drawing.Size(884, 545);
+            this.homeTab.TabIndex = 0;
+            this.homeTab.Text = "Home";
+            this.homeTab.UseVisualStyleBackColor = true;
+            // 
+            // searchTab
+            // 
+            this.searchTab.Controls.Add(this.searchPanel);
+            this.searchTab.Location = new System.Drawing.Point(4, 25);
+            this.searchTab.Name = "searchTab";
+            this.searchTab.Padding = new System.Windows.Forms.Padding(3);
+            this.searchTab.Size = new System.Drawing.Size(884, 545);
+            this.searchTab.TabIndex = 1;
+            this.searchTab.Text = "Search";
+            this.searchTab.UseVisualStyleBackColor = true;
+            // 
+            // profileTab
+            // 
+            this.profileTab.Controls.Add(this.profilePanel);
+            this.profileTab.Location = new System.Drawing.Point(4, 25);
+            this.profileTab.Name = "profileTab";
+            this.profileTab.Size = new System.Drawing.Size(884, 545);
+            this.profileTab.TabIndex = 2;
+            this.profileTab.Text = "My Profile";
+            this.profileTab.UseVisualStyleBackColor = true;
+            // 
             // UserOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(1095, 594);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.searchPanel);
-            this.Controls.Add(this.homePanel);
+            this.Controls.Add(this.OverviewTabControl);
+            this.Controls.Add(this.sideviewPanel);
             this.Name = "UserOverview";
             this.Text = "User Overview";
             this.Load += new System.EventHandler(this.UserOverview_Load);
-            this.Controls.SetChildIndex(this.homePanel, 0);
-            this.Controls.SetChildIndex(this.searchPanel, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.panel1.ResumeLayout(false);
+            this.Controls.SetChildIndex(this.sideviewPanel, 0);
+            this.Controls.SetChildIndex(this.OverviewTabControl, 0);
+            this.sideviewPanel.ResumeLayout(false);
             this.searchFlowLayoutPanel.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
+            this.profilePanel.ResumeLayout(false);
+            this.profilePanel.PerformLayout();
+            this.OverviewTabControl.ResumeLayout(false);
+            this.homeTab.ResumeLayout(false);
+            this.searchTab.ResumeLayout(false);
+            this.profileTab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,7 +316,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel sideviewPanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView sideListView;
         private System.Windows.Forms.Button postButton;
@@ -241,5 +331,12 @@
         private System.Windows.Forms.Panel searchPanel;
         private System.Windows.Forms.Panel homePanel;
         private System.Windows.Forms.Label overviewLabel;
+        private System.Windows.Forms.Panel profilePanel;
+        private System.Windows.Forms.TabPage homeTab;
+        private System.Windows.Forms.TabPage searchTab;
+        private System.Windows.Forms.TabPage profileTab;
+        private System.Windows.Forms.TabControl OverviewTabControl;
+        private System.Windows.Forms.Label MyPostsLabel;
+        private System.Windows.Forms.FlowLayoutPanel MyPostsFlowLayoutPanel;
     }
 }
