@@ -1,4 +1,4 @@
-﻿namespace Y
+﻿namespace ParentOverviewForm
 {
     partial class Overview
     {
@@ -41,30 +41,30 @@
             // 
             YLabel.AutoSize = true;
             YLabel.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            YLabel.Location = new Point(62, 24);
+            YLabel.Location = new Point(71, 32);
             YLabel.Margin = new Padding(2, 0, 2, 0);
             YLabel.Name = "YLabel";
-            YLabel.Size = new Size(50, 55);
+            YLabel.Size = new Size(63, 69);
             YLabel.TabIndex = 8;
             YLabel.Text = "𝕐";
             // 
             // welcomeLabel
             // 
             welcomeLabel.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            welcomeLabel.Location = new Point(33, 79);
-            welcomeLabel.Margin = new Padding(4, 0, 4, 0);
+            welcomeLabel.Location = new Point(38, 105);
+            welcomeLabel.Margin = new Padding(5, 0, 5, 0);
             welcomeLabel.Name = "welcomeLabel";
-            welcomeLabel.Size = new Size(112, 42);
+            welcomeLabel.Size = new Size(128, 56);
             welcomeLabel.TabIndex = 9;
             welcomeLabel.Text = "Welcome User";
             welcomeLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // contentListView
             // 
-            contentListView.Location = new Point(243, 52);
-            contentListView.Margin = new Padding(4, 3, 4, 3);
+            contentListView.Location = new Point(278, 69);
+            contentListView.Margin = new Padding(5, 4, 5, 4);
             contentListView.Name = "contentListView";
-            contentListView.Size = new Size(447, 453);
+            contentListView.Size = new Size(510, 603);
             contentListView.TabIndex = 10;
             contentListView.UseCompatibleStateImageBehavior = false;
             // 
@@ -72,48 +72,48 @@
             // 
             homeLabel.AutoSize = true;
             homeLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            homeLabel.Location = new Point(238, 25);
-            homeLabel.Margin = new Padding(4, 0, 4, 0);
+            homeLabel.Location = new Point(272, 33);
+            homeLabel.Margin = new Padding(5, 0, 5, 0);
             homeLabel.Name = "homeLabel";
-            homeLabel.Size = new Size(56, 20);
+            homeLabel.Size = new Size(68, 25);
             homeLabel.TabIndex = 11;
             homeLabel.Text = "Home";
             // 
             // searchTextBox
             // 
             searchTextBox.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            searchTextBox.Location = new Point(698, 52);
-            searchTextBox.Margin = new Padding(4, 3, 4, 3);
+            searchTextBox.Location = new Point(798, 69);
+            searchTextBox.Margin = new Padding(5, 4, 5, 4);
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(221, 22);
+            searchTextBox.Size = new Size(252, 26);
             searchTextBox.TabIndex = 12;
             // 
             // searchLabel
             // 
             searchLabel.AutoSize = true;
             searchLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            searchLabel.Location = new Point(693, 25);
-            searchLabel.Margin = new Padding(4, 0, 4, 0);
+            searchLabel.Location = new Point(792, 33);
+            searchLabel.Margin = new Padding(5, 0, 5, 0);
             searchLabel.Name = "searchLabel";
-            searchLabel.Size = new Size(66, 20);
+            searchLabel.Size = new Size(81, 25);
             searchLabel.TabIndex = 13;
             searchLabel.Text = "Search";
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(832, 89);
-            searchButton.Margin = new Padding(4, 3, 4, 3);
+            searchButton.Location = new Point(949, 103);
+            searchButton.Margin = new Padding(5, 4, 5, 4);
             searchButton.Name = "searchButton";
-            searchButton.Size = new Size(88, 27);
+            searchButton.Size = new Size(101, 36);
             searchButton.TabIndex = 14;
             searchButton.Text = "Search";
             searchButton.UseVisualStyleBackColor = true;
             // 
             // Overview
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(933, 519);
+            ClientSize = new Size(1066, 692);
             Controls.Add(searchButton);
             Controls.Add(searchLabel);
             Controls.Add(searchTextBox);
@@ -121,7 +121,7 @@
             Controls.Add(contentListView);
             Controls.Add(welcomeLabel);
             Controls.Add(YLabel);
-            Margin = new Padding(4, 3, 4, 3);
+            Margin = new Padding(5, 4, 5, 4);
             Name = "Overview";
             Text = "Overview";
             ResumeLayout(false);
