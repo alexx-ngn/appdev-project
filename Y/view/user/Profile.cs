@@ -28,5 +28,17 @@ namespace Y
                 followButton.Text = "Follow";
             }
         }
+
+        private void usernameLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DetailedProfile detailedProfile = new DetailedProfile();
+            detailedProfile.ShowDialog();
+        }
+
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            NewUserReport report = new NewUserReport();
+            report.ShowDialog();
+        }
     }
 }

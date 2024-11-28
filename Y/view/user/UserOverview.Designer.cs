@@ -40,6 +40,8 @@
             this.profile1 = new Y.Profile();
             this.profile2 = new Y.Profile();
             this.profile3 = new Y.Profile();
+            this.profile4 = new Y.Profile();
+            this.profile5 = new Y.Profile();
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchEnterButton = new System.Windows.Forms.Button();
@@ -127,6 +129,8 @@
             this.searchFlowLayoutPanel.Controls.Add(this.profile1);
             this.searchFlowLayoutPanel.Controls.Add(this.profile2);
             this.searchFlowLayoutPanel.Controls.Add(this.profile3);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile4);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile5);
             this.searchFlowLayoutPanel.Location = new System.Drawing.Point(4, 40);
             this.searchFlowLayoutPanel.Name = "searchFlowLayoutPanel";
             this.searchFlowLayoutPanel.Size = new System.Drawing.Size(721, 477);
@@ -136,22 +140,36 @@
             // 
             this.profile1.Location = new System.Drawing.Point(3, 3);
             this.profile1.Name = "profile1";
-            this.profile1.Size = new System.Drawing.Size(661, 148);
+            this.profile1.Size = new System.Drawing.Size(665, 175);
             this.profile1.TabIndex = 0;
             // 
             // profile2
             // 
-            this.profile2.Location = new System.Drawing.Point(3, 157);
+            this.profile2.Location = new System.Drawing.Point(674, 3);
             this.profile2.Name = "profile2";
-            this.profile2.Size = new System.Drawing.Size(665, 148);
+            this.profile2.Size = new System.Drawing.Size(8, 8);
             this.profile2.TabIndex = 1;
             // 
             // profile3
             // 
-            this.profile3.Location = new System.Drawing.Point(3, 311);
+            this.profile3.Location = new System.Drawing.Point(3, 184);
             this.profile3.Name = "profile3";
-            this.profile3.Size = new System.Drawing.Size(665, 148);
+            this.profile3.Size = new System.Drawing.Size(665, 175);
             this.profile3.TabIndex = 2;
+            // 
+            // profile4
+            // 
+            this.profile4.Location = new System.Drawing.Point(3, 365);
+            this.profile4.Name = "profile4";
+            this.profile4.Size = new System.Drawing.Size(665, 175);
+            this.profile4.TabIndex = 3;
+            // 
+            // profile5
+            // 
+            this.profile5.Location = new System.Drawing.Point(3, 546);
+            this.profile5.Name = "profile5";
+            this.profile5.Size = new System.Drawing.Size(665, 175);
+            this.profile5.TabIndex = 4;
             // 
             // searchLabel
             // 
@@ -289,7 +307,7 @@
             // UserOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1095, 594);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.OverviewTabControl);
             this.Controls.Add(this.sideviewPanel);
             this.Name = "UserOverview";
@@ -322,9 +340,6 @@
         private System.Windows.Forms.Button postButton;
         private System.Windows.Forms.FlowLayoutPanel overviewFlowLayoutPanel;
         private System.Windows.Forms.FlowLayoutPanel searchFlowLayoutPanel;
-        private Profile profile1;
-        private Profile profile2;
-        private Profile profile3;
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchEnterButton;
@@ -338,5 +353,10 @@
         private System.Windows.Forms.TabControl OverviewTabControl;
         private System.Windows.Forms.Label MyPostsLabel;
         private System.Windows.Forms.FlowLayoutPanel MyPostsFlowLayoutPanel;
+        private Profile profile1;
+        private Profile profile2;
+        private Profile profile3;
+        private Profile profile4;
+        private Profile profile5;
     }
 }
