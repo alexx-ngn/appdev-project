@@ -13,6 +13,15 @@ namespace Y
         public UserOverview()
         {
             InitializeComponent();
+            loadPosts();
+        }
+        public void loadPosts()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Post post = new Post();
+                overviewFlowLayoutPanel.Controls.Add(post);
+            }
         }
     }
 }

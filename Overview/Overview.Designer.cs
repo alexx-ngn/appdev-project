@@ -34,6 +34,7 @@
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.YLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // searchLabel
@@ -66,7 +67,7 @@
             // welcomeLabel
             // 
             this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Location = new System.Drawing.Point(23, 128);
+            this.welcomeLabel.Location = new System.Drawing.Point(21, 100);
             this.welcomeLabel.Name = "welcomeLabel";
             this.welcomeLabel.Size = new System.Drawing.Size(97, 16);
             this.welcomeLabel.TabIndex = 2;
@@ -76,7 +77,7 @@
             // 
             this.YLabel.AutoSize = true;
             this.YLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YLabel.Location = new System.Drawing.Point(12, 9);
+            this.YLabel.Location = new System.Drawing.Point(12, -19);
             this.YLabel.Name = "YLabel";
             this.YLabel.Size = new System.Drawing.Size(123, 135);
             this.YLabel.TabIndex = 1;
@@ -91,11 +92,21 @@
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // logoutButton
+            // 
+            this.logoutButton.Location = new System.Drawing.Point(24, 119);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(94, 27);
+            this.logoutButton.TabIndex = 8;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            // 
             // Overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 594);
+            this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.textBox1);
@@ -116,6 +127,7 @@
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Label YLabel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button logoutButton;
     }
 }
 

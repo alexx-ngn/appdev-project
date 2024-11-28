@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Post));
             this.label1 = new System.Windows.Forms.Label();
-            this.postRichTextBox = new System.Windows.Forms.RichTextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
             this.likeCounterLabel = new System.Windows.Forms.Label();
             this.likeButton = new System.Windows.Forms.Button();
             this.repostButton = new System.Windows.Forms.Button();
             this.repostCounterLabel = new System.Windows.Forms.Label();
+            this.postContentLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -45,15 +46,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 0;
-            // 
-            // postRichTextBox
-            // 
-            this.postRichTextBox.Location = new System.Drawing.Point(3, 19);
-            this.postRichTextBox.Name = "postRichTextBox";
-            this.postRichTextBox.ReadOnly = true;
-            this.postRichTextBox.Size = new System.Drawing.Size(663, 85);
-            this.postRichTextBox.TabIndex = 1;
-            this.postRichTextBox.Text = "";
             // 
             // usernameLabel
             // 
@@ -117,22 +109,31 @@
             this.repostCounterLabel.TabIndex = 7;
             this.repostCounterLabel.Text = "0";
             // 
+            // postContentLabel
+            // 
+            this.postContentLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.postContentLabel.Location = new System.Drawing.Point(3, 16);
+            this.postContentLabel.Name = "postContentLabel";
+            this.postContentLabel.Size = new System.Drawing.Size(639, 88);
+            this.postContentLabel.TabIndex = 8;
+            this.postContentLabel.Text = resources.GetString("postContentLabel.Text");
+            // 
             // Post
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.postContentLabel);
             this.Controls.Add(this.repostCounterLabel);
             this.Controls.Add(this.repostButton);
             this.Controls.Add(this.likeCounterLabel);
             this.Controls.Add(this.likeButton);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.usernameLabel);
-            this.Controls.Add(this.postRichTextBox);
             this.Controls.Add(this.label1);
             this.Name = "Post";
-            this.Size = new System.Drawing.Size(665, 138);
+            this.Size = new System.Drawing.Size(665, 148);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,12 +142,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox postRichTextBox;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label likeCounterLabel;
         private System.Windows.Forms.Button likeButton;
         private System.Windows.Forms.Button repostButton;
         private System.Windows.Forms.Label repostCounterLabel;
+        private System.Windows.Forms.Label postContentLabel;
     }
 }

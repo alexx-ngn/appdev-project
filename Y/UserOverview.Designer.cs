@@ -35,13 +35,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.sideListView = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.post1 = new Y.Post();
-            this.post2 = new Y.Post();
-            this.post3 = new Y.Post();
-            this.post4 = new Y.Post();
+            this.overviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,66 +84,26 @@
             this.button1.Text = "Post";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // overviewFlowLayoutPanel
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.post4);
-            this.panel2.Controls.Add(this.post3);
-            this.panel2.Controls.Add(this.post2);
-            this.panel2.Controls.Add(this.post1);
-            this.panel2.Location = new System.Drawing.Point(146, 47);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(729, 509);
-            this.panel2.TabIndex = 8;
-            // 
-            // post1
-            // 
-            this.post1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.post1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.post1.Location = new System.Drawing.Point(3, 3);
-            this.post1.Name = "post1";
-            this.post1.Size = new System.Drawing.Size(665, 138);
-            this.post1.TabIndex = 0;
-            // 
-            // post2
-            // 
-            this.post2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.post2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.post2.Location = new System.Drawing.Point(3, 147);
-            this.post2.Name = "post2";
-            this.post2.Size = new System.Drawing.Size(665, 138);
-            this.post2.TabIndex = 1;
-            // 
-            // post3
-            // 
-            this.post3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.post3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.post3.Location = new System.Drawing.Point(3, 291);
-            this.post3.Name = "post3";
-            this.post3.Size = new System.Drawing.Size(665, 138);
-            this.post3.TabIndex = 2;
-            // 
-            // post4
-            // 
-            this.post4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.post4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.post4.Location = new System.Drawing.Point(3, 435);
-            this.post4.Name = "post4";
-            this.post4.Size = new System.Drawing.Size(665, 138);
-            this.post4.TabIndex = 3;
+            this.overviewFlowLayoutPanel.AutoScroll = true;
+            this.overviewFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.overviewFlowLayoutPanel.Location = new System.Drawing.Point(146, 47);
+            this.overviewFlowLayoutPanel.Name = "overviewFlowLayoutPanel";
+            this.overviewFlowLayoutPanel.Size = new System.Drawing.Size(729, 509);
+            this.overviewFlowLayoutPanel.TabIndex = 9;
             // 
             // UserOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(1095, 594);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.overviewFlowLayoutPanel);
             this.Controls.Add(this.panel1);
             this.Name = "UserOverview";
             this.Text = "User Overview";
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.overviewFlowLayoutPanel, 0);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,10 +115,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView sideListView;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel2;
-        private Post post4;
-        private Post post3;
-        private Post post2;
-        private Post post1;
+        private System.Windows.Forms.FlowLayoutPanel overviewFlowLayoutPanel;
     }
 }
