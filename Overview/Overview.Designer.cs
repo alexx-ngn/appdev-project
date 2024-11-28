@@ -31,7 +31,6 @@
             this.searchLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.overviewLabel = new System.Windows.Forms.Label();
-            this.contentListView = new System.Windows.Forms.ListView();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.YLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -63,15 +62,6 @@
             this.overviewLabel.Size = new System.Drawing.Size(102, 25);
             this.overviewLabel.TabIndex = 4;
             this.overviewLabel.Text = "Overview";
-            // 
-            // contentListView
-            // 
-            this.contentListView.HideSelection = false;
-            this.contentListView.Location = new System.Drawing.Point(141, 47);
-            this.contentListView.Name = "contentListView";
-            this.contentListView.Size = new System.Drawing.Size(734, 509);
-            this.contentListView.TabIndex = 3;
-            this.contentListView.UseCompatibleStateImageBehavior = false;
             // 
             // welcomeLabel
             // 
@@ -110,7 +100,6 @@
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.overviewLabel);
-            this.Controls.Add(this.contentListView);
             this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.YLabel);
             this.Name = "Overview";
@@ -124,7 +113,6 @@
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label overviewLabel;
-        private System.Windows.Forms.ListView contentListView;
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Label YLabel;
         private System.Windows.Forms.Button button1;
