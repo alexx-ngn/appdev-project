@@ -13,7 +13,6 @@ namespace Y
         public UserOverview()
         {
             InitializeComponent();
-            loadPosts();
         }
         public void loadPosts()
         {
@@ -28,6 +27,11 @@ namespace Y
         {
             NewPost post = new NewPost();
             post.ShowDialog();
+        }
+
+        private void UserOverview_Load(object sender, EventArgs e)
+        {
+            loadPosts();
         }
     }
 }

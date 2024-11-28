@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Home");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Search");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("My Profile");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Home");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Search");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("My Profile");
             this.panel1 = new System.Windows.Forms.Panel();
             this.postButton = new System.Windows.Forms.Button();
             this.sideListView = new System.Windows.Forms.ListView();
@@ -64,9 +64,9 @@
             this.sideListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideListView.HideSelection = false;
             this.sideListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.sideListView.Location = new System.Drawing.Point(0, 0);
             this.sideListView.Name = "sideListView";
             this.sideListView.Size = new System.Drawing.Size(123, 409);
@@ -102,6 +102,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UserOverview";
             this.Text = "User Overview";
+            this.Load += new System.EventHandler(this.UserOverview_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.overviewFlowLayoutPanel, 0);
             this.panel1.ResumeLayout(false);
