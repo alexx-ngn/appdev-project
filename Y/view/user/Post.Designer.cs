@@ -43,10 +43,10 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel.Location = new System.Drawing.Point(0, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(92, 16);
+            this.usernameLabel.Size = new System.Drawing.Size(181, 32);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "USERNAME";
             // 
@@ -54,29 +54,30 @@
             // 
             this.dateLabel.AutoSize = true;
             this.dateLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.Location = new System.Drawing.Point(617, 0);
+            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel.Location = new System.Drawing.Point(1107, 0);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(48, 16);
+            this.dateLabel.Size = new System.Drawing.Size(93, 32);
             this.dateLabel.TabIndex = 3;
             this.dateLabel.Text = "DATE";
             // 
             // likeCounterLabel
             // 
             this.likeCounterLabel.AutoSize = true;
-            this.likeCounterLabel.Location = new System.Drawing.Point(589, 116);
+            this.likeCounterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.likeCounterLabel.Location = new System.Drawing.Point(1055, 250);
             this.likeCounterLabel.Name = "likeCounterLabel";
-            this.likeCounterLabel.Size = new System.Drawing.Size(14, 16);
+            this.likeCounterLabel.Size = new System.Drawing.Size(30, 32);
             this.likeCounterLabel.TabIndex = 5;
             this.likeCounterLabel.Text = "0";
             this.likeCounterLabel.Click += new System.EventHandler(this.likeCounterLabel_Click);
             // 
             // likeButton
             // 
-            this.likeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.likeButton.Location = new System.Drawing.Point(550, 107);
+            this.likeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.likeButton.Location = new System.Drawing.Point(983, 231);
             this.likeButton.Name = "likeButton";
-            this.likeButton.Size = new System.Drawing.Size(33, 32);
+            this.likeButton.Size = new System.Drawing.Size(66, 66);
             this.likeButton.TabIndex = 4;
             this.likeButton.Text = "👍";
             this.likeButton.UseVisualStyleBackColor = true;
@@ -84,10 +85,10 @@
             // 
             // repostButton
             // 
-            this.repostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repostButton.Location = new System.Drawing.Point(609, 107);
+            this.repostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repostButton.Location = new System.Drawing.Point(1091, 231);
             this.repostButton.Name = "repostButton";
-            this.repostButton.Size = new System.Drawing.Size(33, 32);
+            this.repostButton.Size = new System.Drawing.Size(66, 66);
             this.repostButton.TabIndex = 6;
             this.repostButton.Text = "🔁";
             this.repostButton.UseVisualStyleBackColor = true;
@@ -95,27 +96,29 @@
             // repostCounterLabel
             // 
             this.repostCounterLabel.AutoSize = true;
-            this.repostCounterLabel.Location = new System.Drawing.Point(648, 116);
+            this.repostCounterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repostCounterLabel.Location = new System.Drawing.Point(1163, 250);
             this.repostCounterLabel.Name = "repostCounterLabel";
-            this.repostCounterLabel.Size = new System.Drawing.Size(14, 16);
+            this.repostCounterLabel.Size = new System.Drawing.Size(30, 32);
             this.repostCounterLabel.TabIndex = 7;
             this.repostCounterLabel.Text = "0";
             // 
             // postContentLabel
             // 
             this.postContentLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.postContentLabel.Location = new System.Drawing.Point(3, 16);
+            this.postContentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postContentLabel.Location = new System.Drawing.Point(3, 44);
             this.postContentLabel.Name = "postContentLabel";
-            this.postContentLabel.Size = new System.Drawing.Size(639, 88);
+            this.postContentLabel.Size = new System.Drawing.Size(1190, 184);
             this.postContentLabel.TabIndex = 8;
             this.postContentLabel.Text = resources.GetString("postContentLabel.Text");
             // 
             // reportButton
             // 
-            this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportButton.Location = new System.Drawing.Point(3, 107);
+            this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportButton.Location = new System.Drawing.Point(3, 231);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(33, 32);
+            this.reportButton.Size = new System.Drawing.Size(66, 66);
             this.reportButton.TabIndex = 10;
             this.reportButton.Text = "⚠️";
             this.reportButton.UseVisualStyleBackColor = true;
@@ -136,7 +139,7 @@
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.usernameLabel);
             this.Name = "Post";
-            this.Size = new System.Drawing.Size(665, 148);
+            this.Size = new System.Drawing.Size(1200, 300);
             this.ResumeLayout(false);
             this.PerformLayout();
 

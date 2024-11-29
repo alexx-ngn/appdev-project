@@ -38,18 +38,19 @@
             // profileDescriptionLabel
             // 
             this.profileDescriptionLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.profileDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileDescriptionLabel.Location = new System.Drawing.Point(6, 51);
             this.profileDescriptionLabel.Name = "profileDescriptionLabel";
-            this.profileDescriptionLabel.Size = new System.Drawing.Size(639, 88);
+            this.profileDescriptionLabel.Size = new System.Drawing.Size(1191, 249);
             this.profileDescriptionLabel.TabIndex = 9;
             this.profileDescriptionLabel.Text = resources.GetString("profileDescriptionLabel.Text");
             // 
             // followButton
             // 
-            this.followButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.followButton.Location = new System.Drawing.Point(527, 10);
+            this.followButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.followButton.Location = new System.Drawing.Point(1024, 10);
             this.followButton.Name = "followButton";
-            this.followButton.Size = new System.Drawing.Size(118, 38);
+            this.followButton.Size = new System.Drawing.Size(173, 38);
             this.followButton.TabIndex = 10;
             this.followButton.Text = "Follow";
             this.followButton.UseVisualStyleBackColor = true;
@@ -58,10 +59,10 @@
             // usernameLinkLabel
             // 
             this.usernameLinkLabel.AutoSize = true;
-            this.usernameLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLinkLabel.Location = new System.Drawing.Point(3, 21);
+            this.usernameLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLinkLabel.Location = new System.Drawing.Point(3, 16);
             this.usernameLinkLabel.Name = "usernameLinkLabel";
-            this.usernameLinkLabel.Size = new System.Drawing.Size(92, 16);
+            this.usernameLinkLabel.Size = new System.Drawing.Size(181, 32);
             this.usernameLinkLabel.TabIndex = 11;
             this.usernameLinkLabel.TabStop = true;
             this.usernameLinkLabel.Text = "USERNAME";
@@ -69,10 +70,10 @@
             // 
             // reportButton
             // 
-            this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportButton.Location = new System.Drawing.Point(488, 12);
+            this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportButton.Location = new System.Drawing.Point(980, 10);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(33, 32);
+            this.reportButton.Size = new System.Drawing.Size(38, 38);
             this.reportButton.TabIndex = 12;
             this.reportButton.Text = "⚠️";
             this.reportButton.UseVisualStyleBackColor = true;
@@ -87,7 +88,7 @@
             this.Controls.Add(this.followButton);
             this.Controls.Add(this.profileDescriptionLabel);
             this.Name = "Profile";
-            this.Size = new System.Drawing.Size(665, 175);
+            this.Size = new System.Drawing.Size(1200, 300);
             this.ResumeLayout(false);
             this.PerformLayout();
 

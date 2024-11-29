@@ -28,20 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Home");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Search");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("My Profile");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Home"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Search"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            "My Profile"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.sideviewPanel = new System.Windows.Forms.Panel();
-            this.postButton = new System.Windows.Forms.Button();
             this.sideListView = new System.Windows.Forms.ListView();
+            this.postButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.overviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.searchFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.profile1 = new Y.Profile();
-            this.profile2 = new Y.Profile();
-            this.profile3 = new Y.Profile();
-            this.profile4 = new Y.Profile();
-            this.profile5 = new Y.Profile();
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchEnterButton = new System.Windows.Forms.Button();
@@ -55,6 +53,9 @@
             this.homeTab = new System.Windows.Forms.TabPage();
             this.searchTab = new System.Windows.Forms.TabPage();
             this.profileTab = new System.Windows.Forms.TabPage();
+            this.profile1 = new Y.Profile();
+            this.profile2 = new Y.Profile();
+            this.profile3 = new Y.Profile();
             this.sideviewPanel.SuspendLayout();
             this.searchFlowLayoutPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
@@ -68,26 +69,16 @@
             // 
             // sideviewPanel
             // 
-            this.sideviewPanel.Controls.Add(this.postButton);
             this.sideviewPanel.Controls.Add(this.sideListView);
-            this.sideviewPanel.Location = new System.Drawing.Point(12, 147);
+            this.sideviewPanel.Controls.Add(this.postButton);
+            this.sideviewPanel.Location = new System.Drawing.Point(52, 381);
             this.sideviewPanel.Name = "sideviewPanel";
-            this.sideviewPanel.Size = new System.Drawing.Size(123, 409);
+            this.sideviewPanel.Size = new System.Drawing.Size(150, 413);
             this.sideviewPanel.TabIndex = 7;
-            // 
-            // postButton
-            // 
-            this.postButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.postButton.Location = new System.Drawing.Point(0, 386);
-            this.postButton.Name = "postButton";
-            this.postButton.Size = new System.Drawing.Size(123, 23);
-            this.postButton.TabIndex = 2;
-            this.postButton.Text = "Post";
-            this.postButton.UseVisualStyleBackColor = true;
-            this.postButton.Click += new System.EventHandler(this.postButton_Click);
             // 
             // sideListView
             // 
+            this.sideListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
             this.sideListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideListView.HideSelection = false;
             this.sideListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
@@ -96,11 +87,24 @@
             listViewItem3});
             this.sideListView.Location = new System.Drawing.Point(0, 0);
             this.sideListView.Name = "sideListView";
-            this.sideListView.Size = new System.Drawing.Size(123, 409);
+            this.sideListView.Scrollable = false;
+            this.sideListView.Size = new System.Drawing.Size(150, 363);
             this.sideListView.TabIndex = 1;
             this.sideListView.UseCompatibleStateImageBehavior = false;
             this.sideListView.View = System.Windows.Forms.View.Tile;
             this.sideListView.SelectedIndexChanged += new System.EventHandler(this.sideListView_SelectedIndexChanged);
+            // 
+            // postButton
+            // 
+            this.postButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.postButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postButton.Location = new System.Drawing.Point(0, 363);
+            this.postButton.Name = "postButton";
+            this.postButton.Size = new System.Drawing.Size(150, 50);
+            this.postButton.TabIndex = 2;
+            this.postButton.Text = "Post";
+            this.postButton.UseVisualStyleBackColor = true;
+            this.postButton.Click += new System.EventHandler(this.postButton_Click);
             // 
             // button1
             // 
@@ -116,10 +120,10 @@
             // overviewFlowLayoutPanel
             // 
             this.overviewFlowLayoutPanel.AutoScroll = true;
-            this.overviewFlowLayoutPanel.Location = new System.Drawing.Point(0, 45);
+            this.overviewFlowLayoutPanel.Location = new System.Drawing.Point(0, 35);
             this.overviewFlowLayoutPanel.Name = "overviewFlowLayoutPanel";
             this.overviewFlowLayoutPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.overviewFlowLayoutPanel.Size = new System.Drawing.Size(725, 480);
+            this.overviewFlowLayoutPanel.Size = new System.Drawing.Size(1298, 677);
             this.overviewFlowLayoutPanel.TabIndex = 9;
             // 
             // searchFlowLayoutPanel
@@ -129,53 +133,16 @@
             this.searchFlowLayoutPanel.Controls.Add(this.profile1);
             this.searchFlowLayoutPanel.Controls.Add(this.profile2);
             this.searchFlowLayoutPanel.Controls.Add(this.profile3);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile4);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile5);
-            this.searchFlowLayoutPanel.Location = new System.Drawing.Point(4, 40);
+            this.searchFlowLayoutPanel.Location = new System.Drawing.Point(4, 62);
             this.searchFlowLayoutPanel.Name = "searchFlowLayoutPanel";
-            this.searchFlowLayoutPanel.Size = new System.Drawing.Size(721, 477);
+            this.searchFlowLayoutPanel.Size = new System.Drawing.Size(1301, 650);
             this.searchFlowLayoutPanel.TabIndex = 10;
-            // 
-            // profile1
-            // 
-            this.profile1.Location = new System.Drawing.Point(3, 3);
-            this.profile1.Name = "profile1";
-            this.profile1.Size = new System.Drawing.Size(665, 175);
-            this.profile1.TabIndex = 0;
-            // 
-            // profile2
-            // 
-            this.profile2.Location = new System.Drawing.Point(674, 3);
-            this.profile2.Name = "profile2";
-            this.profile2.Size = new System.Drawing.Size(8, 8);
-            this.profile2.TabIndex = 1;
-            // 
-            // profile3
-            // 
-            this.profile3.Location = new System.Drawing.Point(3, 184);
-            this.profile3.Name = "profile3";
-            this.profile3.Size = new System.Drawing.Size(665, 175);
-            this.profile3.TabIndex = 2;
-            // 
-            // profile4
-            // 
-            this.profile4.Location = new System.Drawing.Point(3, 365);
-            this.profile4.Name = "profile4";
-            this.profile4.Size = new System.Drawing.Size(665, 175);
-            this.profile4.TabIndex = 3;
-            // 
-            // profile5
-            // 
-            this.profile5.Location = new System.Drawing.Point(3, 546);
-            this.profile5.Name = "profile5";
-            this.profile5.Size = new System.Drawing.Size(665, 175);
-            this.profile5.TabIndex = 4;
             // 
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
             this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchLabel.Location = new System.Drawing.Point(-2, 0);
+            this.searchLabel.Location = new System.Drawing.Point(3, 3);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(119, 32);
             this.searchLabel.TabIndex = 11;
@@ -183,18 +150,18 @@
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox.Location = new System.Drawing.Point(123, 3);
+            this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextBox.Location = new System.Drawing.Point(128, -3);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(177, 30);
+            this.searchTextBox.Size = new System.Drawing.Size(261, 38);
             this.searchTextBox.TabIndex = 12;
             // 
             // searchEnterButton
             // 
             this.searchEnterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchEnterButton.Location = new System.Drawing.Point(306, 2);
+            this.searchEnterButton.Location = new System.Drawing.Point(395, 0);
             this.searchEnterButton.Name = "searchEnterButton";
-            this.searchEnterButton.Size = new System.Drawing.Size(32, 32);
+            this.searchEnterButton.Size = new System.Drawing.Size(35, 35);
             this.searchEnterButton.TabIndex = 13;
             this.searchEnterButton.Text = "🔍";
             this.searchEnterButton.UseVisualStyleBackColor = true;
@@ -209,7 +176,7 @@
             this.searchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchPanel.Location = new System.Drawing.Point(3, 3);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(878, 539);
+            this.searchPanel.Size = new System.Drawing.Size(1298, 715);
             this.searchPanel.TabIndex = 14;
             // 
             // homePanel
@@ -219,14 +186,14 @@
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(3, 3);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(878, 539);
+            this.homePanel.Size = new System.Drawing.Size(1298, 715);
             this.homePanel.TabIndex = 15;
             // 
             // overviewLabel
             // 
             this.overviewLabel.AutoSize = true;
             this.overviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.overviewLabel.Location = new System.Drawing.Point(3, 10);
+            this.overviewLabel.Location = new System.Drawing.Point(3, 0);
             this.overviewLabel.Name = "overviewLabel";
             this.overviewLabel.Size = new System.Drawing.Size(140, 32);
             this.overviewLabel.TabIndex = 10;
@@ -239,14 +206,15 @@
             this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilePanel.Location = new System.Drawing.Point(0, 0);
             this.profilePanel.Name = "profilePanel";
-            this.profilePanel.Size = new System.Drawing.Size(884, 545);
+            this.profilePanel.Size = new System.Drawing.Size(1304, 721);
             this.profilePanel.TabIndex = 16;
             // 
             // MyPostsLabel
             // 
             this.MyPostsLabel.AutoSize = true;
+            this.MyPostsLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.MyPostsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MyPostsLabel.Location = new System.Drawing.Point(3, 0);
+            this.MyPostsLabel.Location = new System.Drawing.Point(0, 0);
             this.MyPostsLabel.Name = "MyPostsLabel";
             this.MyPostsLabel.Size = new System.Drawing.Size(137, 32);
             this.MyPostsLabel.TabIndex = 12;
@@ -255,10 +223,11 @@
             // MyPostsFlowLayoutPanel
             // 
             this.MyPostsFlowLayoutPanel.AutoScroll = true;
+            this.MyPostsFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.MyPostsFlowLayoutPanel.Location = new System.Drawing.Point(0, 35);
             this.MyPostsFlowLayoutPanel.Name = "MyPostsFlowLayoutPanel";
             this.MyPostsFlowLayoutPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.MyPostsFlowLayoutPanel.Size = new System.Drawing.Size(725, 510);
+            this.MyPostsFlowLayoutPanel.Size = new System.Drawing.Size(1304, 686);
             this.MyPostsFlowLayoutPanel.TabIndex = 11;
             // 
             // OverviewTabControl
@@ -266,10 +235,10 @@
             this.OverviewTabControl.Controls.Add(this.homeTab);
             this.OverviewTabControl.Controls.Add(this.searchTab);
             this.OverviewTabControl.Controls.Add(this.profileTab);
-            this.OverviewTabControl.Location = new System.Drawing.Point(141, 8);
+            this.OverviewTabControl.Location = new System.Drawing.Point(234, 44);
             this.OverviewTabControl.Name = "OverviewTabControl";
             this.OverviewTabControl.SelectedIndex = 0;
-            this.OverviewTabControl.Size = new System.Drawing.Size(892, 574);
+            this.OverviewTabControl.Size = new System.Drawing.Size(1312, 750);
             this.OverviewTabControl.TabIndex = 17;
             // 
             // homeTab
@@ -278,7 +247,7 @@
             this.homeTab.Location = new System.Drawing.Point(4, 25);
             this.homeTab.Name = "homeTab";
             this.homeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.homeTab.Size = new System.Drawing.Size(884, 545);
+            this.homeTab.Size = new System.Drawing.Size(1304, 721);
             this.homeTab.TabIndex = 0;
             this.homeTab.Text = "Home";
             this.homeTab.UseVisualStyleBackColor = true;
@@ -289,7 +258,7 @@
             this.searchTab.Location = new System.Drawing.Point(4, 25);
             this.searchTab.Name = "searchTab";
             this.searchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.searchTab.Size = new System.Drawing.Size(884, 545);
+            this.searchTab.Size = new System.Drawing.Size(1304, 721);
             this.searchTab.TabIndex = 1;
             this.searchTab.Text = "Search";
             this.searchTab.UseVisualStyleBackColor = true;
@@ -299,15 +268,36 @@
             this.profileTab.Controls.Add(this.profilePanel);
             this.profileTab.Location = new System.Drawing.Point(4, 25);
             this.profileTab.Name = "profileTab";
-            this.profileTab.Size = new System.Drawing.Size(884, 545);
+            this.profileTab.Size = new System.Drawing.Size(1304, 721);
             this.profileTab.TabIndex = 2;
             this.profileTab.Text = "My Profile";
             this.profileTab.UseVisualStyleBackColor = true;
             // 
+            // profile1
+            // 
+            this.profile1.Location = new System.Drawing.Point(3, 3);
+            this.profile1.Name = "profile1";
+            this.profile1.Size = new System.Drawing.Size(1200, 300);
+            this.profile1.TabIndex = 0;
+            // 
+            // profile2
+            // 
+            this.profile2.Location = new System.Drawing.Point(3, 309);
+            this.profile2.Name = "profile2";
+            this.profile2.Size = new System.Drawing.Size(1200, 300);
+            this.profile2.TabIndex = 1;
+            // 
+            // profile3
+            // 
+            this.profile3.Location = new System.Drawing.Point(3, 615);
+            this.profile3.Name = "profile3";
+            this.profile3.Size = new System.Drawing.Size(1200, 300);
+            this.profile3.TabIndex = 2;
+            // 
             // UserOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1582, 853);
             this.Controls.Add(this.OverviewTabControl);
             this.Controls.Add(this.sideviewPanel);
             this.Name = "UserOverview";
@@ -356,7 +346,5 @@
         private Profile profile1;
         private Profile profile2;
         private Profile profile3;
-        private Profile profile4;
-        private Profile profile5;
     }
 }

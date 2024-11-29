@@ -35,28 +35,30 @@
             // 
             // welcomeLabel
             // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Location = new System.Drawing.Point(21, 100);
+            this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(52, 210);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(97, 16);
+            this.welcomeLabel.Size = new System.Drawing.Size(150, 89);
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Welcome User";
+            this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // YLabel
             // 
             this.YLabel.AutoSize = true;
-            this.YLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 144F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YLabel.Location = new System.Drawing.Point(12, -19);
             this.YLabel.Name = "YLabel";
-            this.YLabel.Size = new System.Drawing.Size(123, 135);
+            this.YLabel.Size = new System.Drawing.Size(248, 272);
             this.YLabel.TabIndex = 1;
             this.YLabel.Text = "𝕐";
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(24, 119);
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.Location = new System.Drawing.Point(52, 291);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(94, 27);
+            this.logoutButton.Size = new System.Drawing.Size(150, 75);
             this.logoutButton.TabIndex = 8;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = true;
@@ -66,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 594);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.YLabel);
