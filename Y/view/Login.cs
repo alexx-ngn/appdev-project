@@ -24,5 +24,18 @@ namespace Y
             register.ShowDialog();
             this.Close();
         }
+
+        public void loadUserOverview()
+        {
+            this.Hide();
+            UserOverview overview = new UserOverview();
+            overview.ShowDialog();
+            this.Close();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            //loadUserOverview();
+        }
     }
 }
