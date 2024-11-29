@@ -8,27 +8,37 @@ namespace Y
 {
     internal class UserAccount : Account
     {
-        private int followerCount;
-        private List<UserAccount> followers;
-        private List<Post> posts;
+        private int FollowerCount { get; set; }
+        private List<UserAccount> Followers {  get; set; }
+        private List<Post> Posts { get; set; }
 
         public UserAccount(int id, string name, string email) : base(id, name, email)
         {
-        }
-
-        public override void removePost(Post post)
-        {
-            throw new NotImplementedException();
+            FollowerCount = 0;
+            Followers = new List<UserAccount>();
+            Posts = new List<Post>();
         }
 
         public void follow(UserAccount account)
         {
-            followers.Add(account);
+            account.FollowerCount++;
+            account.Followers.Add(this);
         }
 
-        public void post (String text)
+        public void post(String text)
+        {
+            Post post = new Post(text);
+            Posts.Add(post);
+        }
+
+        public void like(Post post)
         {
 
+        }
+
+        public override void removePost(Post post)
+        {
+            Posts.Remove(post);
         }
     }
 }
