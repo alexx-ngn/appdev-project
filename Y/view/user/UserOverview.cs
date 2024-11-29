@@ -18,7 +18,7 @@ namespace Y
         {
             for (int i = 0; i < 5; i++)
             {
-                Post post = new Post();
+                UserPost post = new UserPost();
                 overviewFlowLayoutPanel.Controls.Add(post);
             }
             for (int i = 0; i < 5 ; i++) {

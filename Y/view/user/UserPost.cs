@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Y
 {
-    public partial class Post : UserControl
+    public partial class UserPost : UserControl
     {
-        public Post()
+        public UserPost()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Y
 {
-    partial class Post
+    partial class UserPost
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Post));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserPost));
             this.usernameLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
             this.likeCounterLabel = new System.Windows.Forms.Label();
@@ -124,7 +124,7 @@
             this.reportButton.UseVisualStyleBackColor = true;
             this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
-            // Post
+            // UserPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,7 +138,7 @@
             this.Controls.Add(this.likeButton);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.usernameLabel);
-            this.Name = "Post";
+            this.Name = "UserPost";
             this.Size = new System.Drawing.Size(1200, 300);
             this.ResumeLayout(false);
             this.PerformLayout();

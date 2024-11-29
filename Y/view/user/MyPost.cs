@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Y
 {
-    public partial class MyPost : Y.Post
+    public partial class MyPost : Y.UserPost
     {
         public MyPost()
         {

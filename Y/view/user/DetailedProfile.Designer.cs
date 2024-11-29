@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.PostsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.post1 = new Y.Post();
-            this.post2 = new Y.Post();
-            this.post3 = new Y.Post();
+            this.post1 = new Y.UserPost();
+            this.post2 = new Y.UserPost();
+            this.post3 = new Y.UserPost();
             this.PostsFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,8 +103,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel PostsFlowLayoutPanel;
-        private Post post1;
-        private Post post2;
-        private Post post3;
+        private UserPost post1;
+        private UserPost post2;
+        private UserPost post3;
     }
 }

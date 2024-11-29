@@ -21,7 +21,5 @@ namespace Y
             CreationDate = DateTime.Now;
         }
         public abstract void removePost(Post post);
-
-
     }
 }
