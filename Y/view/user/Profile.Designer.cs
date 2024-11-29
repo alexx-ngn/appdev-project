@@ -28,22 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
-            this.profileDescriptionLabel = new System.Windows.Forms.Label();
             this.followButton = new System.Windows.Forms.Button();
             this.usernameLinkLabel = new System.Windows.Forms.LinkLabel();
             this.reportButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // profileDescriptionLabel
-            // 
-            this.profileDescriptionLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profileDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profileDescriptionLabel.Location = new System.Drawing.Point(6, 51);
-            this.profileDescriptionLabel.Name = "profileDescriptionLabel";
-            this.profileDescriptionLabel.Size = new System.Drawing.Size(1191, 249);
-            this.profileDescriptionLabel.TabIndex = 9;
-            this.profileDescriptionLabel.Text = resources.GetString("profileDescriptionLabel.Text");
             // 
             // followButton
             // 
@@ -83,19 +71,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.usernameLinkLabel);
             this.Controls.Add(this.followButton);
-            this.Controls.Add(this.profileDescriptionLabel);
             this.Name = "Profile";
-            this.Size = new System.Drawing.Size(1200, 300);
+            this.Size = new System.Drawing.Size(1196, 53);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label profileDescriptionLabel;
         private System.Windows.Forms.Button followButton;
         private System.Windows.Forms.LinkLabel usernameLinkLabel;
         private System.Windows.Forms.Button reportButton;

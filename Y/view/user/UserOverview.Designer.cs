@@ -39,7 +39,6 @@
             this.postButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.overviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.searchFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchEnterButton = new System.Windows.Forms.Button();
@@ -53,11 +52,19 @@
             this.homeTab = new System.Windows.Forms.TabPage();
             this.searchTab = new System.Windows.Forms.TabPage();
             this.profileTab = new System.Windows.Forms.TabPage();
+            this.searchFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.profile1 = new Y.Profile();
             this.profile2 = new Y.Profile();
             this.profile3 = new Y.Profile();
+            this.profile4 = new Y.Profile();
+            this.profile5 = new Y.Profile();
+            this.profile6 = new Y.Profile();
+            this.profile7 = new Y.Profile();
+            this.profile8 = new Y.Profile();
+            this.profile9 = new Y.Profile();
+            this.profile10 = new Y.Profile();
+            this.profile11 = new Y.Profile();
             this.sideviewPanel.SuspendLayout();
-            this.searchFlowLayoutPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.homePanel.SuspendLayout();
             this.profilePanel.SuspendLayout();
@@ -65,6 +72,7 @@
             this.homeTab.SuspendLayout();
             this.searchTab.SuspendLayout();
             this.profileTab.SuspendLayout();
+            this.searchFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideviewPanel
@@ -125,18 +133,6 @@
             this.overviewFlowLayoutPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.overviewFlowLayoutPanel.Size = new System.Drawing.Size(1298, 677);
             this.overviewFlowLayoutPanel.TabIndex = 9;
-            // 
-            // searchFlowLayoutPanel
-            // 
-            this.searchFlowLayoutPanel.AutoScroll = true;
-            this.searchFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.searchFlowLayoutPanel.Controls.Add(this.profile1);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile2);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile3);
-            this.searchFlowLayoutPanel.Location = new System.Drawing.Point(4, 62);
-            this.searchFlowLayoutPanel.Name = "searchFlowLayoutPanel";
-            this.searchFlowLayoutPanel.Size = new System.Drawing.Size(1301, 650);
-            this.searchFlowLayoutPanel.TabIndex = 10;
             // 
             // searchLabel
             // 
@@ -273,26 +269,102 @@
             this.profileTab.Text = "My Profile";
             this.profileTab.UseVisualStyleBackColor = true;
             // 
+            // searchFlowLayoutPanel
+            // 
+            this.searchFlowLayoutPanel.AutoScroll = true;
+            this.searchFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.searchFlowLayoutPanel.Controls.Add(this.profile1);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile2);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile3);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile4);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile5);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile6);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile7);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile8);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile9);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile10);
+            this.searchFlowLayoutPanel.Controls.Add(this.profile11);
+            this.searchFlowLayoutPanel.Location = new System.Drawing.Point(4, 62);
+            this.searchFlowLayoutPanel.Name = "searchFlowLayoutPanel";
+            this.searchFlowLayoutPanel.Size = new System.Drawing.Size(1301, 650);
+            this.searchFlowLayoutPanel.TabIndex = 10;
+            // 
             // profile1
             // 
             this.profile1.Location = new System.Drawing.Point(3, 3);
             this.profile1.Name = "profile1";
-            this.profile1.Size = new System.Drawing.Size(1200, 300);
+            this.profile1.Size = new System.Drawing.Size(1200, 57);
             this.profile1.TabIndex = 0;
             // 
             // profile2
             // 
-            this.profile2.Location = new System.Drawing.Point(3, 309);
+            this.profile2.Location = new System.Drawing.Point(3, 66);
             this.profile2.Name = "profile2";
-            this.profile2.Size = new System.Drawing.Size(1200, 300);
+            this.profile2.Size = new System.Drawing.Size(1200, 57);
             this.profile2.TabIndex = 1;
             // 
             // profile3
             // 
-            this.profile3.Location = new System.Drawing.Point(3, 615);
+            this.profile3.Location = new System.Drawing.Point(3, 129);
             this.profile3.Name = "profile3";
-            this.profile3.Size = new System.Drawing.Size(1200, 300);
+            this.profile3.Size = new System.Drawing.Size(1200, 57);
             this.profile3.TabIndex = 2;
+            // 
+            // profile4
+            // 
+            this.profile4.Location = new System.Drawing.Point(3, 192);
+            this.profile4.Name = "profile4";
+            this.profile4.Size = new System.Drawing.Size(1200, 57);
+            this.profile4.TabIndex = 3;
+            // 
+            // profile5
+            // 
+            this.profile5.Location = new System.Drawing.Point(3, 255);
+            this.profile5.Name = "profile5";
+            this.profile5.Size = new System.Drawing.Size(1200, 57);
+            this.profile5.TabIndex = 4;
+            // 
+            // profile6
+            // 
+            this.profile6.Location = new System.Drawing.Point(3, 318);
+            this.profile6.Name = "profile6";
+            this.profile6.Size = new System.Drawing.Size(1200, 57);
+            this.profile6.TabIndex = 5;
+            // 
+            // profile7
+            // 
+            this.profile7.Location = new System.Drawing.Point(3, 381);
+            this.profile7.Name = "profile7";
+            this.profile7.Size = new System.Drawing.Size(1200, 57);
+            this.profile7.TabIndex = 6;
+            // 
+            // profile8
+            // 
+            this.profile8.Location = new System.Drawing.Point(3, 444);
+            this.profile8.Name = "profile8";
+            this.profile8.Size = new System.Drawing.Size(1200, 57);
+            this.profile8.TabIndex = 7;
+            // 
+            // profile9
+            // 
+            this.profile9.Location = new System.Drawing.Point(3, 507);
+            this.profile9.Name = "profile9";
+            this.profile9.Size = new System.Drawing.Size(1200, 57);
+            this.profile9.TabIndex = 8;
+            // 
+            // profile10
+            // 
+            this.profile10.Location = new System.Drawing.Point(3, 570);
+            this.profile10.Name = "profile10";
+            this.profile10.Size = new System.Drawing.Size(1200, 57);
+            this.profile10.TabIndex = 9;
+            // 
+            // profile11
+            // 
+            this.profile11.Location = new System.Drawing.Point(3, 633);
+            this.profile11.Name = "profile11";
+            this.profile11.Size = new System.Drawing.Size(1200, 57);
+            this.profile11.TabIndex = 10;
             // 
             // UserOverview
             // 
@@ -306,7 +378,6 @@
             this.Controls.SetChildIndex(this.sideviewPanel, 0);
             this.Controls.SetChildIndex(this.OverviewTabControl, 0);
             this.sideviewPanel.ResumeLayout(false);
-            this.searchFlowLayoutPanel.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
             this.homePanel.ResumeLayout(false);
@@ -317,6 +388,7 @@
             this.homeTab.ResumeLayout(false);
             this.searchTab.ResumeLayout(false);
             this.profileTab.ResumeLayout(false);
+            this.searchFlowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +401,6 @@
         private System.Windows.Forms.ListView sideListView;
         private System.Windows.Forms.Button postButton;
         private System.Windows.Forms.FlowLayoutPanel overviewFlowLayoutPanel;
-        private System.Windows.Forms.FlowLayoutPanel searchFlowLayoutPanel;
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchEnterButton;
@@ -343,8 +414,17 @@
         private System.Windows.Forms.TabControl OverviewTabControl;
         private System.Windows.Forms.Label MyPostsLabel;
         private System.Windows.Forms.FlowLayoutPanel MyPostsFlowLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel searchFlowLayoutPanel;
         private Profile profile1;
         private Profile profile2;
         private Profile profile3;
+        private Profile profile4;
+        private Profile profile5;
+        private Profile profile6;
+        private Profile profile7;
+        private Profile profile8;
+        private Profile profile9;
+        private Profile profile10;
+        private Profile profile11;
     }
 }
