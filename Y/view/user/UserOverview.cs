@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Y.view.user;
 
 namespace Y
 {
@@ -18,7 +19,7 @@ namespace Y
         {
             for (int i = 0; i < 5; i++)
             {
-                UserPost post = new UserPost();
+                UserPostProfile post = new UserPostProfile();
                 overviewFlowLayoutPanel.Controls.Add(post);
             }
             for (int i = 0; i < 5 ; i++) {

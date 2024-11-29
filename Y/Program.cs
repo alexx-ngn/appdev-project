@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Y.view.admin;
 
 namespace Y
 {
@@ -17,6 +18,7 @@ namespace Y
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new UserOverview());
+            Application.Run(new AdminOverview());
         }
     }
 }

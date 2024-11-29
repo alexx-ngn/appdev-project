@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="view\user\UserPostProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\user\UserPostProfile.Designer.cs">
+      <DependentUpon>UserPostProfile.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\user\UserPostProfile.resx">
+      <DependentUpon>UserPostProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +56,12 @@
     <Compile Include="Account.cs" />
     <Compile Include="AdminAccount.cs" />
     <Compile Include="Post.cs" />
+    <Compile Include="view\admin\AdminOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\AdminOverview.Designer.cs">
+      <DependentUpon>AdminOverview.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\user\DetailedProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,10 +86,10 @@
     <Compile Include="view\user\NewUserReport.Designer.cs">
       <DependentUpon>NewUserReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\user\Overview.cs">
+    <Compile Include="view\Overview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\user\Overview.Designer.cs">
+    <Compile Include="view\Overview.Designer.cs">
       <DependentUpon>Overview.cs</DependentUpon>
     </Compile>
     <Compile Include="view\user\UserPost.cs">
@@ -111,6 +126,9 @@
     <Compile Include="view\user\UserOverview.Designer.cs">
       <DependentUpon>UserOverview.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\admin\AdminOverview.resx">
+      <DependentUpon>AdminOverview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\user\DetailedProfile.resx">
       <DependentUpon>DetailedProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,7 +144,7 @@
     <EmbeddedResource Include="view\user\NewUserReport.resx">
       <DependentUpon>NewUserReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\user\Overview.resx">
+    <EmbeddedResource Include="view\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\user\UserPost.resx">
@@ -161,5 +179,6 @@
     </Compile>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
