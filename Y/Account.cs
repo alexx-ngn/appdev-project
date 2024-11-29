@@ -10,15 +10,15 @@ namespace Y
     {
         public int Id {  get; set; }
         public string Name {get; set;}
-        public string email { get; set;}
-        public DateTime creationDate { get; private set; }
+        public string Email { get; set;}
+        private DateTime CreationDate { get;}
 
-        public Account(int id, string name, string email)
+        protected Account(int id, string name, string email)
         {
             Id = id;
             Name = name;
-            this.email = email;
-            this.creationDate = DateTime.Now;
+            Email = email;
+            CreationDate = DateTime.Now;
         }
         public abstract void removePost(Post post);
 
