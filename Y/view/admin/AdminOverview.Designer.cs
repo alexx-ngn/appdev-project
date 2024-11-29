@@ -42,27 +42,17 @@
             this.overviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.postReportsListView = new System.Windows.Forms.ListView();
             this.PostReportPostColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PostReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.userReportsListView = new System.Windows.Forms.ListView();
             this.UserReportUserColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UserReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchTab = new System.Windows.Forms.TabPage();
             this.searchPanel = new System.Windows.Forms.Panel();
+            this.searchListView = new System.Windows.Forms.ListView();
+            this.UserColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchEnterButton = new System.Windows.Forms.Button();
-            this.searchFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.profile1 = new Y.Profile();
-            this.profile2 = new Y.Profile();
-            this.profile3 = new Y.Profile();
-            this.profile4 = new Y.Profile();
-            this.profile5 = new Y.Profile();
-            this.profile6 = new Y.Profile();
-            this.profile7 = new Y.Profile();
-            this.profile8 = new Y.Profile();
-            this.profile9 = new Y.Profile();
-            this.profile10 = new Y.Profile();
-            this.profile11 = new Y.Profile();
-            this.PostReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.UserReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sideViewPanel.SuspendLayout();
             this.overviewTabControl.SuspendLayout();
             this.reportsTab.SuspendLayout();
@@ -70,7 +60,6 @@
             this.overviewFlowLayoutPanel.SuspendLayout();
             this.searchTab.SuspendLayout();
             this.searchPanel.SuspendLayout();
-            this.searchFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideViewPanel
@@ -182,6 +171,11 @@
             this.PostReportPostColumn.Text = "Post";
             this.PostReportPostColumn.Width = 154;
             // 
+            // PostReportDateColumn
+            // 
+            this.PostReportDateColumn.Text = "Date";
+            this.PostReportDateColumn.Width = 165;
+            // 
             // userReportsListView
             // 
             this.userReportsListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
@@ -203,6 +197,11 @@
             this.UserReportUserColumn.Text = "User";
             this.UserReportUserColumn.Width = 155;
             // 
+            // UserReportDateColumn
+            // 
+            this.UserReportDateColumn.Text = "Date";
+            this.UserReportDateColumn.Width = 187;
+            // 
             // searchTab
             // 
             this.searchTab.Controls.Add(this.searchPanel);
@@ -216,15 +215,35 @@
             // 
             // searchPanel
             // 
+            this.searchPanel.Controls.Add(this.searchListView);
             this.searchPanel.Controls.Add(this.searchLabel);
             this.searchPanel.Controls.Add(this.searchTextBox);
             this.searchPanel.Controls.Add(this.searchEnterButton);
-            this.searchPanel.Controls.Add(this.searchFlowLayoutPanel);
             this.searchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchPanel.Location = new System.Drawing.Point(3, 3);
             this.searchPanel.Name = "searchPanel";
             this.searchPanel.Size = new System.Drawing.Size(1283, 715);
             this.searchPanel.TabIndex = 14;
+            // 
+            // searchListView
+            // 
+            this.searchListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.searchListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.UserColumn});
+            this.searchListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchListView.HideSelection = false;
+            this.searchListView.Location = new System.Drawing.Point(9, 38);
+            this.searchListView.Name = "searchListView";
+            this.searchListView.Size = new System.Drawing.Size(1271, 674);
+            this.searchListView.TabIndex = 14;
+            this.searchListView.UseCompatibleStateImageBehavior = false;
+            this.searchListView.View = System.Windows.Forms.View.Details;
+            this.searchListView.SelectedIndexChanged += new System.EventHandler(this.searchListView_SelectedIndexChanged);
+            // 
+            // UserColumn
+            // 
+            this.UserColumn.Text = "User";
+            this.UserColumn.Width = 154;
             // 
             // searchLabel
             // 
@@ -253,124 +272,7 @@
             this.searchEnterButton.TabIndex = 13;
             this.searchEnterButton.Text = "🔍";
             this.searchEnterButton.UseVisualStyleBackColor = true;
-            // 
-            // searchFlowLayoutPanel
-            // 
-            this.searchFlowLayoutPanel.AutoScroll = true;
-            this.searchFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.searchFlowLayoutPanel.Controls.Add(this.profile1);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile2);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile3);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile4);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile5);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile6);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile7);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile8);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile9);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile10);
-            this.searchFlowLayoutPanel.Controls.Add(this.profile11);
-            this.searchFlowLayoutPanel.Location = new System.Drawing.Point(4, 62);
-            this.searchFlowLayoutPanel.Name = "searchFlowLayoutPanel";
-            this.searchFlowLayoutPanel.Size = new System.Drawing.Size(1301, 650);
-            this.searchFlowLayoutPanel.TabIndex = 10;
-            // 
-            // profile1
-            // 
-            this.profile1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile1.Location = new System.Drawing.Point(3, 3);
-            this.profile1.Name = "profile1";
-            this.profile1.Size = new System.Drawing.Size(1200, 57);
-            this.profile1.TabIndex = 0;
-            // 
-            // profile2
-            // 
-            this.profile2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile2.Location = new System.Drawing.Point(3, 66);
-            this.profile2.Name = "profile2";
-            this.profile2.Size = new System.Drawing.Size(1200, 57);
-            this.profile2.TabIndex = 1;
-            // 
-            // profile3
-            // 
-            this.profile3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile3.Location = new System.Drawing.Point(3, 129);
-            this.profile3.Name = "profile3";
-            this.profile3.Size = new System.Drawing.Size(1200, 57);
-            this.profile3.TabIndex = 2;
-            // 
-            // profile4
-            // 
-            this.profile4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile4.Location = new System.Drawing.Point(3, 192);
-            this.profile4.Name = "profile4";
-            this.profile4.Size = new System.Drawing.Size(1200, 57);
-            this.profile4.TabIndex = 3;
-            // 
-            // profile5
-            // 
-            this.profile5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile5.Location = new System.Drawing.Point(3, 255);
-            this.profile5.Name = "profile5";
-            this.profile5.Size = new System.Drawing.Size(1200, 57);
-            this.profile5.TabIndex = 4;
-            // 
-            // profile6
-            // 
-            this.profile6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile6.Location = new System.Drawing.Point(3, 318);
-            this.profile6.Name = "profile6";
-            this.profile6.Size = new System.Drawing.Size(1200, 57);
-            this.profile6.TabIndex = 5;
-            // 
-            // profile7
-            // 
-            this.profile7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile7.Location = new System.Drawing.Point(3, 381);
-            this.profile7.Name = "profile7";
-            this.profile7.Size = new System.Drawing.Size(1200, 57);
-            this.profile7.TabIndex = 6;
-            // 
-            // profile8
-            // 
-            this.profile8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile8.Location = new System.Drawing.Point(3, 444);
-            this.profile8.Name = "profile8";
-            this.profile8.Size = new System.Drawing.Size(1200, 57);
-            this.profile8.TabIndex = 7;
-            // 
-            // profile9
-            // 
-            this.profile9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile9.Location = new System.Drawing.Point(3, 507);
-            this.profile9.Name = "profile9";
-            this.profile9.Size = new System.Drawing.Size(1200, 57);
-            this.profile9.TabIndex = 8;
-            // 
-            // profile10
-            // 
-            this.profile10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile10.Location = new System.Drawing.Point(3, 570);
-            this.profile10.Name = "profile10";
-            this.profile10.Size = new System.Drawing.Size(1200, 57);
-            this.profile10.TabIndex = 9;
-            // 
-            // profile11
-            // 
-            this.profile11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.profile11.Location = new System.Drawing.Point(3, 633);
-            this.profile11.Name = "profile11";
-            this.profile11.Size = new System.Drawing.Size(1200, 57);
-            this.profile11.TabIndex = 10;
-            // 
-            // PostReportDateColumn
-            // 
-            this.PostReportDateColumn.Text = "Date";
-            this.PostReportDateColumn.Width = 165;
-            // 
-            // UserReportDateColumn
-            // 
-            this.UserReportDateColumn.Text = "Date";
-            this.UserReportDateColumn.Width = 187;
+            this.searchEnterButton.Click += new System.EventHandler(this.searchEnterButton_Click);
             // 
             // AdminOverview
             // 
@@ -390,7 +292,6 @@
             this.searchTab.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
-            this.searchFlowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,21 +314,11 @@
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchEnterButton;
-        private System.Windows.Forms.FlowLayoutPanel searchFlowLayoutPanel;
-        private Profile profile1;
-        private Profile profile2;
-        private Profile profile3;
-        private Profile profile4;
-        private Profile profile5;
-        private Profile profile6;
-        private Profile profile7;
-        private Profile profile8;
-        private Profile profile9;
-        private Profile profile10;
-        private Profile profile11;
         private System.Windows.Forms.ColumnHeader PostReportPostColumn;
         private System.Windows.Forms.ColumnHeader UserReportUserColumn;
         private System.Windows.Forms.ColumnHeader PostReportDateColumn;
         private System.Windows.Forms.ColumnHeader UserReportDateColumn;
+        private System.Windows.Forms.ListView searchListView;
+        private System.Windows.Forms.ColumnHeader UserColumn;
     }
 }

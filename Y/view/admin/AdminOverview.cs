@@ -47,6 +47,16 @@ namespace Y.view.admin
             }
         }
 
+        private void loadSearchResults()
+        {
+            for (int i = 0; i < 50; i++)
+            {
+                ListViewItem item = new ListViewItem("User " + i);
+                item.SubItems.Add("User " + i);
+                searchListView.Items.Add(item);
+            }
+        }
+
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (sideListView.SelectedItems.Count > 0)
@@ -71,7 +81,7 @@ namespace Y.view.admin
             if (postReportsListView.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = postReportsListView.SelectedItems[0];
-                MessageBox.Show("Selected Report: " + selectedItem.Text);
+                new PostReport().ShowDialog();
             }
         }
 
@@ -82,6 +92,20 @@ namespace Y.view.admin
                 ListViewItem selectedItem = userReportsListView.SelectedItems[0];
                 MessageBox.Show("Selected Report: " + selectedItem.Text);
             }
+        }
+
+        private void searchListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (searchListView.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = searchListView.SelectedItems[0];
+                new DetailedProfileAdmin().ShowDialog();
+            }
+        }
+
+        private void searchEnterButton_Click(object sender, EventArgs e)
+        {
+            loadSearchResults();
         }
     }
 }
