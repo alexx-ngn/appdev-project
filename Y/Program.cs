@@ -17,7 +17,7 @@ namespace Y
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserOverview());
+            //Application.Run(new UserOverview());
             Application.Run(new AdminOverview());
         }
     }

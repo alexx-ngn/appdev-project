@@ -41,7 +41,9 @@
             this.reportsLabel = new System.Windows.Forms.Label();
             this.overviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.postReportsListView = new System.Windows.Forms.ListView();
+            this.PostReportPostColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.userReportsListView = new System.Windows.Forms.ListView();
+            this.UserReportUserColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchTab = new System.Windows.Forms.TabPage();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.searchLabel = new System.Windows.Forms.Label();
@@ -59,6 +61,8 @@
             this.profile9 = new Y.Profile();
             this.profile10 = new Y.Profile();
             this.profile11 = new Y.Profile();
+            this.PostReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UserReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sideViewPanel.SuspendLayout();
             this.overviewTabControl.SuspendLayout();
             this.reportsTab.SuspendLayout();
@@ -160,6 +164,9 @@
             // postReportsListView
             // 
             this.postReportsListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.postReportsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.PostReportPostColumn,
+            this.PostReportDateColumn});
             this.postReportsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.postReportsListView.HideSelection = false;
             this.postReportsListView.Location = new System.Drawing.Point(3, 3);
@@ -167,12 +174,20 @@
             this.postReportsListView.Size = new System.Drawing.Size(623, 674);
             this.postReportsListView.TabIndex = 0;
             this.postReportsListView.UseCompatibleStateImageBehavior = false;
-            this.postReportsListView.View = System.Windows.Forms.View.List;
+            this.postReportsListView.View = System.Windows.Forms.View.Details;
             this.postReportsListView.SelectedIndexChanged += new System.EventHandler(this.postReportsListView_SelectedIndexChanged);
+            // 
+            // PostReportPostColumn
+            // 
+            this.PostReportPostColumn.Text = "Post";
+            this.PostReportPostColumn.Width = 154;
             // 
             // userReportsListView
             // 
             this.userReportsListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.userReportsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.UserReportUserColumn,
+            this.UserReportDateColumn});
             this.userReportsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userReportsListView.HideSelection = false;
             this.userReportsListView.Location = new System.Drawing.Point(632, 3);
@@ -180,8 +195,13 @@
             this.userReportsListView.Size = new System.Drawing.Size(631, 674);
             this.userReportsListView.TabIndex = 1;
             this.userReportsListView.UseCompatibleStateImageBehavior = false;
-            this.userReportsListView.View = System.Windows.Forms.View.List;
+            this.userReportsListView.View = System.Windows.Forms.View.Details;
             this.userReportsListView.SelectedIndexChanged += new System.EventHandler(this.userReportsListView_SelectedIndexChanged);
+            // 
+            // UserReportUserColumn
+            // 
+            this.UserReportUserColumn.Text = "User";
+            this.UserReportUserColumn.Width = 155;
             // 
             // searchTab
             // 
@@ -342,6 +362,16 @@
             this.profile11.Size = new System.Drawing.Size(1200, 57);
             this.profile11.TabIndex = 10;
             // 
+            // PostReportDateColumn
+            // 
+            this.PostReportDateColumn.Text = "Date";
+            this.PostReportDateColumn.Width = 165;
+            // 
+            // UserReportDateColumn
+            // 
+            this.UserReportDateColumn.Text = "Date";
+            this.UserReportDateColumn.Width = 187;
+            // 
             // AdminOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -395,5 +425,9 @@
         private Profile profile9;
         private Profile profile10;
         private Profile profile11;
+        private System.Windows.Forms.ColumnHeader PostReportPostColumn;
+        private System.Windows.Forms.ColumnHeader UserReportUserColumn;
+        private System.Windows.Forms.ColumnHeader PostReportDateColumn;
+        private System.Windows.Forms.ColumnHeader UserReportDateColumn;
     }
 }

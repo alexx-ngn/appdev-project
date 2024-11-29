@@ -17,30 +17,32 @@ namespace Y.view.admin
             loadUserReports();
         }
 
-        private List<String> postReports = new List<String>();
-        private List<String> userReports = new List<String>();
+        private List<(String, String)> postReports = new List<(String, String)>();
+        private List<(String, String)> userReports = new List<(String, String)>();
+
         private void loadPostReports()
         {
-            postReports.Add("Post 1 - DATE");
-            postReports.Add("Post 2 - DATE");
-            postReports.Add("Post 3 - DATE");
-            postReports.Add("Post 4 - DATE");
-            foreach (String report in postReports)
+            for (int i = 0; i < 50; i++)
             {
-                ListViewItem item = new ListViewItem(report);
+                postReports.Add(("Post " + i, "Date " + i));
+            }
+            foreach ((String, String) report in postReports)
+            {
+                ListViewItem item = new ListViewItem($"{report.Item1}");
+                item.SubItems.Add($"{report.Item2}");
                 postReportsListView.Items.Add(item);
             }
         }
 
         private void loadUserReports()
         {
-            userReports.Add("User 1 - DATE");
-            userReports.Add("User 2 - DATE");
-            userReports.Add("User 3 - DATE");
-            userReports.Add("User 4 - DATE");
-            foreach (String report in userReports)
+            for (int i = 0; i < 50; i++) {
+                userReports.Add(("User " + i, "Date " + i));
+            }
+            foreach ((String, String) report in userReports)
             {
-                ListViewItem item = new ListViewItem(report);
+                ListViewItem item = new ListViewItem($"{report.Item1}");
+                item.SubItems.Add($"{report.Item2}");
                 userReportsListView.Items.Add(item);
             }
         }
