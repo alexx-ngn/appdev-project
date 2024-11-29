@@ -14,19 +14,34 @@ namespace Y.view.admin
         {
             InitializeComponent();
             loadPostReports();
+            loadUserReports();
         }
 
-        private List<String> list = new List<String>();
+        private List<String> postReports = new List<String>();
+        private List<String> userReports = new List<String>();
         private void loadPostReports()
         {
-            list.Add("Post 1 - DATE");
-            list.Add("Post 2 - DATE");
-            list.Add("Post 3 - DATE");
-            list.Add("Post 4 - DATE");
-            foreach (String report in list)
+            postReports.Add("Post 1 - DATE");
+            postReports.Add("Post 2 - DATE");
+            postReports.Add("Post 3 - DATE");
+            postReports.Add("Post 4 - DATE");
+            foreach (String report in postReports)
             {
                 ListViewItem item = new ListViewItem(report);
                 postReportsListView.Items.Add(item);
+            }
+        }
+
+        private void loadUserReports()
+        {
+            userReports.Add("User 1 - DATE");
+            userReports.Add("User 2 - DATE");
+            userReports.Add("User 3 - DATE");
+            userReports.Add("User 4 - DATE");
+            foreach (String report in postReports)
+            {
+                ListViewItem item = new ListViewItem(report);
+                userReportsListView.Items.Add(item);
             }
         }
 
@@ -54,6 +69,15 @@ namespace Y.view.admin
             if (postReportsListView.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = postReportsListView.SelectedItems[0];
+                MessageBox.Show("Selected Report: " + selectedItem.Text);
+            }
+        }
+
+        private void userReportsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (userReportsListView.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = userReportsListView.SelectedItems[0];
                 MessageBox.Show("Selected Report: " + selectedItem.Text);
             }
         }

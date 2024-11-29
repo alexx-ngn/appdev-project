@@ -32,12 +32,6 @@
             "Reports"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Search"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("User1 - DATE");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("User2 - DATE");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("User3 - DATE");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("User4 - DATE");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("User5 - DATE");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("User6 - DATE");
             this.sideViewPanel = new System.Windows.Forms.Panel();
             this.sideListView = new System.Windows.Forms.ListView();
             this.overviewTabControl = new System.Windows.Forms.TabControl();
@@ -181,19 +175,13 @@
             this.userReportsListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
             this.userReportsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userReportsListView.HideSelection = false;
-            this.userReportsListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
             this.userReportsListView.Location = new System.Drawing.Point(632, 3);
             this.userReportsListView.Name = "userReportsListView";
             this.userReportsListView.Size = new System.Drawing.Size(631, 674);
             this.userReportsListView.TabIndex = 1;
             this.userReportsListView.UseCompatibleStateImageBehavior = false;
             this.userReportsListView.View = System.Windows.Forms.View.List;
+            this.userReportsListView.SelectedIndexChanged += new System.EventHandler(this.userReportsListView_SelectedIndexChanged);
             // 
             // searchTab
             // 
@@ -201,7 +189,7 @@
             this.searchTab.Location = new System.Drawing.Point(4, 25);
             this.searchTab.Name = "searchTab";
             this.searchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.searchTab.Size = new System.Drawing.Size(1304, 721);
+            this.searchTab.Size = new System.Drawing.Size(1289, 721);
             this.searchTab.TabIndex = 1;
             this.searchTab.Text = "Search";
             this.searchTab.UseVisualStyleBackColor = true;
@@ -215,7 +203,7 @@
             this.searchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchPanel.Location = new System.Drawing.Point(3, 3);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(1298, 715);
+            this.searchPanel.Size = new System.Drawing.Size(1283, 715);
             this.searchPanel.TabIndex = 14;
             // 
             // searchLabel
