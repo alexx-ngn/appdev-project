@@ -38,7 +38,7 @@ namespace Y.view.admin
             userReports.Add("User 2 - DATE");
             userReports.Add("User 3 - DATE");
             userReports.Add("User 4 - DATE");
-            foreach (String report in postReports)
+            foreach (String report in userReports)
             {
                 ListViewItem item = new ListViewItem(report);
                 userReportsListView.Items.Add(item);
