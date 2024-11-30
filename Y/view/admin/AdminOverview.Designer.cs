@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Reports"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Search"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.sideViewPanel = new System.Windows.Forms.Panel();
             this.sideListView = new System.Windows.Forms.ListView();
@@ -48,9 +48,9 @@
             this.UserReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchTab = new System.Windows.Forms.TabPage();
             this.searchPanel = new System.Windows.Forms.Panel();
-            this.clearButton = new System.Windows.Forms.Button();
             this.searchListView = new System.Windows.Forms.ListView();
             this.UserColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clearButton = new System.Windows.Forms.Button();
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchEnterButton = new System.Windows.Forms.Button();
@@ -77,8 +77,8 @@
             this.sideListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideListView.HideSelection = false;
             this.sideListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem3,
+            listViewItem4});
             this.sideListView.Location = new System.Drawing.Point(0, 0);
             this.sideListView.Name = "sideListView";
             this.sideListView.Scrollable = false;
@@ -216,8 +216,8 @@
             // 
             // searchPanel
             // 
-            this.searchPanel.Controls.Add(this.clearButton);
             this.searchPanel.Controls.Add(this.searchListView);
+            this.searchPanel.Controls.Add(this.clearButton);
             this.searchPanel.Controls.Add(this.searchLabel);
             this.searchPanel.Controls.Add(this.searchTextBox);
             this.searchPanel.Controls.Add(this.searchEnterButton);
@@ -226,17 +226,6 @@
             this.searchPanel.Name = "searchPanel";
             this.searchPanel.Size = new System.Drawing.Size(1283, 715);
             this.searchPanel.TabIndex = 14;
-            // 
-            // clearButton
-            // 
-            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(436, 0);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(35, 35);
-            this.clearButton.TabIndex = 15;
-            this.clearButton.Text = "❌";
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // searchListView
             // 
@@ -251,12 +240,23 @@
             this.searchListView.TabIndex = 14;
             this.searchListView.UseCompatibleStateImageBehavior = false;
             this.searchListView.View = System.Windows.Forms.View.Details;
-            this.searchListView.SelectedIndexChanged += new System.EventHandler(this.searchListView_SelectedIndexChanged);
+            this.searchListView.Click += new System.EventHandler(this.searchListView_Click);
             // 
             // UserColumn
             // 
             this.UserColumn.Text = "User";
             this.UserColumn.Width = 154;
+            // 
+            // clearButton
+            // 
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(436, 0);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(35, 35);
+            this.clearButton.TabIndex = 15;
+            this.clearButton.Text = "❌";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // searchLabel
             // 

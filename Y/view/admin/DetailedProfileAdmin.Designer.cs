@@ -79,6 +79,7 @@
             this.deleteButton.TabIndex = 17;
             this.deleteButton.Text = "BAN";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // adminPost1
             // 

@@ -111,12 +111,19 @@ namespace Y.view.admin
             }
         }
 
-        private void searchListView_SelectedIndexChanged(object sender, EventArgs e)
+        private void searchListView_Click(object sender, EventArgs e)
         {
             if (searchListView.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = searchListView.SelectedItems[0];
-                new DetailedProfileAdmin().ShowDialog();
+                var detailedProfile = new DetailedProfileAdmin();
+                detailedProfile.banClicked += (s, args) => remove();
+                detailedProfile.ShowDialog();
+
+                void remove()
+                {
+                    searchListView.Items.Remove(selectedItem);
+                }
             }
         }
 
