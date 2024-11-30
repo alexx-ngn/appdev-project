@@ -82,7 +82,7 @@
             this.Controls.Add(this.reasonUserControl1);
             this.Controls.Add(this.userPost1);
             this.Name = "PostReport";
-            this.Text = "PostReport";
+            this.Text = "Post Report";
             this.ResumeLayout(false);
 
         }

@@ -48,12 +48,12 @@
             this.UserReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchTab = new System.Windows.Forms.TabPage();
             this.searchPanel = new System.Windows.Forms.Panel();
+            this.clearButton = new System.Windows.Forms.Button();
             this.searchListView = new System.Windows.Forms.ListView();
             this.UserColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchEnterButton = new System.Windows.Forms.Button();
-            this.clearButton = new System.Windows.Forms.Button();
             this.sideViewPanel.SuspendLayout();
             this.overviewTabControl.SuspendLayout();
             this.reportsTab.SuspendLayout();
@@ -227,6 +227,17 @@
             this.searchPanel.Size = new System.Drawing.Size(1283, 715);
             this.searchPanel.TabIndex = 14;
             // 
+            // clearButton
+            // 
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(436, 0);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(35, 35);
+            this.clearButton.TabIndex = 15;
+            this.clearButton.Text = "❌";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // searchListView
             // 
             this.searchListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
@@ -276,17 +287,6 @@
             this.searchEnterButton.UseVisualStyleBackColor = true;
             this.searchEnterButton.Click += new System.EventHandler(this.searchEnterButton_Click);
             // 
-            // clearButton
-            // 
-            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(436, 0);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(35, 35);
-            this.clearButton.TabIndex = 15;
-            this.clearButton.Text = "❌";
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
-            // 
             // AdminOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -294,6 +294,7 @@
             this.Controls.Add(this.overviewTabControl);
             this.Controls.Add(this.sideViewPanel);
             this.Name = "AdminOverview";
+            this.Text = "Admin Overview";
             this.Controls.SetChildIndex(this.sideViewPanel, 0);
             this.Controls.SetChildIndex(this.overviewTabControl, 0);
             this.sideViewPanel.ResumeLayout(false);
