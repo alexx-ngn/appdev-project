@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Y.view.admin;
 
 namespace Y.view.admin
 {
@@ -76,21 +77,37 @@ namespace Y.view.admin
             }
         }
 
-        private void postReportsListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (postReportsListView.SelectedItems.Count > 0)
-            {
-                ListViewItem selectedItem = postReportsListView.SelectedItems[0];
-                new PostReport().ShowDialog();
-            }
-        }
-
-        private void userReportsListView_SelectedIndexChanged(object sender, EventArgs e)
+        private void userReportsListView_Click(object sender, EventArgs e)
         {
             if (userReportsListView.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = userReportsListView.SelectedItems[0];
-                new UserReport().ShowDialog();
+                var userReport = new UserReport();
+                userReport.dismissClicked += (s, args) => remove();
+                userReport.banClicked += (s, args) => remove();
+                userReport.ShowDialog();
+
+                void remove()
+                {
+                    userReportsListView.Items.Remove(selectedItem);
+                }
+            }
+        }
+
+        private void postReportsListView_Click(object sender, EventArgs e)
+        {
+            if (postReportsListView.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = postReportsListView.SelectedItems[0];
+                var postReport = new PostReport();
+                postReport.dismissClicked += (s, args) => remove();
+                postReport.banClicked += (s, args) => remove();
+                postReport.ShowDialog();
+
+                void remove()
+                {
+                    postReportsListView.Items.Remove(selectedItem);
+                }
             }
         }
 

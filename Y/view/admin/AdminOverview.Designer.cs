@@ -165,7 +165,7 @@
             this.postReportsListView.TabIndex = 0;
             this.postReportsListView.UseCompatibleStateImageBehavior = false;
             this.postReportsListView.View = System.Windows.Forms.View.Details;
-            this.postReportsListView.SelectedIndexChanged += new System.EventHandler(this.postReportsListView_SelectedIndexChanged);
+            this.postReportsListView.Click += new System.EventHandler(this.postReportsListView_Click);
             // 
             // PostReportPostColumn
             // 
@@ -191,7 +191,7 @@
             this.userReportsListView.TabIndex = 1;
             this.userReportsListView.UseCompatibleStateImageBehavior = false;
             this.userReportsListView.View = System.Windows.Forms.View.Details;
-            this.userReportsListView.SelectedIndexChanged += new System.EventHandler(this.userReportsListView_SelectedIndexChanged);
+            this.userReportsListView.Click += new System.EventHandler(this.userReportsListView_Click);
             // 
             // UserReportUserColumn
             // 

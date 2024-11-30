@@ -60,6 +60,7 @@
             this.banButton.TabIndex = 18;
             this.banButton.Text = "BAN";
             this.banButton.UseVisualStyleBackColor = true;
+            this.banButton.Click += new System.EventHandler(this.banButton_Click);
             // 
             // allowButton
             // 
@@ -71,6 +72,7 @@
             this.allowButton.TabIndex = 19;
             this.allowButton.Text = "DISMISS";
             this.allowButton.UseVisualStyleBackColor = true;
+            this.allowButton.Click += new System.EventHandler(this.allowButton_Click);
             // 
             // PostReport
             // 
