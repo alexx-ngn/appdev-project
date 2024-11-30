@@ -20,6 +20,13 @@ namespace Y
             Email = email;
             CreationDate = DateTime.Now;
         }
+
+        protected Account(string name, string email)
+        {
+            Name = name;
+            Email = email;
+            CreationDate = DateTime.Now;
+        }
         public abstract void removePost(Post post);
     }
 }

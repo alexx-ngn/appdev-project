@@ -19,10 +19,20 @@ namespace Y
             Posts = new List<Post>();
         }
 
+        public UserAccount(string name, string email) : base(name, email)
+        {
+            FollowerCount = 0;
+            Followers = new List<UserAccount>();
+            Posts = new List<Post>();
+        }
+
         public void follow(UserAccount account)
         {
-            account.FollowerCount++;
-            account.Followers.Add(this);
+            if (!account.Followers.Contains(this))
+            {
+                account.FollowerCount++;
+                account.Followers.Add(this);
+            }
         }
 
         public void post(String text)
@@ -33,12 +43,16 @@ namespace Y
 
         public void like(Post post)
         {
-
+            int userId = GetHashCode();
+            post.AddLike(userId);
         }
 
         public override void removePost(Post post)
         {
-            Posts.Remove(post);
+            if (Posts.Contains(post))
+            {
+                Posts.Remove(post);
+            }
         }
     }
 }
