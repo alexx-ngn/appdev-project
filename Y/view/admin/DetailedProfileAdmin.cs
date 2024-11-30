@@ -8,20 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Y
+namespace Y.view.admin
 {
-    public partial class Login : Form
+    public partial class DetailedProfileAdmin : Form
     {
-        public Login()
+        public EventHandler banClicked;
+        public DetailedProfileAdmin()
         {
             InitializeComponent();
         }
 
-        private void registerLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void deleteButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Register register = new Register();
-            register.ShowDialog();
+            banClicked?.Invoke(this, EventArgs.Empty);
+            MessageBox.Show("User has been banned.");
             this.Close();
         }
     }

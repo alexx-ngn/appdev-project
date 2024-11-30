@@ -8,14 +8,22 @@ namespace Y
         private int Id { get; set; }
         private string Text { get; set; }
 
+
         private HashSet<int> Likes { get; set; }
         private DateTime DatePosted { get;}
-
+      
         public Post(int id, string text)
         {
             Id = id;
             Text = text;
-            Likes = new HashSet<int>();
+            Likes = new HashSet<Account>();
+            DatePosted = DateTime.Now;
+        }
+
+        public Post(string text)
+        {
+            Text = text;
+            Likes = new HashSet<Account>();
             DatePosted = DateTime.Now;
         }
 

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ParentOverviewForm
+namespace Y.view
 {
-    public partial class Overview : Form
+    public partial class ReasonUserControl : UserControl
     {
-        public Overview()
+        public ReasonUserControl()
         {
             InitializeComponent();
         }

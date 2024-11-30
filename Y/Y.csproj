@@ -33,6 +33,60 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="view\admin\AdminPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\admin\AdminPost.Designer.cs">
+      <DependentUpon>AdminPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\DetailedProfileAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\DetailedProfileAdmin.Designer.cs">
+      <DependentUpon>DetailedProfileAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\PostReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\PostReport.Designer.cs">
+      <DependentUpon>PostReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\ReasonUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\admin\ReasonUserControl.Designer.cs">
+      <DependentUpon>ReasonUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\UserReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\UserReport.Designer.cs">
+      <DependentUpon>UserReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\user\UserPostProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\user\UserPostProfile.Designer.cs">
+      <DependentUpon>UserPostProfile.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\admin\AdminPost.resx">
+      <DependentUpon>AdminPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\DetailedProfileAdmin.resx">
+      <DependentUpon>DetailedProfileAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\PostReport.resx">
+      <DependentUpon>PostReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\ReasonUserControl.resx">
+      <DependentUpon>ReasonUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\UserReport.resx">
+      <DependentUpon>UserReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\UserPostProfile.resx">
+      <DependentUpon>UserPostProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,29 +98,105 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="AdminAccount.cs" />
     <Compile Include="Post.cs" />
-    <Compile Include="Register.cs">
+    <Compile Include="view\admin\AdminOverview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Register.Designer.cs">
+    <Compile Include="view\admin\AdminOverview.Designer.cs">
+      <DependentUpon>AdminOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\user\DetailedProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\user\DetailedProfile.Designer.cs">
+      <DependentUpon>DetailedProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\user\MyPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\user\MyPost.Designer.cs">
+      <DependentUpon>MyPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\user\NewPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\user\NewPost.Designer.cs">
+      <DependentUpon>NewPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\user\NewUserReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\user\NewUserReport.Designer.cs">
+      <DependentUpon>NewUserReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Overview.Designer.cs">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\user\UserPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\user\UserPost.Designer.cs">
+      <DependentUpon>UserPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\user\Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\user\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="view\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="view\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report.cs" />
     <Compile Include="UserAccount.cs" />
-    <EmbeddedResource Include="Login.resx">
+    <Compile Include="view\user\UserOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\user\UserOverview.Designer.cs">
+      <DependentUpon>UserOverview.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\admin\AdminOverview.resx">
+      <DependentUpon>AdminOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\DetailedProfile.resx">
+      <DependentUpon>DetailedProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\MyPost.resx">
+      <DependentUpon>MyPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\NewPost.resx">
+      <DependentUpon>NewPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\NewUserReport.resx">
+      <DependentUpon>NewUserReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Overview.resx">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\UserPost.resx">
+      <DependentUpon>UserPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,8 +207,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Register.resx">
+    <EmbeddedResource Include="view\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\UserOverview.resx">
+      <DependentUpon>UserOverview.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,9 +222,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
