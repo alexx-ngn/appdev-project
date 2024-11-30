@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Y
 {
-    internal class UserAccount : Account
+    public class UserAccount : Account
     {
         private int FollowerCount { get; set; }
         private List<UserAccount> Followers {  get; set; }
@@ -43,8 +43,7 @@ namespace Y
 
         public void like(Post post)
         {
-            int userId = GetHashCode();
-            post.AddLike(userId);
+            post.AddLike(this);
         }
 
         public override void removePost(Post post)

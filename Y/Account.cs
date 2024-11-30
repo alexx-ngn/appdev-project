@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Y
 {
-    internal abstract class Account
+    public abstract class Account
     {
         public int Id {  get; set; }
         public string Name {get; set;}
@@ -28,5 +28,24 @@ namespace Y
             CreationDate = DateTime.Now;
         }
         public abstract void removePost(Post post);
+
+        public override bool Equals(object obj)
+        {
+            return obj is Account account &&
+                   Id == account.Id &&
+                   Name == account.Name &&
+                   Email == account.Email &&
+                   CreationDate == account.CreationDate;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -1247915963;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Email);
+            hashCode = hashCode * -1521134295 + CreationDate.GetHashCode();
+            return hashCode;
+        }
     }
 }

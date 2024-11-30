@@ -9,7 +9,7 @@ namespace Y
         private string Text { get; set; }
 
 
-        private HashSet<int> Likes { get; set; }
+        private HashSet<Account> Likes { get; set; }
         private DateTime DatePosted { get;}
       
         public Post(int id, string text)
@@ -27,24 +27,9 @@ namespace Y
             DatePosted = DateTime.Now;
         }
 
-        public Post(string text)
+        public void AddLike(Account account)
         {
-            Text = text;
-            Likes = new HashSet<int>();
-            DatePosted = DateTime.Now;
-        }
-
-        public void AddLike(int userId)
-        {
-            if (!Likes.Contains(userId))
-            {
-                Likes.Add(userId); 
-                //Console.WriteLine($"User {userId} liked the post: {Text}");
-            }
-            else
-            {
-                //Console.WriteLine($"User {userId} already liked the post: {Text}");
-            }
+            Likes.Add(account);
         }
     }
 }
