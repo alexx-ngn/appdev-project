@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="resources\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="view\admin\AdminPost.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,6 +74,12 @@
     <Compile Include="view\user\UserPostProfile.Designer.cs">
       <DependentUpon>UserPostProfile.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="resources\Resources.en_US.resx" />
+    <EmbeddedResource Include="resources\Resources.fr_CA.resx" />
+    <EmbeddedResource Include="resources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\admin\AdminPost.resx">
       <DependentUpon>AdminPost.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,10 +95,41 @@
     <EmbeddedResource Include="view\admin\UserReport.resx">
       <DependentUpon>UserReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Login.en-US.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Login.fr-CA.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Overview.fr-CA.resx">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Register.fr-CA.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\DetailedProfile.fr-CA.resx">
+      <DependentUpon>DetailedProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\NewPost.fr-CA.resx">
+      <DependentUpon>NewPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\NewUserReport.fr-CA.resx">
+      <DependentUpon>NewUserReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\Profile.fr-CA.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\UserOverview.fr-CA.resx">
+      <DependentUpon>UserOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\UserOverview.fr.resx">
+      <DependentUpon>UserOverview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\user\UserPostProfile.resx">
       <DependentUpon>UserPostProfile.cs</DependentUpon>
     </EmbeddedResource>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />

@@ -117,108 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="followButton.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;reportButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="followButton.Text" xml:space="preserve">
+    <value>Suivre</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="reportButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>980, 10</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Profile</value>
-  </data>
-  <data name="usernameLinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="usernameLinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16.2pt, style=Bold</value>
-  </data>
-  <data name="usernameLinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1196, 53</value>
+    <value>1192, 49</value>
   </data>
-  <data name="&gt;&gt;reportButton.Name" xml:space="preserve">
-    <value>reportButton</value>
-  </data>
-  <data name="reportButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 13.8pt</value>
-  </data>
-  <data name="usernameLinkLabel.Text" xml:space="preserve">
-    <value>USERNAME</value>
-  </data>
-  <data name="followButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1024, 10</value>
-  </data>
-  <data name="&gt;&gt;followButton.Name" xml:space="preserve">
-    <value>followButton</value>
-  </data>
-  <data name="reportButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 38</value>
-  </data>
-  <data name="&gt;&gt;followButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="reportButton.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;reportButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="reportButton.Text" xml:space="preserve">
-    <value>⚠️</value>
-  </data>
-  <data name="&gt;&gt;usernameLinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="followButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 38</value>
-  </data>
-  <data name="&gt;&gt;followButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;reportButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="followButton.Text" xml:space="preserve">
-    <value>Follow</value>
-  </data>
-  <data name="&gt;&gt;usernameLinkLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;followButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;usernameLinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="followButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16.2pt, style=Bold</value>
-  </data>
-  <data name="usernameLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 32</value>
-  </data>
-  <data name="usernameLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="&gt;&gt;usernameLinkLabel.Name" xml:space="preserve">
-    <value>usernameLinkLabel</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>fr-CA</value>
-  </metadata>
 </root>

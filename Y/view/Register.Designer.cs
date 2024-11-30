@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.loginLabel = new System.Windows.Forms.LinkLabel();
             this.enterButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,117 +40,84 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateOfBirthPicker = new System.Windows.Forms.DateTimePicker();
             this.dateOfBirthLabel = new System.Windows.Forms.Label();
+            this.languageComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // loginLabel
             // 
-            this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(281, 370);
+            resources.ApplyResources(this.loginLabel, "loginLabel");
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(125, 16);
-            this.loginLabel.TabIndex = 13;
             this.loginLabel.TabStop = true;
-            this.loginLabel.Text = "Already registered?";
             this.loginLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.loginLabel_LinkClicked);
             // 
             // enterButton
             // 
-            this.enterButton.Location = new System.Drawing.Point(443, 383);
+            resources.ApplyResources(this.enterButton, "enterButton");
             this.enterButton.Name = "enterButton";
-            this.enterButton.Size = new System.Drawing.Size(78, 33);
-            this.enterButton.TabIndex = 12;
-            this.enterButton.Text = "Enter";
             this.enterButton.UseVisualStyleBackColor = true;
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(280, 310);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Password:";
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(284, 329);
+            resources.ApplyResources(this.passwordTextBox, "passwordTextBox");
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(237, 38);
-            this.passwordTextBox.TabIndex = 10;
             this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // usernameLabel
             // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(280, 130);
+            resources.ApplyResources(this.usernameLabel, "usernameLabel");
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(91, 20);
-            this.usernameLabel.TabIndex = 9;
-            this.usernameLabel.Text = "Username:";
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(284, 151);
+            resources.ApplyResources(this.usernameTextBox, "usernameTextBox");
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(237, 38);
-            this.usernameTextBox.TabIndex = 8;
             // 
             // YLabel
             // 
-            this.YLabel.AutoSize = true;
-            this.YLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YLabel.Location = new System.Drawing.Point(341, -5);
+            resources.ApplyResources(this.YLabel, "YLabel");
             this.YLabel.Name = "YLabel";
-            this.YLabel.Size = new System.Drawing.Size(123, 135);
-            this.YLabel.TabIndex = 7;
-            this.YLabel.Text = "𝕐";
             // 
             // emailLabel
             // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(280, 195);
+            resources.ApplyResources(this.emailLabel, "emailLabel");
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(56, 20);
-            this.emailLabel.TabIndex = 15;
-            this.emailLabel.Text = "Email:";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(284, 218);
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 38);
-            this.textBox1.TabIndex = 14;
             // 
             // dateOfBirthPicker
             // 
-            this.dateOfBirthPicker.Location = new System.Drawing.Point(284, 282);
+            resources.ApplyResources(this.dateOfBirthPicker, "dateOfBirthPicker");
             this.dateOfBirthPicker.Name = "dateOfBirthPicker";
-            this.dateOfBirthPicker.Size = new System.Drawing.Size(237, 22);
-            this.dateOfBirthPicker.TabIndex = 16;
             // 
             // dateOfBirthLabel
             // 
-            this.dateOfBirthLabel.AutoSize = true;
-            this.dateOfBirthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfBirthLabel.Location = new System.Drawing.Point(280, 259);
+            resources.ApplyResources(this.dateOfBirthLabel, "dateOfBirthLabel");
             this.dateOfBirthLabel.Name = "dateOfBirthLabel";
-            this.dateOfBirthLabel.Size = new System.Drawing.Size(102, 20);
-            this.dateOfBirthLabel.TabIndex = 17;
-            this.dateOfBirthLabel.Text = "Date of birth";
+            // 
+            // languageComboBox
+            // 
+            resources.ApplyResources(this.languageComboBox, "languageComboBox");
+            this.languageComboBox.FormattingEnabled = true;
+            this.languageComboBox.Items.AddRange(new object[] {
+            resources.GetString("languageComboBox.Items"),
+            resources.GetString("languageComboBox.Items1")});
+            this.languageComboBox.Name = "languageComboBox";
+            this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.languageComboBox);
             this.Controls.Add(this.dateOfBirthLabel);
             this.Controls.Add(this.dateOfBirthPicker);
             this.Controls.Add(this.emailLabel);
@@ -162,7 +130,6 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.YLabel);
             this.Name = "Register";
-            this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +148,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateOfBirthPicker;
         private System.Windows.Forms.Label dateOfBirthLabel;
+        private System.Windows.Forms.ComboBox languageComboBox;
     }
 }

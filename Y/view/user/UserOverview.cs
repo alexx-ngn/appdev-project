@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using Y.view.user;
 
@@ -44,7 +46,6 @@ namespace Y
         private void UserOverview_Load(object sender, EventArgs e)
         {
             loadPosts();
-            //hideTabs();
         }
 
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,12 +56,15 @@ namespace Y
                 switch (item.Text)
                 {
                     case "Home":
+                    case "Accueil":
                         OverviewTabControl.SelectedTab = homeTab;
                         break;
                     case "Search":
+                    case "Chercher":
                         OverviewTabControl.SelectedTab = searchTab;
                         break;
                     case "My Profile":
+                    case "Mon Profil":
                         OverviewTabControl.SelectedTab = profileTab;
                         break;
                     default:
@@ -74,6 +78,25 @@ namespace Y
             searchFlowLayoutPanel.Controls.Clear();
         }
 
-        
+        private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (languageComboBox.SelectedIndex)
+            {
+                case 0:
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                    break;
+                case 1:
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-CA");
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("fr-CA");
+                    break;
+                default:
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                    break;
+            }
+            this.Controls.Clear();
+            InitializeComponent();
+        }
     }
 }
