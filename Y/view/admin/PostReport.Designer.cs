@@ -58,18 +58,18 @@
             this.banButton.Name = "banButton";
             this.banButton.Size = new System.Drawing.Size(72, 33);
             this.banButton.TabIndex = 18;
-            this.banButton.Text = "❌";
+            this.banButton.Text = "BAN";
             this.banButton.UseVisualStyleBackColor = true;
             // 
             // allowButton
             // 
             this.allowButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allowButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.allowButton.Location = new System.Drawing.Point(1062, 547);
+            this.allowButton.Location = new System.Drawing.Point(1031, 547);
             this.allowButton.Name = "allowButton";
-            this.allowButton.Size = new System.Drawing.Size(72, 33);
+            this.allowButton.Size = new System.Drawing.Size(103, 33);
             this.allowButton.TabIndex = 19;
-            this.allowButton.Text = "✅";
+            this.allowButton.Text = "DISMISS";
             this.allowButton.UseVisualStyleBackColor = true;
             // 
             // PostReport

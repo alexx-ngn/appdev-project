@@ -90,7 +90,7 @@ namespace Y.view.admin
             if (userReportsListView.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = userReportsListView.SelectedItems[0];
-                MessageBox.Show("Selected Report: " + selectedItem.Text);
+                new UserReport().ShowDialog();
             }
         }
 
@@ -106,6 +106,11 @@ namespace Y.view.admin
         private void searchEnterButton_Click(object sender, EventArgs e)
         {
             loadSearchResults();
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            searchListView.Items.Clear();
         }
     }
 }

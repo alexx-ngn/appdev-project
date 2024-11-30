@@ -53,6 +53,7 @@
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchEnterButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.sideViewPanel.SuspendLayout();
             this.overviewTabControl.SuspendLayout();
             this.reportsTab.SuspendLayout();
@@ -215,6 +216,7 @@
             // 
             // searchPanel
             // 
+            this.searchPanel.Controls.Add(this.clearButton);
             this.searchPanel.Controls.Add(this.searchListView);
             this.searchPanel.Controls.Add(this.searchLabel);
             this.searchPanel.Controls.Add(this.searchTextBox);
@@ -274,6 +276,17 @@
             this.searchEnterButton.UseVisualStyleBackColor = true;
             this.searchEnterButton.Click += new System.EventHandler(this.searchEnterButton_Click);
             // 
+            // clearButton
+            // 
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(436, 0);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(35, 35);
+            this.clearButton.TabIndex = 15;
+            this.clearButton.Text = "❌";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // AdminOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -320,5 +333,6 @@
         private System.Windows.Forms.ColumnHeader UserReportDateColumn;
         private System.Windows.Forms.ListView searchListView;
         private System.Windows.Forms.ColumnHeader UserColumn;
+        private System.Windows.Forms.Button clearButton;
     }
 }

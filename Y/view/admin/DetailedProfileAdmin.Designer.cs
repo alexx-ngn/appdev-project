@@ -73,7 +73,7 @@
             // 
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.Red;
-            this.deleteButton.Location = new System.Drawing.Point(345, 8);
+            this.deleteButton.Location = new System.Drawing.Point(1203, 453);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(72, 33);
             this.deleteButton.TabIndex = 17;
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1339, 450);
+            this.ClientSize = new System.Drawing.Size(1317, 498);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.PostsFlowLayoutPanel);

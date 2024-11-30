@@ -57,6 +57,12 @@
     <Compile Include="view\admin\ReasonUserControl.Designer.cs">
       <DependentUpon>ReasonUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\admin\UserReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\UserReport.Designer.cs">
+      <DependentUpon>UserReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\user\UserPostProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\admin\ReasonUserControl.resx">
       <DependentUpon>ReasonUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\UserReport.resx">
+      <DependentUpon>UserReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\user\UserPostProfile.resx">
       <DependentUpon>UserPostProfile.cs</DependentUpon>
