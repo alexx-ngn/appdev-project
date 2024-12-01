@@ -60,7 +60,7 @@ namespace Y
                         OverviewTabControl.SelectedTab = homeTab;
                         break;
                     case "Search":
-                    case "Chercher":
+                    case "Recherche":
                         OverviewTabControl.SelectedTab = searchTab;
                         break;
                     case "My Profile":
@@ -96,7 +96,7 @@ namespace Y
                     break;
             }
             this.Controls.Clear();
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

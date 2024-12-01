@@ -96,6 +96,7 @@
             // dateOfBirthPicker
             // 
             resources.ApplyResources(this.dateOfBirthPicker, "dateOfBirthPicker");
+            this.dateOfBirthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateOfBirthPicker.Name = "dateOfBirthPicker";
             // 
             // dateOfBirthLabel

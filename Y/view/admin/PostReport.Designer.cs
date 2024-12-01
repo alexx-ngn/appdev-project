@@ -28,71 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userPost1 = new Y.UserPost();
-            this.reasonUserControl1 = new Y.view.ReasonUserControl();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PostReport));
+            this.userPost = new Y.UserPost();
+            this.reasonUserControl = new Y.view.ReasonUserControl();
             this.banButton = new System.Windows.Forms.Button();
             this.allowButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // userPost1
+            // userPost
             // 
-            this.userPost1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.userPost1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.userPost1.Location = new System.Drawing.Point(12, 291);
-            this.userPost1.Name = "userPost1";
-            this.userPost1.Size = new System.Drawing.Size(1200, 242);
-            this.userPost1.TabIndex = 0;
+            resources.ApplyResources(this.userPost, "userPost");
+            this.userPost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.userPost.Name = "userPost";
             // 
-            // reasonUserControl1
+            // reasonUserControl
             // 
-            this.reasonUserControl1.Location = new System.Drawing.Point(12, 12);
-            this.reasonUserControl1.Name = "reasonUserControl1";
-            this.reasonUserControl1.Size = new System.Drawing.Size(1200, 262);
-            this.reasonUserControl1.TabIndex = 1;
+            resources.ApplyResources(this.reasonUserControl, "reasonUserControl");
+            this.reasonUserControl.Name = "reasonUserControl";
             // 
             // banButton
             // 
-            this.banButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.banButton, "banButton");
             this.banButton.ForeColor = System.Drawing.Color.Red;
-            this.banButton.Location = new System.Drawing.Point(1140, 547);
             this.banButton.Name = "banButton";
-            this.banButton.Size = new System.Drawing.Size(72, 33);
-            this.banButton.TabIndex = 18;
-            this.banButton.Text = "BAN";
             this.banButton.UseVisualStyleBackColor = true;
             this.banButton.Click += new System.EventHandler(this.banButton_Click);
             // 
             // allowButton
             // 
-            this.allowButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.allowButton, "allowButton");
             this.allowButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.allowButton.Location = new System.Drawing.Point(1031, 547);
             this.allowButton.Name = "allowButton";
-            this.allowButton.Size = new System.Drawing.Size(103, 33);
-            this.allowButton.TabIndex = 19;
-            this.allowButton.Text = "DISMISS";
             this.allowButton.UseVisualStyleBackColor = true;
             this.allowButton.Click += new System.EventHandler(this.allowButton_Click);
             // 
             // PostReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 592);
             this.Controls.Add(this.allowButton);
             this.Controls.Add(this.banButton);
-            this.Controls.Add(this.reasonUserControl1);
-            this.Controls.Add(this.userPost1);
+            this.Controls.Add(this.reasonUserControl);
+            this.Controls.Add(this.userPost);
             this.Name = "PostReport";
-            this.Text = "Post Report";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private UserPost userPost1;
-        private ReasonUserControl reasonUserControl1;
+        private UserPost userPost;
+        private ReasonUserControl reasonUserControl;
         private System.Windows.Forms.Button banButton;
         private System.Windows.Forms.Button allowButton;
     }

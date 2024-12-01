@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +20,30 @@ namespace Y
 
         private void reportButton_Click(object sender, EventArgs e)
         {
+            var culture = CultureInfo.CurrentUICulture.ToString();
             if (reportRichTextBox.Text == "")
             {
-                MessageBox.Show("Please enter your message.");
+                switch (culture)
+                {
+                    case "fr-CA":
+                        MessageBox.Show("Veuillez entrez votre raison.");
+                        break;
+                    default:
+                        MessageBox.Show("Please enter your statement.");
+                        break;
+                }
             }
             else
             {
-                MessageBox.Show("Report submitted.");
+                switch (culture)
+                {
+                    case "fr-CA":
+                        MessageBox.Show("L'utilisateur a été signalé.");
+                        break;
+                    default:
+                        MessageBox.Show("User has been reported.");
+                        break;
+                }
                 this.Close();
             }
         }

@@ -118,19 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="followButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>881, 10</value>
+  <data name="usernameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 32</value>
   </data>
-  <data name="followButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 38</value>
+  <data name="usernameLabel.Text" xml:space="preserve">
+    <value>USERNAME PROFIL</value>
   </data>
-  <data name="followButton.Text" xml:space="preserve">
-    <value>Suivre</value>
+  <data name="deleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1160, 453</value>
   </data>
-  <data name="reportButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 10</value>
+  <data name="deleteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 33</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1188, 45</value>
+  <data name="deleteButton.Text" xml:space="preserve">
+    <value>BANNIR</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Username Profil</value>
   </data>
 </root>

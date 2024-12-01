@@ -44,6 +44,7 @@
             this.reportButton.TabIndex = 15;
             this.reportButton.Text = "⚠️";
             this.reportButton.UseVisualStyleBackColor = true;
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
             // repostCounterLabel
             // 

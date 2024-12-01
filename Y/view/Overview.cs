@@ -15,7 +15,15 @@ namespace Overview
     {
         public Overview()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent(); // Add try-catch to identify specific initialization errors
+            }
+            catch (Exception ex)
+            {
+                // Log or display the specific initialization error
+                MessageBox.Show($"Initialization Error: {ex.Message}");
+            }
         }
 
         private void logoutButton_Click(object sender, EventArgs e)

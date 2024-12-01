@@ -80,17 +80,29 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\AdminOverview.fr-CA.resx">
+      <DependentUpon>AdminOverview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\admin\AdminPost.resx">
       <DependentUpon>AdminPost.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\DetailedProfileAdmin.fr-CA.resx">
+      <DependentUpon>DetailedProfileAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\admin\DetailedProfileAdmin.resx">
       <DependentUpon>DetailedProfileAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\PostReport.fr-CA.resx">
+      <DependentUpon>PostReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\admin\PostReport.resx">
       <DependentUpon>PostReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\admin\ReasonUserControl.resx">
       <DependentUpon>ReasonUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\UserReport.fr-CA.resx">
+      <DependentUpon>UserReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\admin\UserReport.resx">
       <DependentUpon>UserReport.cs</DependentUpon>

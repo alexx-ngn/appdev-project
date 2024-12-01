@@ -14,5 +14,10 @@ namespace Y.view.user
         {
             InitializeComponent();
         }
+
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            new NewUserReport().ShowDialog();
+        }
     }
 }

@@ -19,13 +19,20 @@ namespace Y
 
         private void followButton_Click(object sender, EventArgs e)
         {
-            if (followButton.Text == "Follow")
+            switch (followButton.Text)
             {
-                followButton.Text = "Unfollow";
-            }
-            else
-            {
-                followButton.Text = "Follow";
+                case "Follow":
+                    followButton.Text = "Unfollow";
+                    break;
+                case "Unfollow":
+                    followButton.Text = "Follow";
+                    break;
+                case "Suivre":
+                    followButton.Text = "Ne plus suivre";
+                    break;
+                case "Ne plus suivre":
+                    followButton.Text = "Suivre";
+                    break;
             }
         }
 
