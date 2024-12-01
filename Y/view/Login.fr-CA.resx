@@ -134,10 +134,10 @@
     <value>Entrer</value>
   </data>
   <data name="registerLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 16</value>
+    <value>95, 16</value>
   </data>
   <data name="registerLabel.Text" xml:space="preserve">
-    <value>Enregistrez vous!</value>
+    <value>Inscrivez-vous!</value>
   </data>
   <data name="languageComboBox.Text" xml:space="preserve">
     <value>Langue</value>

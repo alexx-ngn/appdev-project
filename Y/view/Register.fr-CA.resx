@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="loginLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 16</value>
+    <value>103, 16</value>
   </data>
   <data name="loginLabel.Text" xml:space="preserve">
-    <value>Déjà enregistré?</value>
+    <value>Connectez-vous</value>
   </data>
   <data name="enterButton.Text" xml:space="preserve">
     <value>Entrer</value>
@@ -155,6 +155,6 @@
     <value>Langue</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Enregistrer</value>
+    <value>Inscription</value>
   </data>
 </root>
