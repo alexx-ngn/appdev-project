@@ -45,7 +45,7 @@ namespace Y.view.admin
             switch (culture)
             {
                 case "fr-CA":
-                    MessageBox.Show("L'utilisateur est suprimé.");
+                    MessageBox.Show("L'utilisateur est supprimé.");
                     break;
                 default:
                     MessageBox.Show("The user is banned.");

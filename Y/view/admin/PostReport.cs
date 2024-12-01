@@ -43,7 +43,7 @@ namespace Y.view.admin
             switch (culture)
             {
                 case "fr-CA":
-                    MessageBox.Show("La publication est suprimée.");
+                    MessageBox.Show("La publication est supprimée.");
                     break;
                 default:
                     MessageBox.Show("The post is removed.");
