@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PostReport.cs" />
+    <Compile Include="ReportSystem.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="UserReport.cs" />
     <Compile Include="view\admin\AdminPost.cs">
       <SubType>UserControl</SubType>
     </Compile>
