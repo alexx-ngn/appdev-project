@@ -53,5 +53,22 @@ namespace Y
                 Posts.Remove(post);
             }
         }
+
+        public void reportUser(UserAccount account, String reason)
+        {
+            UserReport report = new UserReport(account.Id, reason, this.Id);
+            ReportSystem.FileReport(report);
+        }
+
+        public void reportPost(UserAccount account, String reason)
+        {
+            PostReport report = new PostReport(account.Id, reason, this.Id);
+            ReportSystem.FileReport(report);
+        }
+
+        public IReadOnlyList<Post> GetPosts()
+        {
+            return Posts.AsReadOnly(); // Expose the list as a read-only collection
+        }
     }
 }
