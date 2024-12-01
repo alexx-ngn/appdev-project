@@ -33,11 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="resources\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="view\admin\AdminPost.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,12 +69,6 @@
     <Compile Include="view\user\UserPostProfile.Designer.cs">
       <DependentUpon>UserPostProfile.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="resources\Resources.en_US.resx" />
-    <EmbeddedResource Include="resources\Resources.fr_CA.resx" />
-    <EmbeddedResource Include="resources\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\admin\AdminOverview.fr-CA.resx">
       <DependentUpon>AdminOverview.cs</DependentUpon>
     </EmbeddedResource>

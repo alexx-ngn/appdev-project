@@ -19,12 +19,30 @@ namespace Y
 
         private void postButton_Click(object sender, EventArgs e)
         {
+            var culture = System.Globalization.CultureInfo.CurrentUICulture.ToString();
+            
             if (postRichTextBox.Text == "") {
-                MessageBox.Show("Please enter content.");
+                switch (culture)
+                {
+                    case "fr-CA":
+                        MessageBox.Show("Veuillez entrez votre contenu.");
+                        break;
+                    default:
+                        MessageBox.Show("Please enter your content.");
+                        break;
+                }
             }
             else
             {
-                MessageBox.Show("Post submitted.");
+                switch (culture)
+                {
+                    case "fr-CA":
+                        MessageBox.Show("Publication a été publiée.");
+                        break;
+                    default:
+                        MessageBox.Show("Post submitted.");
+                        break;
+                }
                 this.Close();
             }
         }

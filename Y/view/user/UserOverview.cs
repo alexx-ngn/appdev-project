@@ -77,26 +77,5 @@ namespace Y
         {
             searchFlowLayoutPanel.Controls.Clear();
         }
-
-        private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (languageComboBox.SelectedIndex)
-            {
-                case 0:
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-                    break;
-                case 1:
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-CA");
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("fr-CA");
-                    break;
-                default:
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-                    break;
-            }
-            this.Controls.Clear();
-            this.InitializeComponent();
-        }
     }
 }

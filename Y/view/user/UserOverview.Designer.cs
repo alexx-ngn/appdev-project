@@ -59,7 +59,6 @@
             this.homeTab = new System.Windows.Forms.TabPage();
             this.searchTab = new System.Windows.Forms.TabPage();
             this.profileTab = new System.Windows.Forms.TabPage();
-            this.languageComboBox = new System.Windows.Forms.ComboBox();
             this.sideViewPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.searchFlowLayoutPanel.SuspendLayout();
@@ -222,8 +221,8 @@
             // homePanel
             // 
             resources.ApplyResources(this.homePanel, "homePanel");
-            this.homePanel.Controls.Add(this.overviewLabel);
             this.homePanel.Controls.Add(this.overviewFlowLayoutPanel);
+            this.homePanel.Controls.Add(this.overviewLabel);
             this.homePanel.Name = "homePanel";
             // 
             // overviewLabel
@@ -278,27 +277,15 @@
             this.profileTab.Name = "profileTab";
             this.profileTab.UseVisualStyleBackColor = true;
             // 
-            // languageComboBox
-            // 
-            resources.ApplyResources(this.languageComboBox, "languageComboBox");
-            this.languageComboBox.FormattingEnabled = true;
-            this.languageComboBox.Items.AddRange(new object[] {
-            resources.GetString("languageComboBox.Items"),
-            resources.GetString("languageComboBox.Items1")});
-            this.languageComboBox.Name = "languageComboBox";
-            this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
-            // 
             // UserOverview
             // 
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.languageComboBox);
             this.Controls.Add(this.OverviewTabControl);
             this.Controls.Add(this.sideViewPanel);
             this.Name = "UserOverview";
             this.Load += new System.EventHandler(this.UserOverview_Load);
             this.Controls.SetChildIndex(this.sideViewPanel, 0);
             this.Controls.SetChildIndex(this.OverviewTabControl, 0);
-            this.Controls.SetChildIndex(this.languageComboBox, 0);
             this.sideViewPanel.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
@@ -348,6 +335,5 @@
         private Profile profile9;
         private Profile profile10;
         private Profile profile11;
-        private System.Windows.Forms.ComboBox languageComboBox;
     }
 }

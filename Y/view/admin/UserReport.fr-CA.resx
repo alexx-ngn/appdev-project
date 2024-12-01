@@ -125,7 +125,10 @@
     <value>USERNAME PROFIL</value>
   </data>
   <data name="allowButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1041, 547</value>
+    <value>1022, 547</value>
+  </data>
+  <data name="allowButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 33</value>
   </data>
   <data name="allowButton.Text" xml:space="preserve">
     <value>REJETER</value>

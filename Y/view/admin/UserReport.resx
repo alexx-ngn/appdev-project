@@ -170,6 +170,9 @@
   <data name="banButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
   </data>
+  <data name="&gt;&gt;banButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;allowButton.Name" xml:space="preserve">
     <value>allowButton</value>
   </data>
@@ -218,9 +221,6 @@
   </data>
   <data name="&gt;&gt;banButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PostsFlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 44</value>
   </data>
   <data name="post1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1200, 300</value>
@@ -303,8 +303,8 @@
   <data name="&gt;&gt;post2.Type" xml:space="preserve">
     <value>Y.UserPost, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;banButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="PostsFlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 44</value>
   </data>
   <data name="post3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>

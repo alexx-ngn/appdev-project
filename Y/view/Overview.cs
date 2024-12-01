@@ -15,14 +15,8 @@ namespace Overview
     {
         public Overview()
         {
-            try
             {
                 InitializeComponent(); // Add try-catch to identify specific initialization errors
-            }
-            catch (Exception ex)
-            {
-                // Log or display the specific initialization error
-                MessageBox.Show($"Initialization Error: {ex.Message}");
             }
         }
 

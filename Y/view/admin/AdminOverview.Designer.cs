@@ -51,7 +51,6 @@
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchEnterButton = new System.Windows.Forms.Button();
-            this.languageComboBox = new System.Windows.Forms.ComboBox();
             this.sideViewPanel.SuspendLayout();
             this.overviewTabControl.SuspendLayout();
             this.reportsTab.SuspendLayout();
@@ -216,26 +215,14 @@
             this.searchEnterButton.UseVisualStyleBackColor = true;
             this.searchEnterButton.Click += new System.EventHandler(this.searchEnterButton_Click);
             // 
-            // languageComboBox
-            // 
-            resources.ApplyResources(this.languageComboBox, "languageComboBox");
-            this.languageComboBox.FormattingEnabled = true;
-            this.languageComboBox.Items.AddRange(new object[] {
-            resources.GetString("languageComboBox.Items"),
-            resources.GetString("languageComboBox.Items1")});
-            this.languageComboBox.Name = "languageComboBox";
-            this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
-            // 
             // AdminOverview
             // 
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.languageComboBox);
             this.Controls.Add(this.overviewTabControl);
             this.Controls.Add(this.sideViewPanel);
             this.Name = "AdminOverview";
             this.Controls.SetChildIndex(this.sideViewPanel, 0);
             this.Controls.SetChildIndex(this.overviewTabControl, 0);
-            this.Controls.SetChildIndex(this.languageComboBox, 0);
             this.sideViewPanel.ResumeLayout(false);
             this.overviewTabControl.ResumeLayout(false);
             this.reportsTab.ResumeLayout(false);
@@ -274,6 +261,5 @@
         private System.Windows.Forms.ListView searchListView;
         private System.Windows.Forms.ColumnHeader UserColumn;
         private System.Windows.Forms.Button clearButton;
-        private System.Windows.Forms.ComboBox languageComboBox;
     }
 }
