@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPost));
             this.postRichTextBox = new System.Windows.Forms.RichTextBox();
             this.newPostLabel = new System.Windows.Forms.Label();
             this.postButton = new System.Windows.Forms.Button();
@@ -35,43 +36,29 @@
             // 
             // postRichTextBox
             // 
-            this.postRichTextBox.Location = new System.Drawing.Point(12, 41);
+            resources.ApplyResources(this.postRichTextBox, "postRichTextBox");
             this.postRichTextBox.Name = "postRichTextBox";
-            this.postRichTextBox.Size = new System.Drawing.Size(607, 96);
-            this.postRichTextBox.TabIndex = 0;
-            this.postRichTextBox.Text = "";
             // 
             // newPostLabel
             // 
-            this.newPostLabel.AutoSize = true;
-            this.newPostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newPostLabel.Location = new System.Drawing.Point(12, 18);
+            resources.ApplyResources(this.newPostLabel, "newPostLabel");
             this.newPostLabel.Name = "newPostLabel";
-            this.newPostLabel.Size = new System.Drawing.Size(191, 20);
-            this.newPostLabel.TabIndex = 1;
-            this.newPostLabel.Text = "What\'s on your mind?";
             // 
             // postButton
             // 
-            this.postButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postButton.Location = new System.Drawing.Point(544, 143);
+            resources.ApplyResources(this.postButton, "postButton");
             this.postButton.Name = "postButton";
-            this.postButton.Size = new System.Drawing.Size(75, 23);
-            this.postButton.TabIndex = 2;
-            this.postButton.Text = "Post";
             this.postButton.UseVisualStyleBackColor = true;
             this.postButton.Click += new System.EventHandler(this.postButton_Click);
             // 
             // NewPost
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 189);
             this.Controls.Add(this.postButton);
             this.Controls.Add(this.newPostLabel);
             this.Controls.Add(this.postRichTextBox);
             this.Name = "NewPost";
-            this.Text = "New Post";
             this.ResumeLayout(false);
             this.PerformLayout();
 

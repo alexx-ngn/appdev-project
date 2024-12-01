@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Reports"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Search"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminOverview));
             this.sideViewPanel = new System.Windows.Forms.Panel();
             this.sideListView = new System.Windows.Forms.ListView();
             this.overviewTabControl = new System.Windows.Forms.TabControl();
@@ -65,236 +62,165 @@
             // 
             // sideViewPanel
             // 
+            resources.ApplyResources(this.sideViewPanel, "sideViewPanel");
             this.sideViewPanel.Controls.Add(this.sideListView);
-            this.sideViewPanel.Location = new System.Drawing.Point(52, 372);
             this.sideViewPanel.Name = "sideViewPanel";
-            this.sideViewPanel.Size = new System.Drawing.Size(150, 404);
-            this.sideViewPanel.TabIndex = 9;
             // 
             // sideListView
             // 
-            this.sideListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
-            this.sideListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.sideListView, "sideListView");
             this.sideListView.HideSelection = false;
             this.sideListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
-            this.sideListView.Location = new System.Drawing.Point(0, 0);
+            ((System.Windows.Forms.ListViewItem)(resources.GetObject("sideListView.Items"))),
+            ((System.Windows.Forms.ListViewItem)(resources.GetObject("sideListView.Items1")))});
             this.sideListView.Name = "sideListView";
             this.sideListView.Scrollable = false;
-            this.sideListView.Size = new System.Drawing.Size(150, 404);
-            this.sideListView.TabIndex = 2;
             this.sideListView.UseCompatibleStateImageBehavior = false;
             this.sideListView.View = System.Windows.Forms.View.Tile;
             this.sideListView.SelectedIndexChanged += new System.EventHandler(this.sideListView_SelectedIndexChanged);
             // 
             // overviewTabControl
             // 
+            resources.ApplyResources(this.overviewTabControl, "overviewTabControl");
             this.overviewTabControl.Controls.Add(this.reportsTab);
             this.overviewTabControl.Controls.Add(this.searchTab);
-            this.overviewTabControl.Location = new System.Drawing.Point(223, 26);
             this.overviewTabControl.Name = "overviewTabControl";
             this.overviewTabControl.SelectedIndex = 0;
-            this.overviewTabControl.Size = new System.Drawing.Size(1297, 750);
-            this.overviewTabControl.TabIndex = 18;
             // 
             // reportsTab
             // 
+            resources.ApplyResources(this.reportsTab, "reportsTab");
             this.reportsTab.Controls.Add(this.homePanel);
-            this.reportsTab.Location = new System.Drawing.Point(4, 25);
             this.reportsTab.Name = "reportsTab";
-            this.reportsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.reportsTab.Size = new System.Drawing.Size(1289, 721);
-            this.reportsTab.TabIndex = 0;
-            this.reportsTab.Text = "Reports";
             this.reportsTab.UseVisualStyleBackColor = true;
             // 
             // homePanel
             // 
+            resources.ApplyResources(this.homePanel, "homePanel");
             this.homePanel.Controls.Add(this.label1);
             this.homePanel.Controls.Add(this.reportsLabel);
             this.homePanel.Controls.Add(this.overviewFlowLayoutPanel);
-            this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homePanel.Location = new System.Drawing.Point(3, 3);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(1283, 715);
-            this.homePanel.TabIndex = 15;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(625, 3);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 32);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "User Reports";
             // 
             // reportsLabel
             // 
-            this.reportsLabel.AutoSize = true;
-            this.reportsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportsLabel.Location = new System.Drawing.Point(3, 0);
+            resources.ApplyResources(this.reportsLabel, "reportsLabel");
             this.reportsLabel.Name = "reportsLabel";
-            this.reportsLabel.Size = new System.Drawing.Size(189, 32);
-            this.reportsLabel.TabIndex = 10;
-            this.reportsLabel.Text = "Post Reports";
             // 
             // overviewFlowLayoutPanel
             // 
-            this.overviewFlowLayoutPanel.AutoScroll = true;
+            resources.ApplyResources(this.overviewFlowLayoutPanel, "overviewFlowLayoutPanel");
             this.overviewFlowLayoutPanel.Controls.Add(this.postReportsListView);
             this.overviewFlowLayoutPanel.Controls.Add(this.userReportsListView);
-            this.overviewFlowLayoutPanel.Location = new System.Drawing.Point(0, 35);
             this.overviewFlowLayoutPanel.Name = "overviewFlowLayoutPanel";
-            this.overviewFlowLayoutPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.overviewFlowLayoutPanel.Size = new System.Drawing.Size(1298, 677);
-            this.overviewFlowLayoutPanel.TabIndex = 9;
             // 
             // postReportsListView
             // 
-            this.postReportsListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            resources.ApplyResources(this.postReportsListView, "postReportsListView");
             this.postReportsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.PostReportPostColumn,
             this.PostReportDateColumn});
-            this.postReportsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.postReportsListView.HideSelection = false;
-            this.postReportsListView.Location = new System.Drawing.Point(3, 3);
             this.postReportsListView.Name = "postReportsListView";
-            this.postReportsListView.Size = new System.Drawing.Size(623, 674);
-            this.postReportsListView.TabIndex = 0;
             this.postReportsListView.UseCompatibleStateImageBehavior = false;
             this.postReportsListView.View = System.Windows.Forms.View.Details;
             this.postReportsListView.Click += new System.EventHandler(this.postReportsListView_Click);
             // 
             // PostReportPostColumn
             // 
-            this.PostReportPostColumn.Text = "Post";
-            this.PostReportPostColumn.Width = 154;
+            resources.ApplyResources(this.PostReportPostColumn, "PostReportPostColumn");
             // 
             // PostReportDateColumn
             // 
-            this.PostReportDateColumn.Text = "Date";
-            this.PostReportDateColumn.Width = 165;
+            resources.ApplyResources(this.PostReportDateColumn, "PostReportDateColumn");
             // 
             // userReportsListView
             // 
-            this.userReportsListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            resources.ApplyResources(this.userReportsListView, "userReportsListView");
             this.userReportsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.UserReportUserColumn,
             this.UserReportDateColumn});
-            this.userReportsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userReportsListView.HideSelection = false;
-            this.userReportsListView.Location = new System.Drawing.Point(632, 3);
             this.userReportsListView.Name = "userReportsListView";
-            this.userReportsListView.Size = new System.Drawing.Size(631, 674);
-            this.userReportsListView.TabIndex = 1;
             this.userReportsListView.UseCompatibleStateImageBehavior = false;
             this.userReportsListView.View = System.Windows.Forms.View.Details;
             this.userReportsListView.Click += new System.EventHandler(this.userReportsListView_Click);
             // 
             // UserReportUserColumn
             // 
-            this.UserReportUserColumn.Text = "User";
-            this.UserReportUserColumn.Width = 155;
+            resources.ApplyResources(this.UserReportUserColumn, "UserReportUserColumn");
             // 
             // UserReportDateColumn
             // 
-            this.UserReportDateColumn.Text = "Date";
-            this.UserReportDateColumn.Width = 187;
+            resources.ApplyResources(this.UserReportDateColumn, "UserReportDateColumn");
             // 
             // searchTab
             // 
+            resources.ApplyResources(this.searchTab, "searchTab");
             this.searchTab.Controls.Add(this.searchPanel);
-            this.searchTab.Location = new System.Drawing.Point(4, 25);
             this.searchTab.Name = "searchTab";
-            this.searchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.searchTab.Size = new System.Drawing.Size(1289, 721);
-            this.searchTab.TabIndex = 1;
-            this.searchTab.Text = "Search";
             this.searchTab.UseVisualStyleBackColor = true;
             // 
             // searchPanel
             // 
+            resources.ApplyResources(this.searchPanel, "searchPanel");
             this.searchPanel.Controls.Add(this.searchListView);
             this.searchPanel.Controls.Add(this.clearButton);
             this.searchPanel.Controls.Add(this.searchLabel);
             this.searchPanel.Controls.Add(this.searchTextBox);
             this.searchPanel.Controls.Add(this.searchEnterButton);
-            this.searchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchPanel.Location = new System.Drawing.Point(3, 3);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(1283, 715);
-            this.searchPanel.TabIndex = 14;
             // 
             // searchListView
             // 
-            this.searchListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            resources.ApplyResources(this.searchListView, "searchListView");
             this.searchListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.UserColumn});
-            this.searchListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchListView.HideSelection = false;
-            this.searchListView.Location = new System.Drawing.Point(9, 38);
             this.searchListView.Name = "searchListView";
-            this.searchListView.Size = new System.Drawing.Size(1271, 674);
-            this.searchListView.TabIndex = 14;
             this.searchListView.UseCompatibleStateImageBehavior = false;
             this.searchListView.View = System.Windows.Forms.View.Details;
             this.searchListView.Click += new System.EventHandler(this.searchListView_Click);
             // 
             // UserColumn
             // 
-            this.UserColumn.Text = "User";
-            this.UserColumn.Width = 154;
+            resources.ApplyResources(this.UserColumn, "UserColumn");
             // 
             // clearButton
             // 
-            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(436, 0);
+            resources.ApplyResources(this.clearButton, "clearButton");
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(35, 35);
-            this.clearButton.TabIndex = 15;
-            this.clearButton.Text = "❌";
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // searchLabel
             // 
-            this.searchLabel.AutoSize = true;
-            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchLabel.Location = new System.Drawing.Point(3, 3);
+            resources.ApplyResources(this.searchLabel, "searchLabel");
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(119, 32);
-            this.searchLabel.TabIndex = 11;
-            this.searchLabel.Text = "Search:";
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox.Location = new System.Drawing.Point(128, -3);
+            resources.ApplyResources(this.searchTextBox, "searchTextBox");
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(261, 38);
-            this.searchTextBox.TabIndex = 12;
             // 
             // searchEnterButton
             // 
-            this.searchEnterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchEnterButton.Location = new System.Drawing.Point(395, 0);
+            resources.ApplyResources(this.searchEnterButton, "searchEnterButton");
             this.searchEnterButton.Name = "searchEnterButton";
-            this.searchEnterButton.Size = new System.Drawing.Size(35, 35);
-            this.searchEnterButton.TabIndex = 13;
-            this.searchEnterButton.Text = "🔍";
             this.searchEnterButton.UseVisualStyleBackColor = true;
             this.searchEnterButton.Click += new System.EventHandler(this.searchEnterButton_Click);
             // 
             // AdminOverview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1582, 853);
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.overviewTabControl);
             this.Controls.Add(this.sideViewPanel);
             this.Name = "AdminOverview";
-            this.Text = "Admin Overview";
             this.Controls.SetChildIndex(this.sideViewPanel, 0);
             this.Controls.SetChildIndex(this.overviewTabControl, 0);
             this.sideViewPanel.ResumeLayout(false);

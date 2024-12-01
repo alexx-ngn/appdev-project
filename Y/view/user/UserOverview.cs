@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using Y.view.user;
 
@@ -44,7 +46,6 @@ namespace Y
         private void UserOverview_Load(object sender, EventArgs e)
         {
             loadPosts();
-            //hideTabs();
         }
 
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,12 +56,15 @@ namespace Y
                 switch (item.Text)
                 {
                     case "Home":
+                    case "Accueil":
                         OverviewTabControl.SelectedTab = homeTab;
                         break;
                     case "Search":
+                    case "Recherche":
                         OverviewTabControl.SelectedTab = searchTab;
                         break;
                     case "My Profile":
+                    case "Mon Profil":
                         OverviewTabControl.SelectedTab = profileTab;
                         break;
                     default:
@@ -73,7 +77,5 @@ namespace Y
         {
             searchFlowLayoutPanel.Controls.Clear();
         }
-
-        
     }
 }

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using Y.view.admin;
 
@@ -66,9 +68,11 @@ namespace Y.view.admin
                 switch (item.Text)
                 {
                     case "Reports":
+                    case "Signaux":
                         overviewTabControl.SelectedTab = reportsTab;
                         break;
                     case "Search":
+                    case "Recherche":
                         overviewTabControl.SelectedTab = searchTab;
                         break;
                     default:
