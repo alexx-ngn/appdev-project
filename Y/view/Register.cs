@@ -17,8 +17,6 @@ namespace Y
         public Register()
         {
             InitializeComponent();
-            dateOfBirthPicker.MaxDate = DateTime.Now.AddYears(-16); //Minimum age to register is 16
-            dateOfBirthPicker.MinDate = DateTime.Now.AddYears(-100); //Maximum age to register is 100
         }
 
         private void loginLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -31,7 +29,45 @@ namespace Y
 
         private void enterButton_Click(object sender, EventArgs e)
         {
-            Account newUserAccount = new UserAccount(usernameTextBox.Text, emailTextBox.Text, passwordTextBox.Text, dateOfBirthPicker.Value);
+            if (usernameTextBox.Text == "" || emailTextBox.Text == "" || passwordTextBox.Text == "")
+            {
+                switch (Thread.CurrentThread.CurrentUICulture.Name)
+                {
+                    case "en-US":
+                        MessageBox.Show("Please fill in all fields");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Veuillez remplir tous les champs");
+                        break;
+                    default:
+                        MessageBox.Show("Please fill in all fields");
+                        break;
+                }
+            }
+            else
+            {
+                if (usernameTextBox.Text.Equals("admin"))                    {
+                    switch (Thread.CurrentThread.CurrentUICulture.Name)
+                    {
+                        case "en-US":
+                            MessageBox.Show("Username cannot be 'admin'");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show("Le nom d'utilisateur ne peut pas être 'admin'");
+                            break;
+                        default:
+                            MessageBox.Show("Username cannot be 'admin'");
+                            break;
+                    }
+
+                    UserAccount newUserAccount = new UserAccount(usernameTextBox.Text, emailTextBox.Text, passwordTextBox.Text);
+                    ReportSystem.AddUser(newUserAccount);
+                    this.Hide();
+                    Login login = new Login();
+                    login.ShowDialog();
+                    this.Close(); 
+                }
+            }
         }
 
         private void passwordTextBox_TextChanged(object sender, EventArgs e)

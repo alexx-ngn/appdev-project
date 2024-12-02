@@ -20,12 +20,9 @@ namespace Y
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(language);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(language);
 
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-            Application.Run(new UserOverview());
-            Application.Run(new AdminOverview());
         }
     }
 }

@@ -11,16 +11,16 @@ namespace Y
         public int FollowerCount { get; set; }
         private List<UserAccount> Followers {  get; set; }
         private List<Post> Posts { get; set; }
-        private static int idCount = 1;
+        private static int idCount = ReportSystem.getLastUserID();
 
-        public UserAccount(int id, string name, string email) : base(id, name, email)
+        public UserAccount(int id, string name, string email, string password) : base(id, name, email, password)
         {
             FollowerCount = 0;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
         }
 
-        public UserAccount(string name, string email) : base(name, email)
+        public UserAccount(string name, string email, string password) : base(name, email, password)
         {
             Id = idCount++;
             FollowerCount = 0;

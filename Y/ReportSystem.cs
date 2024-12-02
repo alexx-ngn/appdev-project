@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
+using System.Windows.Forms;
+using System.Data;
+using System.Data.SQLite;
 
 namespace Y
 {
@@ -13,81 +16,105 @@ namespace Y
         private static Queue<Report> ProcessingReports { get; set; } = new Queue<Report>();
         private static List<Report> ClosedReports { get; set; } = new List<Report>();
 
-        private static SqlConnection GetConnection()
+        private static SQLiteConnection GetConnection()
         {
             string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"database\Y_DB.sqlite");
-            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={databasePath};Integrated Security=True;";
-            return new SqlConnection(connectionString);
+            //string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={databasePath};Integrated Security=True;";
+            string connectionString = $@"Data Source={databasePath};";
+            return new SQLiteConnection(connectionString);
         }
 
         public static void AddUser(UserAccount user)
         {
-            using (SqlConnection connection = GetConnection())
+            using (SQLiteConnection connection = GetConnection())
             {
                 try
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO UserAccount (id, name, email, followerCount) VALUES (@id, @name, @email, @followerCount)";
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    string query = "INSERT INTO UserAccount (id, name, email, password, followerCount) VALUES (@id, @name, @email, @password, @followerCount)";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         // Add parameters to avoid SQL injection
                         command.Parameters.AddWithValue("@id", user.Id);
                         command.Parameters.AddWithValue("@name", user.Name);
                         command.Parameters.AddWithValue("@email", user.Email);
+                        command.Parameters.AddWithValue("@password", user.Password);
                         command.Parameters.AddWithValue("@followerCount", user.FollowerCount);
 
                         command.ExecuteNonQuery();
                     }
-
-                    Console.WriteLine("User added successfully.");
+                    UserAccounts.Add(user); // Add to in-memory list
+                    MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"{ex.Message}");
+                    MessageBox.Show($"Error adding user: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         public static void RemoveUser(UserAccount user)
         {
-            using (SqlConnection connection = GetConnection())
+            using (SQLiteConnection connection = GetConnection())
             {
                 try
                 {
                     connection.Open();
 
                     string query = "DELETE FROM UserAccount WHERE id = @id";
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@id", user.Id);
                         command.ExecuteNonQuery();
                     }
 
                     UserAccounts.Remove(user); // Also remove from in-memory list
-                    Console.WriteLine("User removed successfully.");
+                    MessageBox.Show("User removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error removing user: {ex.Message}");
+                    MessageBox.Show($"Error removing user: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        public static int getLastUserID()
+        {
+            try
+            {
+                using (SQLiteConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT MAX(id) FROM UserAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        return Convert.ToInt32(command.ExecuteScalar());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error getting last user ID: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
             }
         }
 
         public static void AddAdmin(AdminAccount admin)
         {
-            using (SqlConnection connection = GetConnection())
+            using (SQLiteConnection connection = GetConnection())
             {
                 try
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO AdminAccount (id, name, email) VALUES (@id, @name, @email)";
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    string query = "INSERT INTO AdminAccount (id, name, email, password) VALUES (@id, @name, @email, @password)";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@id", admin.Id);
                         command.Parameters.AddWithValue("@name", admin.Name);
                         command.Parameters.AddWithValue("@email", admin.Email);
+                        command.Parameters.AddWithValue("@password", admin.Password);
 
                         command.ExecuteNonQuery();
                     }
@@ -104,14 +131,14 @@ namespace Y
 
         public static void RemoveAdmin(AdminAccount admin)
         {
-            using (SqlConnection connection = GetConnection())
+            using (SQLiteConnection connection = GetConnection())
             {
                 try
                 {
                     connection.Open();
 
                     string query = "DELETE FROM AdminAccount WHERE id = @id";
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@id", admin.Id);
                         command.ExecuteNonQuery();
@@ -127,10 +154,31 @@ namespace Y
             }
         }
 
+        public static int getLastAdminID()
+        {
+            try
+            {
+                using (SQLiteConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT MAX(id) FROM AdminAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        return Convert.ToInt32(command.ExecuteScalar());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error getting last admin ID: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+
 
         public static void FileReport(Report report)
         {
-            using (SqlConnection connection = GetConnection())
+            using (SQLiteConnection connection = GetConnection())
             {
                 try
                 {
@@ -142,7 +190,7 @@ namespace Y
                     {
                         // UserReport: Insert into UserReport table
                         query = "INSERT INTO UserReport (id, reportingUserId, reason, reportedUserId) VALUES (@id, @reportingUserId, @reason, @reportedUserId)";
-                        using (SqlCommand command = new SqlCommand(query, connection))
+                        using (SQLiteCommand command = new SQLiteCommand(query, connection))
                         {
                             command.Parameters.AddWithValue("@id", userReport.Id);
                             command.Parameters.AddWithValue("@reportingUserId", userReport.ReportingUserId);
@@ -156,7 +204,7 @@ namespace Y
                     {
                         // PostReport: Insert into PostReport table
                         query = "INSERT INTO PostReport (id, reportingUserId, reason, reportedPostId) VALUES (@id, @reportingUserId, @reason, @reportedPostId)";
-                        using (SqlCommand command = new SqlCommand(query, connection))
+                        using (SQLiteCommand command = new SQLiteCommand(query, connection))
                         {
                             command.Parameters.AddWithValue("@id", postReport.Id);
                             command.Parameters.AddWithValue("@reportingUserId", postReport.ReportingUserId);
@@ -197,7 +245,7 @@ namespace Y
             {
                 Report report = ProcessingReports.Dequeue();
 
-                using (SqlConnection connection = GetConnection())
+                using (SQLiteConnection connection = GetConnection())
                 {
                     try
                     {
@@ -209,7 +257,7 @@ namespace Y
                         {
                             // Delete the report from UserReport table
                             query = "DELETE FROM UserReport WHERE id = @id";
-                            using (SqlCommand command = new SqlCommand(query, connection))
+                            using (SQLiteCommand command = new SQLiteCommand(query, connection))
                             {
                                 command.Parameters.AddWithValue("@id", userReport.Id);
                                 command.ExecuteNonQuery();
@@ -219,7 +267,7 @@ namespace Y
                         {
                             // Delete the report from PostReport table
                             query = "DELETE FROM PostReport WHERE id = @id";
-                            using (SqlCommand command = new SqlCommand(query, connection))
+                            using (SQLiteCommand command = new SQLiteCommand(query, connection))
                             {
                                 command.Parameters.AddWithValue("@id", postReport.Id);
                                 command.ExecuteNonQuery();

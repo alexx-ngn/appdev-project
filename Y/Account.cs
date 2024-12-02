@@ -12,19 +12,22 @@ namespace Y
         public string Name {get; set;}
         public string Email { get; set;}
         private DateTime CreationDate { get;}
+        public string Password { get; set; }
 
-        protected Account(int id, string name, string email)
+        public Account(int id, string name, string email, string password)
         {
             Id = id;
             Name = name;
             Email = email;
+            Password = password;
             CreationDate = DateTime.Now;
         }
 
-        protected Account(string name, string email)
+        public Account(string name, string email, string password)
         {
             Name = name;
             Email = email;
+            Password = password;
             CreationDate = DateTime.Now;
         }
         public abstract void removePost(Post post);

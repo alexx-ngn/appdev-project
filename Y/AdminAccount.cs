@@ -9,11 +9,11 @@ namespace Y
     public class AdminAccount : Account
     {
         private static int idCount = 1;
-        public AdminAccount(int id, string name, string email) : base(id, name, email)
+        public AdminAccount(int id, string name, string email, string password) : base(id, name, email, password)
         {
         }
 
-        public AdminAccount(string name, string email) : base(name, email)
+        public AdminAccount(string name, string email, string password) : base(name, email, password)
         {
             Id = idCount++;
         }
