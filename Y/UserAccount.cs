@@ -8,9 +8,10 @@ namespace Y
 {
     public class UserAccount : Account
     {
-        private int FollowerCount { get; set; }
+        public int FollowerCount { get; set; }
         private List<UserAccount> Followers {  get; set; }
         private List<Post> Posts { get; set; }
+        private static int idCount = 1;
 
         public UserAccount(int id, string name, string email) : base(id, name, email)
         {
@@ -21,6 +22,7 @@ namespace Y
 
         public UserAccount(string name, string email) : base(name, email)
         {
+            Id = idCount++;
             FollowerCount = 0;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();

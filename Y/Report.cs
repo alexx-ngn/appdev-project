@@ -8,14 +8,14 @@ namespace Y
 {
     public abstract class Report
     {
-        protected int Id {  get; set; }
-        protected int AdminId { get; set; } 
-        protected int ReportingUserId { get; set; }
-        protected String Reason { get; set; }
-        protected Status Status { get; set; }
-        protected DateTime DateReported { get;}
+        public int Id {  get; set; }
+        public int AdminId { get; set; } 
+        public int ReportingUserId { get; set; }
+        public String Reason { get; set; }
+        public Status Status { get; set; }
+        public DateTime DateReported { get;}
 
-        protected Report(int id, int reportingUserId, string reason)
+        public Report(int id, int reportingUserId, string reason)
         {
             Id = id;
             AdminId = 0;
@@ -26,7 +26,7 @@ namespace Y
         }
 
         //this is what is created in the userAccount class, not sure about other one and how to handle them
-        protected Report(int reportingUserId, string reason)
+        public Report(int reportingUserId, string reason)
         {
             AdminId = 0;
             ReportingUserId = reportingUserId;

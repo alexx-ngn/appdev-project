@@ -7,6 +7,7 @@ namespace Y
     {
         private int Id { get; set; }
         private string Text { get; set; }
+        private static int idCount = 1;
 
 
         private HashSet<Account> Likes { get; set; }
@@ -22,6 +23,7 @@ namespace Y
 
         public Post(string text)
         {
+            Id = idCount++;
             Text = text;
             Likes = new HashSet<Account>();
             DatePosted = DateTime.Now;

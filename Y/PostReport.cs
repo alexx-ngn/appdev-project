@@ -8,9 +8,11 @@ namespace Y
 {
     public class PostReport : Report
     {
-        private int ReportedPostId { get; set; }
+        public int ReportedPostId { get; set; }
+        private static int idCount = 1;
         public PostReport(int reportingUserId, string reason, int reportedPostId) : base(reportingUserId, reason)
         {
+            Id = idCount++;
             ReportedPostId = reportedPostId;
         }
     }

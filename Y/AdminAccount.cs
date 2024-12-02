@@ -8,20 +8,23 @@ namespace Y
 {
     public class AdminAccount : Account
     {
+        private static int idCount = 1;
         public AdminAccount(int id, string name, string email) : base(id, name, email)
         {
         }
 
         public AdminAccount(string name, string email) : base(name, email)
         {
+            Id = idCount++;
         }
+
         public void removeReport(Report ticket)
         {          
         }
 
         public void ban(UserAccount account)
         {
-            if (ReportSystem.getUserAccount().Contains(account))
+            if (ReportSystem.GetUserAccounts().Contains(account))
             {
                 ReportSystem.RemoveUser(account);
             }
@@ -39,6 +42,7 @@ namespace Y
                 return null;
             }
         }
+
         public void changeReportStatus(Report report, Status status)
         {
             report.ChangeStatus(status);
@@ -62,7 +66,7 @@ namespace Y
 
         private UserAccount FindAccountWithPost(Post post)
         {
-            foreach (UserAccount user in ReportSystem.getUserAccount()) // Assuming GetUserAccounts fetches all users
+            foreach (UserAccount user in ReportSystem.GetUserAccounts()) // Assuming GetUserAccounts fetches all users
             {
                 if (user.GetPosts().Contains(post)) // Check if the user's posts contain the given post
                 {
