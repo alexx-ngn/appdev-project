@@ -31,7 +31,7 @@ namespace Y
 
         private void enterButton_Click(object sender, EventArgs e)
         {
-
+            Account newUserAccount = new UserAccount(usernameTextBox.Text, emailTextBox.Text, passwordTextBox.Text, dateOfBirthPicker.Value);
         }
 
         private void passwordTextBox_TextChanged(object sender, EventArgs e)

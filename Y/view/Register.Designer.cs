@@ -37,9 +37,7 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.YLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateOfBirthPicker = new System.Windows.Forms.DateTimePicker();
-            this.dateOfBirthLabel = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
             this.languageComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -88,21 +86,10 @@
             resources.ApplyResources(this.emailLabel, "emailLabel");
             this.emailLabel.Name = "emailLabel";
             // 
-            // textBox1
+            // emailTextBox
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            // 
-            // dateOfBirthPicker
-            // 
-            resources.ApplyResources(this.dateOfBirthPicker, "dateOfBirthPicker");
-            this.dateOfBirthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateOfBirthPicker.Name = "dateOfBirthPicker";
-            // 
-            // dateOfBirthLabel
-            // 
-            resources.ApplyResources(this.dateOfBirthLabel, "dateOfBirthLabel");
-            this.dateOfBirthLabel.Name = "dateOfBirthLabel";
+            resources.ApplyResources(this.emailTextBox, "emailTextBox");
+            this.emailTextBox.Name = "emailTextBox";
             // 
             // languageComboBox
             // 
@@ -119,10 +106,8 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.languageComboBox);
-            this.Controls.Add(this.dateOfBirthLabel);
-            this.Controls.Add(this.dateOfBirthPicker);
             this.Controls.Add(this.emailLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.label1);
@@ -146,9 +131,7 @@
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label YLabel;
         private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateOfBirthPicker;
-        private System.Windows.Forms.Label dateOfBirthLabel;
+        private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.ComboBox languageComboBox;
     }
 }
