@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Y
 {
@@ -18,7 +19,14 @@ namespace Y
             FollowerCount = followerCount;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
-            ReportSystem.AddUserCredentials(name, password);
+            try
+            {
+                ReportSystem.AddUserCredentials(name, password);
+            } catch
+            {
+                MessageBox.Show("User already exists"); 
+                return;
+            }
         }
         public UserAccount(int id, string name, string email, string password) : base(id, name, email, password)
         {

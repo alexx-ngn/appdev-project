@@ -112,6 +112,9 @@
     <EmbeddedResource Include="view\Overview.fr-CA.resx">
       <DependentUpon>Overview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Register.en.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Register.fr-CA.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
