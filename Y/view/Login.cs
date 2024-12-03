@@ -38,19 +38,10 @@ namespace Y
 
         private void Login_Load(object sender, EventArgs e)
         {
-            // Set the culture for the current thread
-            //Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-
-
-            // Set the labels to the corresponding languages specified in the resources
-            //ResourceManager rm = new ResourceManager("Y.Resources", typeof(Login).Assembly);
-            //CultureInfo ci = CultureInfo.CurrentUICulture;
-
-            //this.Text = rm.GetString("loginFormTitle", ci);
-            //this.Text = "BRUH";
-            //registerLabel.Text = rm.GetString("registerLabel", ci);
-            // Set other labels similarly
+            if (ReportSystem.GetUserAccounts().Count == 0)
+            {
+                ReportSystem.LoadUsers();
+            }
         }
 
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,6 +63,18 @@ namespace Y
             }
             this.Controls.Clear();
             InitializeComponent();
+        }
+
+        private void enterButton_Click(object sender, EventArgs e)
+        {
+            if (ReportSystem.ValidateUser(usernameTextBox.Text, passwordTextBox.Text))
+            {
+                loadUserOverview();
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials ");
+            }
         }
     }
 }

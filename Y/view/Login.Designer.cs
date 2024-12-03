@@ -69,6 +69,7 @@
             resources.ApplyResources(this.enterButton, "enterButton");
             this.enterButton.Name = "enterButton";
             this.enterButton.UseVisualStyleBackColor = true;
+            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
             // registerLabel
             // 

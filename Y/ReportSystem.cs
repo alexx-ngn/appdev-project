@@ -15,6 +15,7 @@ namespace Y
         private static Queue<Report> OpenReports { get; set; } = new Queue<Report>();
         private static Queue<Report> ProcessingReports { get; set; } = new Queue<Report>();
         private static List<Report> ClosedReports { get; set; } = new List<Report>();
+        private static Dictionary<String, String> UserCredentials { get; set; } = new Dictionary<String, String>();
 
         private static SQLiteConnection GetConnection()
         {
@@ -45,6 +46,7 @@ namespace Y
                         command.ExecuteNonQuery();
                     }
                     UserAccounts.Add(user); // Add to in-memory list
+
                     MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -79,6 +81,49 @@ namespace Y
             }
         }
 
+        public static void LoadUsers()
+        {
+            try
+            {
+                using (SQLiteConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM UserAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        if (count == 0)
+                        {
+                            return;
+                        }
+                    }
+
+                    query = "SELECT * FROM UserAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int id = Convert.ToInt32(reader["id"]);
+                                string name = reader["name"].ToString();
+                                string email = reader["email"].ToString();
+                                string password = reader["password"].ToString();
+                                int followerCount = Convert.ToInt32(reader["followerCount"]);
+
+                                UserAccount user = new UserAccount(id, name, email, password, followerCount);
+                                UserAccounts.Add(user);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading users: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public static int getLastUserID()
         {
             try
@@ -86,7 +131,17 @@ namespace Y
                 using (SQLiteConnection connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT MAX(id) FROM UserAccount";
+                    string query = "SELECT COUNT(*) FROM UserAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        if (count == 0)
+                        {
+                            return 0;
+                        }
+                    }
+
+                    query = "SELECT MAX(id) FROM UserAccount";
                     using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         return Convert.ToInt32(command.ExecuteScalar());
@@ -161,7 +216,17 @@ namespace Y
                 using (SQLiteConnection connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT MAX(id) FROM AdminAccount";
+                    string query = "SELECT COUNT(*) FROM UserAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        if (count == 0)
+                        {
+                            return 0;
+                        }
+                    }
+                    
+                    query = "SELECT MAX(id) FROM AdminAccount";
                     using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         return Convert.ToInt32(command.ExecuteScalar());
@@ -293,6 +358,19 @@ namespace Y
         public static List<UserAccount> GetUserAccounts()
         {
             return UserAccounts;
+        }
+
+        public static void AddUserCredentials(String username, String password)
+        {
+            UserCredentials.Add(username, password);
+        }
+        public static bool ValidateUser(String userName, String password)
+        {
+            if (UserCredentials.ContainsKey(userName))
+            {
+                return UserCredentials[userName] == password;
+            }
+            return false;
         }
     }
 }

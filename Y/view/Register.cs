@@ -44,29 +44,29 @@ namespace Y
                         break;
                 }
             }
+            else if (usernameTextBox.Text.Equals("admin"))
+            {
+                switch (Thread.CurrentThread.CurrentUICulture.Name)
+                {
+                    case "en-US":
+                        MessageBox.Show("Username cannot be 'admin'");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Le nom d'utilisateur ne peut pas être 'admin'");
+                        break;
+                    default:
+                        MessageBox.Show("Username cannot be 'admin'");
+                        break;
+                }
+            }
             else
             {
-                if (usernameTextBox.Text.Equals("admin"))                    {
-                    switch (Thread.CurrentThread.CurrentUICulture.Name)
-                    {
-                        case "en-US":
-                            MessageBox.Show("Username cannot be 'admin'");
-                            break;
-                        case "fr-CA":
-                            MessageBox.Show("Le nom d'utilisateur ne peut pas être 'admin'");
-                            break;
-                        default:
-                            MessageBox.Show("Username cannot be 'admin'");
-                            break;
-                    }
-
-                    UserAccount newUserAccount = new UserAccount(usernameTextBox.Text, emailTextBox.Text, passwordTextBox.Text);
-                    ReportSystem.AddUser(newUserAccount);
-                    this.Hide();
-                    Login login = new Login();
-                    login.ShowDialog();
-                    this.Close(); 
-                }
+                UserAccount newUserAccount = new UserAccount(usernameTextBox.Text, emailTextBox.Text, passwordTextBox.Text);
+                ReportSystem.AddUser(newUserAccount);
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+                this.Close();
             }
         }
 

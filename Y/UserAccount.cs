@@ -11,21 +11,30 @@ namespace Y
         public int FollowerCount { get; set; }
         private List<UserAccount> Followers {  get; set; }
         private List<Post> Posts { get; set; }
-        private static int idCount = ReportSystem.getLastUserID();
+        private static int nextId = 1 + ReportSystem.getLastUserID();
 
+        public UserAccount(int id, string name, string email, string password, int followerCount) : base(id, name, email, password)
+        {
+            FollowerCount = followerCount;
+            Followers = new List<UserAccount>();
+            Posts = new List<Post>();
+            ReportSystem.AddUserCredentials(name, password);
+        }
         public UserAccount(int id, string name, string email, string password) : base(id, name, email, password)
         {
             FollowerCount = 0;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
+            ReportSystem.AddUserCredentials(name, password);
         }
 
         public UserAccount(string name, string email, string password) : base(name, email, password)
         {
-            Id = idCount++;
+            Id = nextId++;
             FollowerCount = 0;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
+            ReportSystem.AddUserCredentials(name, password);
         }
 
         public void follow(UserAccount account)
