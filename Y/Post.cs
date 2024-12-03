@@ -8,16 +8,21 @@ namespace Y
         public int Id { get; set; }
         public string Text { get; set; }
         private static int idCount = 1;
-
-
-        private HashSet<Account> Likes { get; set; }
+        public int Likes { get; set; }
         public DateTime DatePosted { get;}
-      
+        public int accountId { get; set; }
+
+        public Post(int id, string text, int likes, DateTime datePosted) : this(id, text)
+        {
+            Likes = likes;
+            DatePosted = datePosted;
+        }
+
         public Post(int id, string text)
         {
             Id = id;
             Text = text;
-            Likes = new HashSet<Account>();
+            Likes = 0;
             DatePosted = DateTime.Now;
         }
 
@@ -25,13 +30,13 @@ namespace Y
         {
             Id = idCount++;
             Text = text;
-            Likes = new HashSet<Account>();
+            Likes = 0;
             DatePosted = DateTime.Now;
         }
 
-        public void AddLike(Account account)
-        {
-            Likes.Add(account);
-        }
+        //public void AddLike(Account account)
+        //{
+        //    Likes.Add(account);
+        //}
     }
 }

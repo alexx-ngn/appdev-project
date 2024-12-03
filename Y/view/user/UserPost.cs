@@ -24,25 +24,28 @@ namespace Y
             this.userId = userId;
             InitializeComponent();
             setUsernameLabel();
-            setPostText();
-            setDateLabel();
+            //setPostText();
+            //setDateLabel();
         }
         
         private void setUsernameLabel()
         {
-            String username = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).Name;
+            String username = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId)?.Name;
+            //String username = ReportSystem.GetUserAccounts()[0].Name;
             usernameLabel.Text = username;
         }
 
         private void setPostText()
         {
-            String postText = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).GetPosts()[0].Text;
+            //String postText = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).GetPosts()[0].Text;
+            String postText = UserOverviewSystem.UserAccounts[0].GetPosts()[0].Text;
             postTextLabel.Text = postText;
         }
 
         private void setDateLabel()
         {
-            String date = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).GetPosts()[0].DatePosted.ToShortDateString();
+            //String date = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).GetPosts()[0].DatePosted.ToShortDateString();
+            String date = UserOverviewSystem.UserAccounts[0].GetPosts()[0].DatePosted.ToShortDateString();
             dateLabel.Text = date;
         }
 

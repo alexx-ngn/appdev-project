@@ -39,10 +39,11 @@ namespace Y
 
         private void Login_Load(object sender, EventArgs e)
         {
-            if (ReportSystem.GetUserAccounts().Count == 0)
+            if (LoginSystem.GetUserAccounts().Count == 0)
             {
-                ReportSystem.LoadUsers();
+                LoginSystem.LoadUsers();
             }
+            //UserOverviewSystem.LoadUsers();
         }
 
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)

@@ -56,7 +56,7 @@ namespace Y
 
         public void like(Post post)
         {
-            post.AddLike(this);
+            post.Likes++;
         }
 
         public override void removePost(Post post)

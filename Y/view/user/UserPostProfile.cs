@@ -12,7 +12,7 @@ namespace Y.view.user
     {
         private int userId { get; set; }
 
-        public UserPostProfile(int userId)
+        public UserPostProfile(int userId) : base(userId)
         {
             this.userId = userId;
             InitializeComponent();

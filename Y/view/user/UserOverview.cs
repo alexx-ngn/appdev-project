@@ -17,12 +17,12 @@ namespace Y
         private int id;
         public UserOverview(int id)
         {
+            UserOverviewSystem.LoadPosts();
             InitializeComponent();
             this.id = id;
-            UserOverviewSystem.LoadPosts();
-            loadPosts();
+            //UserOverviewSystem.LoadUsers();
         }
-        private void loadPosts()
+        private void loadFeed()
         {
             //for (int i = 0; i < 5; i++)
             //{
@@ -56,7 +56,7 @@ namespace Y
 
         private void UserOverview_Load(object sender, EventArgs e)
         {
-            loadPosts();
+            loadFeed();
         }
 
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)
