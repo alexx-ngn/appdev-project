@@ -15,7 +15,6 @@ namespace Y
         private static Queue<Report> OpenReports { get; set; } = new Queue<Report>();
         private static Queue<Report> ProcessingReports { get; set; } = new Queue<Report>();
         private static List<Report> ClosedReports { get; set; } = new List<Report>();
-        private static Dictionary<String, String> UserCredentials { get; set; } = new Dictionary<String, String>();
 
         private static SQLiteConnection GetConnection()
         {
@@ -209,7 +208,7 @@ namespace Y
             }
         }
 
-        public static int getLastAdminID()
+        public static int GetLastAdminID()
         {
             try
             {
@@ -358,19 +357,6 @@ namespace Y
         public static List<UserAccount> GetUserAccounts()
         {
             return UserAccounts;
-        }
-
-        public static void AddUserCredentials(String username, String password)
-        {
-            UserCredentials.Add(username, password);
-        }
-        public static bool ValidateUser(String userName, String password)
-        {
-            if (UserCredentials.ContainsKey(userName))
-            {
-                return UserCredentials[userName] == password;
-            }
-            return false;
         }
     }
 }

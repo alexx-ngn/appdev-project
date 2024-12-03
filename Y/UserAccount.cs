@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Y.controller;
 
 namespace Y
 {
@@ -19,21 +20,14 @@ namespace Y
             FollowerCount = followerCount;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
-            try
-            {
-                ReportSystem.AddUserCredentials(name, password);
-            } catch
-            {
-                MessageBox.Show("User already exists"); 
-                return;
-            }
+            LoginSystem.AddUserCredentials(name, password);
         }
         public UserAccount(int id, string name, string email, string password) : base(id, name, email, password)
         {
             FollowerCount = 0;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
-            ReportSystem.AddUserCredentials(name, password);
+            LoginSystem.AddUserCredentials(name, password);
         }
 
         public UserAccount(string name, string email, string password) : base(name, email, password)
@@ -42,7 +36,7 @@ namespace Y
             FollowerCount = 0;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
-            ReportSystem.AddUserCredentials(name, password);
+            LoginSystem.AddUserCredentials(name, password);
         }
 
         public void follow(UserAccount account)

@@ -5,7 +5,7 @@
         /// <summary> 
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private global::System.ComponentModel.IContainer components = null;
 
         /// <summary> 
         /// Clean up any resources being used.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
-            this.followButton = new System.Windows.Forms.Button();
-            this.usernameLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.reportButton = new System.Windows.Forms.Button();
+            global::System.ComponentModel.ComponentResourceManager resources = new global::System.ComponentModel.ComponentResourceManager(typeof(Profile));
+            this.followButton = new global::System.Windows.Forms.Button();
+            this.usernameLinkLabel = new global::System.Windows.Forms.LinkLabel();
+            this.reportButton = new global::System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // followButton
@@ -39,27 +39,27 @@
             resources.ApplyResources(this.followButton, "followButton");
             this.followButton.Name = "followButton";
             this.followButton.UseVisualStyleBackColor = true;
-            this.followButton.Click += new System.EventHandler(this.followButton_Click);
+            this.followButton.Click += new global::System.EventHandler(this.followButton_Click);
             // 
             // usernameLinkLabel
             // 
             resources.ApplyResources(this.usernameLinkLabel, "usernameLinkLabel");
             this.usernameLinkLabel.Name = "usernameLinkLabel";
             this.usernameLinkLabel.TabStop = true;
-            this.usernameLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.usernameLinkLabel_LinkClicked);
+            this.usernameLinkLabel.LinkClicked += new global::System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.usernameLinkLabel_LinkClicked);
             // 
             // reportButton
             // 
             resources.ApplyResources(this.reportButton, "reportButton");
             this.reportButton.Name = "reportButton";
             this.reportButton.UseVisualStyleBackColor = true;
-            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
+            this.reportButton.Click += new global::System.EventHandler(this.reportButton_Click);
             // 
             // Profile
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.usernameLinkLabel);
             this.Controls.Add(this.followButton);
@@ -70,8 +70,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button followButton;
-        private System.Windows.Forms.LinkLabel usernameLinkLabel;
-        private System.Windows.Forms.Button reportButton;
+        private global::System.Windows.Forms.Button followButton;
+        private global::System.Windows.Forms.LinkLabel usernameLinkLabel;
+        private global::System.Windows.Forms.Button reportButton;
     }
 }

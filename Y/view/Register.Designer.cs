@@ -5,7 +5,7 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private global::System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            this.loginLabel = new System.Windows.Forms.LinkLabel();
-            this.enterButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.YLabel = new System.Windows.Forms.Label();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.languageComboBox = new System.Windows.Forms.ComboBox();
+            global::System.ComponentModel.ComponentResourceManager resources = new global::System.ComponentModel.ComponentResourceManager(typeof(Register));
+            this.loginLabel = new global::System.Windows.Forms.LinkLabel();
+            this.enterButton = new global::System.Windows.Forms.Button();
+            this.label1 = new global::System.Windows.Forms.Label();
+            this.passwordTextBox = new global::System.Windows.Forms.TextBox();
+            this.usernameLabel = new global::System.Windows.Forms.Label();
+            this.usernameTextBox = new global::System.Windows.Forms.TextBox();
+            this.YLabel = new global::System.Windows.Forms.Label();
+            this.emailLabel = new global::System.Windows.Forms.Label();
+            this.emailTextBox = new global::System.Windows.Forms.TextBox();
+            this.languageComboBox = new global::System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // loginLabel
@@ -46,14 +46,14 @@
             resources.ApplyResources(this.loginLabel, "loginLabel");
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.TabStop = true;
-            this.loginLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.loginLabel_LinkClicked);
+            this.loginLabel.LinkClicked += new global::System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.loginLabel_LinkClicked);
             // 
             // enterButton
             // 
             resources.ApplyResources(this.enterButton, "enterButton");
             this.enterButton.Name = "enterButton";
             this.enterButton.UseVisualStyleBackColor = true;
-            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
+            this.enterButton.Click += new global::System.EventHandler(this.enterButton_Click);
             // 
             // label1
             // 
@@ -64,7 +64,7 @@
             // 
             resources.ApplyResources(this.passwordTextBox, "passwordTextBox");
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
+            this.passwordTextBox.TextChanged += new global::System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // usernameLabel
             // 
@@ -99,12 +99,12 @@
             resources.GetString("languageComboBox.Items"),
             resources.GetString("languageComboBox.Items1")});
             this.languageComboBox.Name = "languageComboBox";
-            this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
+            this.languageComboBox.SelectedIndexChanged += new global::System.EventHandler(this.languageComboBox_SelectedIndexChanged);
             // 
             // Register
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.languageComboBox);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.emailTextBox);
@@ -123,15 +123,15 @@
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel loginLabel;
-        private System.Windows.Forms.Button enterButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Label usernameLabel;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.Label YLabel;
-        private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.ComboBox languageComboBox;
+        private global::System.Windows.Forms.LinkLabel loginLabel;
+        private global::System.Windows.Forms.Button enterButton;
+        private global::System.Windows.Forms.Label label1;
+        private global::System.Windows.Forms.TextBox passwordTextBox;
+        private global::System.Windows.Forms.Label usernameLabel;
+        private global::System.Windows.Forms.TextBox usernameTextBox;
+        private global::System.Windows.Forms.Label YLabel;
+        private global::System.Windows.Forms.Label emailLabel;
+        private global::System.Windows.Forms.TextBox emailTextBox;
+        private global::System.Windows.Forms.ComboBox languageComboBox;
     }
 }

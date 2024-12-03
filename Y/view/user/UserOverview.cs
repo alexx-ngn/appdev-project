@@ -8,25 +8,36 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using Y.view.user;
+using Y.controller;
 
 namespace Y
 {
     public partial class UserOverview : Overview.Overview
     {
-        public UserOverview()
+        private int id;
+        public UserOverview(int id)
         {
             InitializeComponent();
+            this.id = id;
+            UserOverviewSystem.LoadPosts();
+            loadPosts();
         }
         private void loadPosts()
         {
-            for (int i = 0; i < 5; i++)
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    UserPostProfile post = new UserPostProfile();
+            //    overviewFlowLayoutPanel.Controls.Add(post);
+            //}
+            //for (int i = 0; i < 5 ; i++) {
+            //    MyPost post = new MyPost();
+            //    MyPostsFlowLayoutPanel.Controls.Add(post);
+            //}
+            for (int i = 0; i < UserOverviewSystem.UserPosts.Count; i++)
             {
-                UserPostProfile post = new UserPostProfile();
+                int id = UserOverviewSystem.UserPosts[i].Id;
+                UserPostProfile post = new UserPostProfile(id);
                 overviewFlowLayoutPanel.Controls.Add(post);
-            }
-            for (int i = 0; i < 5 ; i++) {
-                MyPost post = new MyPost();
-                MyPostsFlowLayoutPanel.Controls.Add(post);
             }
         }
 

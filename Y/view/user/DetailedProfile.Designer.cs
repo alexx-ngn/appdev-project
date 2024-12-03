@@ -5,7 +5,7 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private global::System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailedProfile));
-            this.label1 = new System.Windows.Forms.Label();
-            this.PostsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            global::System.ComponentModel.ComponentResourceManager resources = new global::System.ComponentModel.ComponentResourceManager(typeof(DetailedProfile));
+            this.label1 = new global::System.Windows.Forms.Label();
+            this.PostsFlowLayoutPanel = new global::System.Windows.Forms.FlowLayoutPanel();
             this.post1 = new Y.UserPost();
             this.post2 = new Y.UserPost();
             this.post3 = new Y.UserPost();
@@ -53,25 +53,25 @@
             // post1
             // 
             resources.ApplyResources(this.post1, "post1");
-            this.post1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.post1.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.post1.Name = "post1";
             // 
             // post2
             // 
             resources.ApplyResources(this.post2, "post2");
-            this.post2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.post2.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.post2.Name = "post2";
             // 
             // post3
             // 
             resources.ApplyResources(this.post3, "post3");
-            this.post3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.post3.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.post3.Name = "post3";
             // 
             // DetailedProfile
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PostsFlowLayoutPanel);
             this.Controls.Add(this.label1);
             this.Name = "DetailedProfile";
@@ -83,8 +83,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel PostsFlowLayoutPanel;
+        private global::System.Windows.Forms.Label label1;
+        private global::System.Windows.Forms.FlowLayoutPanel PostsFlowLayoutPanel;
         private UserPost post1;
         private UserPost post2;
         private UserPost post3;

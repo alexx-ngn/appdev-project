@@ -36,8 +36,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="controller\LoginSystem.cs" />
+    <Compile Include="controller\UserOverviewSystem.cs" />
     <Compile Include="PostReport.cs" />
-    <Compile Include="ReportSystem.cs" />
+    <Compile Include="controller\ReportSystem.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="UserReport.cs" />
     <Compile Include="view\admin\AdminPost.cs">

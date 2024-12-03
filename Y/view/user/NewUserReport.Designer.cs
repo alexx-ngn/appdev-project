@@ -5,7 +5,7 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private global::System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewUserReport));
-            this.reportButton = new System.Windows.Forms.Button();
-            this.newReportLabel = new System.Windows.Forms.Label();
-            this.reportRichTextBox = new System.Windows.Forms.RichTextBox();
+            global::System.ComponentModel.ComponentResourceManager resources = new global::System.ComponentModel.ComponentResourceManager(typeof(NewUserReport));
+            this.reportButton = new global::System.Windows.Forms.Button();
+            this.newReportLabel = new global::System.Windows.Forms.Label();
+            this.reportRichTextBox = new global::System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // reportButton
@@ -39,7 +39,7 @@
             resources.ApplyResources(this.reportButton, "reportButton");
             this.reportButton.Name = "reportButton";
             this.reportButton.UseVisualStyleBackColor = true;
-            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
+            this.reportButton.Click += new global::System.EventHandler(this.reportButton_Click);
             // 
             // newReportLabel
             // 
@@ -54,7 +54,7 @@
             // NewUserReport
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.newReportLabel);
             this.Controls.Add(this.reportRichTextBox);
@@ -66,8 +66,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button reportButton;
-        private System.Windows.Forms.Label newReportLabel;
-        private System.Windows.Forms.RichTextBox reportRichTextBox;
+        private global::System.Windows.Forms.Button reportButton;
+        private global::System.Windows.Forms.Label newReportLabel;
+        private global::System.Windows.Forms.RichTextBox reportRichTextBox;
     }
 }

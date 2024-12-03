@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Y.controller;
 
 namespace Y
 {
@@ -28,10 +29,10 @@ namespace Y
             this.Close();
         }
 
-        public void loadUserOverview()
+        public void loadUserOverview(int id)
         {
             this.Hide();
-            UserOverview overview = new UserOverview();
+            UserOverview overview = new UserOverview(id);
             overview.ShowDialog();
             this.Close();
         }
@@ -67,9 +68,10 @@ namespace Y
 
         private void enterButton_Click(object sender, EventArgs e)
         {
-            if (ReportSystem.ValidateUser(usernameTextBox.Text, passwordTextBox.Text))
+            if (LoginSystem.ValidateUser(usernameTextBox.Text, passwordTextBox.Text))
             {
-                loadUserOverview();
+                int id = LoginSystem.FetchUserIdFromUsername(usernameTextBox.Text);
+                loadUserOverview(id);
             }
             else
             {

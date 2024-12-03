@@ -5,13 +5,13 @@ namespace Y
 {
     public class Post
     {
-        private int Id { get; set; }
-        private string Text { get; set; }
+        public int Id { get; set; }
+        public string Text { get; set; }
         private static int idCount = 1;
 
 
         private HashSet<Account> Likes { get; set; }
-        private DateTime DatePosted { get;}
+        public DateTime DatePosted { get;}
       
         public Post(int id, string text)
         {

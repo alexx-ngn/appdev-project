@@ -5,7 +5,7 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private global::System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPost));
-            this.postRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.newPostLabel = new System.Windows.Forms.Label();
-            this.postButton = new System.Windows.Forms.Button();
+            global::System.ComponentModel.ComponentResourceManager resources = new global::System.ComponentModel.ComponentResourceManager(typeof(NewPost));
+            this.postRichTextBox = new global::System.Windows.Forms.RichTextBox();
+            this.newPostLabel = new global::System.Windows.Forms.Label();
+            this.postButton = new global::System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // postRichTextBox
@@ -49,12 +49,12 @@
             resources.ApplyResources(this.postButton, "postButton");
             this.postButton.Name = "postButton";
             this.postButton.UseVisualStyleBackColor = true;
-            this.postButton.Click += new System.EventHandler(this.postButton_Click);
+            this.postButton.Click += new global::System.EventHandler(this.postButton_Click);
             // 
             // NewPost
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.postButton);
             this.Controls.Add(this.newPostLabel);
             this.Controls.Add(this.postRichTextBox);
@@ -66,8 +66,8 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox postRichTextBox;
-        private System.Windows.Forms.Label newPostLabel;
-        private System.Windows.Forms.Button postButton;
+        private global::System.Windows.Forms.RichTextBox postRichTextBox;
+        private global::System.Windows.Forms.Label newPostLabel;
+        private global::System.Windows.Forms.Button postButton;
     }
 }

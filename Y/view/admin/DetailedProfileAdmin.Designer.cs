@@ -5,7 +5,7 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private global::System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailedProfileAdmin));
-            this.PostsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            global::System.ComponentModel.ComponentResourceManager resources = new global::System.ComponentModel.ComponentResourceManager(typeof(DetailedProfileAdmin));
+            this.PostsFlowLayoutPanel = new global::System.Windows.Forms.FlowLayoutPanel();
             this.adminPost1 = new Y.view.admin.AdminPost();
             this.adminPost2 = new Y.view.admin.AdminPost();
             this.adminPost3 = new Y.view.admin.AdminPost();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.dateLabel = new System.Windows.Forms.Label();
-            this.deleteButton = new System.Windows.Forms.Button();
+            this.usernameLabel = new global::System.Windows.Forms.Label();
+            this.dateLabel = new global::System.Windows.Forms.Label();
+            this.deleteButton = new global::System.Windows.Forms.Button();
             this.PostsFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,19 +50,19 @@
             // adminPost1
             // 
             resources.ApplyResources(this.adminPost1, "adminPost1");
-            this.adminPost1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.adminPost1.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.adminPost1.Name = "adminPost1";
             // 
             // adminPost2
             // 
             resources.ApplyResources(this.adminPost2, "adminPost2");
-            this.adminPost2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.adminPost2.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.adminPost2.Name = "adminPost2";
             // 
             // adminPost3
             // 
             resources.ApplyResources(this.adminPost3, "adminPost3");
-            this.adminPost3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.adminPost3.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.adminPost3.Name = "adminPost3";
             // 
             // usernameLabel
@@ -78,15 +78,15 @@
             // deleteButton
             // 
             resources.ApplyResources(this.deleteButton, "deleteButton");
-            this.deleteButton.ForeColor = System.Drawing.Color.Red;
+            this.deleteButton.ForeColor = global::System.Drawing.Color.Red;
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            this.deleteButton.Click += new global::System.EventHandler(this.deleteButton_Click);
             // 
             // DetailedProfileAdmin
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.PostsFlowLayoutPanel);
@@ -100,12 +100,12 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel PostsFlowLayoutPanel;
-        private System.Windows.Forms.Label usernameLabel;
-        private System.Windows.Forms.Label dateLabel;
+        private global::System.Windows.Forms.FlowLayoutPanel PostsFlowLayoutPanel;
+        private global::System.Windows.Forms.Label usernameLabel;
+        private global::System.Windows.Forms.Label dateLabel;
         private AdminPost adminPost1;
         private AdminPost adminPost2;
         private AdminPost adminPost3;
-        private System.Windows.Forms.Button deleteButton;
+        private global::System.Windows.Forms.Button deleteButton;
     }
 }

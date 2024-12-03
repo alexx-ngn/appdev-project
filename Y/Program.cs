@@ -17,8 +17,8 @@ namespace Y
         static void Main()
         {
             var language = "fr-CA";
-            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(language);
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(language);
+            Thread.CurrentThread.CurrentCulture = new global::System.Globalization.CultureInfo(language);
+            Thread.CurrentThread.CurrentUICulture = new global::System.Globalization.CultureInfo(language);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

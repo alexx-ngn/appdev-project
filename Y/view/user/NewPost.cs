@@ -19,7 +19,7 @@ namespace Y
 
         private void postButton_Click(object sender, EventArgs e)
         {
-            var culture = System.Globalization.CultureInfo.CurrentUICulture.ToString();
+            var culture = global::System.Globalization.CultureInfo.CurrentUICulture.ToString();
             
             if (postRichTextBox.Text == "") {
                 switch (culture)

@@ -5,7 +5,7 @@
         /// <summary> 
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private global::System.ComponentModel.IContainer components = null;
 
         /// <summary> 
         /// Clean up any resources being used.
@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserPost));
             this.usernameLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
-            this.postContentLabel = new System.Windows.Forms.Label();
+            this.postTextLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -56,15 +56,15 @@
             this.dateLabel.TabIndex = 3;
             this.dateLabel.Text = "DATE";
             // 
-            // postContentLabel
+            // postTextLabel
             // 
-            this.postContentLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.postContentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postContentLabel.Location = new System.Drawing.Point(3, 44);
-            this.postContentLabel.Name = "postContentLabel";
-            this.postContentLabel.Size = new System.Drawing.Size(1190, 184);
-            this.postContentLabel.TabIndex = 8;
-            this.postContentLabel.Text = resources.GetString("postContentLabel.Text");
+            this.postTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.postTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postTextLabel.Location = new System.Drawing.Point(3, 44);
+            this.postTextLabel.Name = "postTextLabel";
+            this.postTextLabel.Size = new System.Drawing.Size(1190, 184);
+            this.postTextLabel.TabIndex = 8;
+            this.postTextLabel.Text = resources.GetString("postTextLabel.Text");
             // 
             // UserPost
             // 
@@ -72,7 +72,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.postContentLabel);
+            this.Controls.Add(this.postTextLabel);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.usernameLabel);
             this.Name = "UserPost";
@@ -83,8 +83,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label usernameLabel;
-        private System.Windows.Forms.Label dateLabel;
-        private System.Windows.Forms.Label postContentLabel;
+        private global::System.Windows.Forms.Label usernameLabel;
+        private global::System.Windows.Forms.Label dateLabel;
+        private global::System.Windows.Forms.Label postTextLabel;
     }
 }

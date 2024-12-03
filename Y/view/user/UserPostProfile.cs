@@ -10,11 +10,13 @@ namespace Y.view.user
 {
     public partial class UserPostProfile : Y.UserPost
     {
-        public UserPostProfile()
+        private int userId { get; set; }
+
+        public UserPostProfile(int userId)
         {
+            this.userId = userId;
             InitializeComponent();
         }
-
         private void reportButton_Click(object sender, EventArgs e)
         {
             new NewUserReport().ShowDialog();

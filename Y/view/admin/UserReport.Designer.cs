@@ -5,7 +5,7 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private global::System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserReport));
-            this.PostsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            global::System.ComponentModel.ComponentResourceManager resources = new global::System.ComponentModel.ComponentResourceManager(typeof(UserReport));
+            this.PostsFlowLayoutPanel = new global::System.Windows.Forms.FlowLayoutPanel();
             this.post1 = new Y.UserPost();
             this.post2 = new Y.UserPost();
             this.post3 = new Y.UserPost();
-            this.label1 = new System.Windows.Forms.Label();
-            this.allowButton = new System.Windows.Forms.Button();
-            this.banButton = new System.Windows.Forms.Button();
+            this.label1 = new global::System.Windows.Forms.Label();
+            this.allowButton = new global::System.Windows.Forms.Button();
+            this.banButton = new global::System.Windows.Forms.Button();
             this.PostsFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,19 +50,19 @@
             // post1
             // 
             resources.ApplyResources(this.post1, "post1");
-            this.post1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.post1.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.post1.Name = "post1";
             // 
             // post2
             // 
             resources.ApplyResources(this.post2, "post2");
-            this.post2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.post2.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.post2.Name = "post2";
             // 
             // post3
             // 
             resources.ApplyResources(this.post3, "post3");
-            this.post3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.post3.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
             this.post3.Name = "post3";
             // 
             // label1
@@ -73,23 +73,23 @@
             // allowButton
             // 
             resources.ApplyResources(this.allowButton, "allowButton");
-            this.allowButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.allowButton.ForeColor = global::System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.allowButton.Name = "allowButton";
             this.allowButton.UseVisualStyleBackColor = true;
-            this.allowButton.Click += new System.EventHandler(this.allowButton_Click);
+            this.allowButton.Click += new global::System.EventHandler(this.allowButton_Click);
             // 
             // banButton
             // 
             resources.ApplyResources(this.banButton, "banButton");
-            this.banButton.ForeColor = System.Drawing.Color.Red;
+            this.banButton.ForeColor = global::System.Drawing.Color.Red;
             this.banButton.Name = "banButton";
             this.banButton.UseVisualStyleBackColor = true;
-            this.banButton.Click += new System.EventHandler(this.banButton_Click);
+            this.banButton.Click += new global::System.EventHandler(this.banButton_Click);
             // 
             // UserReport
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.allowButton);
             this.Controls.Add(this.banButton);
             this.Controls.Add(this.PostsFlowLayoutPanel);
@@ -103,12 +103,12 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel PostsFlowLayoutPanel;
+        private global::System.Windows.Forms.FlowLayoutPanel PostsFlowLayoutPanel;
         private UserPost post1;
         private UserPost post2;
         private UserPost post3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button allowButton;
-        private System.Windows.Forms.Button banButton;
+        private global::System.Windows.Forms.Label label1;
+        private global::System.Windows.Forms.Button allowButton;
+        private global::System.Windows.Forms.Button banButton;
     }
 }
