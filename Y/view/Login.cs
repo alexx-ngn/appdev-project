@@ -16,6 +16,7 @@ namespace Y
 {
     public partial class Login : Form
     {
+        LoginSystem LoginSystem = LoginSystem.Instance;
         public Login()
         {
             InitializeComponent();

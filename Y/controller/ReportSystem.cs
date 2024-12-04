@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Y.controller
 {
@@ -64,6 +65,7 @@ namespace Y.controller
                     }
 
                     UserAccounts.Add(user);
+                    LoginSystem.Instance.AddUserCredentials(user.Name, user.Password);
                     MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

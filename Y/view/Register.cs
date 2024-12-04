@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Y.controller;
 
 namespace Y
 {
     public partial class Register : Form
     {
+        ReportSystem ReportSystem = ReportSystem.Instance;
         public Register()
         {
             InitializeComponent();

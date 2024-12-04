@@ -89,47 +89,47 @@ namespace Y.controller
 
         private List<UserAccount> LoadUsers()
         {
-            try
+            //try
+            //{
+            using (SQLiteConnection connection = GetConnection())
             {
-                using (SQLiteConnection connection = GetConnection())
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM UserAccount";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    connection.Open();
-                    string query = "SELECT COUNT(*) FROM UserAccount";
-                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    if (count == 0)
                     {
-                        int count = Convert.ToInt32(command.ExecuteScalar());
-                        if (count == 0)
-                        {
-                            return new List<UserAccount>();
-                        }
+                        return new List<UserAccount>();
                     }
+                }
 
-                    var users = new List<UserAccount>();
-                    query = "SELECT * FROM UserAccount";
-                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                var users = new List<UserAccount>();
+                query = "SELECT * FROM UserAccount";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    using (SQLiteDataReader reader = command.ExecuteReader())
                     {
-                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        while (reader.Read())
                         {
-                            while (reader.Read())
-                            {
-                                int id = Convert.ToInt32(reader["id"]);
-                                string name = reader["name"].ToString();
-                                string email = reader["email"].ToString();
-                                string password = reader["password"].ToString();
-                                int followerCount = Convert.ToInt32(reader["followerCount"]);
+                            int id = Convert.ToInt32(reader["id"]);
+                            string name = reader["name"].ToString();
+                            string email = reader["email"].ToString();
+                            string password = reader["password"].ToString();
+                            int followerCount = Convert.ToInt32(reader["followerCount"]);
 
-                                UserAccount user = new UserAccount(id, name, email, password, followerCount);
-                                users.Add(user);
-                            }
+                            UserAccount user = new UserAccount(id, name, email, password, followerCount);
+                            users.Add(user);
                         }
                     }
                     return users;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading users: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return new List<UserAccount>();
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show($"Error loading users: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return new List<UserAccount>();
+                //}
             }
         }
     }

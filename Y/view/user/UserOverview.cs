@@ -14,6 +14,7 @@ namespace Y
 {
     public partial class UserOverview : Overview.Overview
     {
+        UserOverviewSystem UserOverviewSystem = UserOverviewSystem.Instance;
         private int id;
         public UserOverview(int id)
         {

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Y.controller;
 
 namespace Y
 {
     public class AdminAccount : Account
     {
+        ReportSystem ReportSystem = ReportSystem.Instance;
         private static int idCount = 1;
         public AdminAccount(int id, string name, string email, string password) : base(id, name, email, password)
         {

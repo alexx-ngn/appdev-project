@@ -10,24 +10,32 @@ namespace Y
 {
     public class UserAccount : Account
     {
+        ReportSystem ReportSystem = ReportSystem.Instance;
+        LoginSystem LoginSystem = LoginSystem.Instance;
+
         public int FollowerCount { get; set; }
-        private List<UserAccount> Followers {  get; set; }
+        private List<UserAccount> Followers { get; set; }
         private List<Post> Posts { get; set; }
-        private static int nextId = 1 + ReportSystem.getLastUserID();
+        private static int nextId;
+
+        static UserAccount()
+        {
+            nextId = 1 + ReportSystem.Instance.GetLastUserID();
+        }
 
         public UserAccount(int id, string name, string email, string password, int followerCount) : base(id, name, email, password)
         {
             FollowerCount = followerCount;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
-            LoginSystem.AddUserCredentials(name, password);
+            //LoginSystem.AddUserCredentials(name, password);
         }
         public UserAccount(int id, string name, string email, string password) : base(id, name, email, password)
         {
             FollowerCount = 0;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
-            LoginSystem.AddUserCredentials(name, password);
+            //LoginSystem.AddUserCredentials(name, password);
         }
 
         public UserAccount(string name, string email, string password) : base(name, email, password)
@@ -36,7 +44,7 @@ namespace Y
             FollowerCount = 0;
             Followers = new List<UserAccount>();
             Posts = new List<Post>();
-            LoginSystem.AddUserCredentials(name, password);
+            //LoginSystem.AddUserCredentials(name, password);
         }
 
         public void follow(UserAccount account)

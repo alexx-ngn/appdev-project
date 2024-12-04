@@ -13,6 +13,7 @@ namespace Y
 {
     public partial class UserPost : UserControl
     {
+        UserOverviewSystem UserOverviewSystem = UserOverviewSystem.Instance;
         private int id { get; set; }
         private String postText { get; set; }
         private DateTime date { get; set; }

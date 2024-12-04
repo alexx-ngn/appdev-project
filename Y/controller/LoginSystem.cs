@@ -101,6 +101,7 @@ namespace Y.controller
 
                                 UserAccount user = new UserAccount(id, name, email, password, followerCount);
                                 UserAccounts.Add(user);
+                                AddUserCredentials(name, password);
                             }
                         }
                     }
