@@ -13,40 +13,46 @@ namespace Y
 {
     public partial class UserPost : UserControl
     {
+        private int id { get; set; }
+        private String postText { get; set; }
+        private DateTime date { get; set; }
+        private int likes { get; set; }
         private int userId { get; set; }
-
+        
         public UserPost()
         {
             InitializeComponent();
         }
-        public UserPost(int userId)
+        public UserPost(Post post)
         {
-            this.userId = userId;
             InitializeComponent();
+            id = post.Id;
+            postText = post.Text;
+            date = post.DatePosted;
+            likes = post.Likes;
+            userId = post.accountId;
             setUsernameLabel();
-            //setPostText();
-            //setDateLabel();
+            setPostText();
+            setDateLabel();
         }
-        
+
         private void setUsernameLabel()
         {
-            String username = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId)?.Name;
-            //String username = ReportSystem.GetUserAccounts()[0].Name;
+            var user = UserOverviewSystem.UserAccounts.FirstOrDefault(x => x.Id == userId);
+            String username = user != null ? user.Name : "Unknown";
             usernameLabel.Text = username;
         }
 
         private void setPostText()
         {
-            //String postText = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).GetPosts()[0].Text;
-            String postText = UserOverviewSystem.UserAccounts[0].GetPosts()[0].Text;
-            postTextLabel.Text = postText;
+            //String postText = UserOverviewSystem.UserAccounts[0].GetPosts()[0].Text;
+             postTextLabel.Text = postText;
         }
 
         private void setDateLabel()
         {
-            //String date = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).GetPosts()[0].DatePosted.ToShortDateString();
-            String date = UserOverviewSystem.UserAccounts[0].GetPosts()[0].DatePosted.ToShortDateString();
-            dateLabel.Text = date;
+            //String date = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).GetPosts()[0].DatePosted.ToShortDateString
+            dateLabel.Text = date.ToString();
         }
 
         private void likeButton_Click(object sender, EventArgs e)

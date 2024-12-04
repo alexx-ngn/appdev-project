@@ -43,7 +43,6 @@ namespace Y
             {
                 LoginSystem.LoadUsers();
             }
-            //UserOverviewSystem.LoadUsers();
         }
 
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)

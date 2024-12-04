@@ -11,8 +11,8 @@ namespace Y.controller
 {
     internal class UserOverviewSystem
     {
-        public static List<UserAccount> UserAccounts { get; set; } = new List<UserAccount>();
-        public static List<Post> UserPosts { get; set; } = new List<Post>();
+        public static List<UserAccount> UserAccounts { get; set; } = LoadUsers();
+        public static List<Post> UserPosts { get; set; } = LoadPosts();
 
         private static SQLiteConnection GetConnection()
         {
@@ -22,13 +22,23 @@ namespace Y.controller
             return new SQLiteConnection(connectionString);
         }
 
-        public static void LoadPosts()
+        public static List<Post> LoadPosts()
         {
-            UserPosts.Clear();
             using (SQLiteConnection connection = GetConnection())
             {
                 connection.Open();
-                string query = "SELECT * FROM Post";
+                string query = "SELECT COUNT(*) FROM Post";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    if (count == 0)
+                    {
+                        return new List<Post>();
+                    }
+                }
+                
+                var posts = new List<Post>();
+                query = "SELECT * FROM Post";
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
                     using (SQLiteDataReader reader = command.ExecuteReader())
@@ -41,13 +51,14 @@ namespace Y.controller
                             int likes = reader.GetInt32(3);
                             int accountId = reader.GetInt32(4);
                             Post post = new Post(id, text, likes, date);
-                            UserPosts.Add(post);
+                            posts.Add(post);
                         }
                     }
                 }
+                return posts;
             }
         }
-        public static void LoadUsers()
+        public static List<UserAccount> LoadUsers()
         {
             try
             {
@@ -60,10 +71,11 @@ namespace Y.controller
                         int count = Convert.ToInt32(command.ExecuteScalar());
                         if (count == 0)
                         {
-                            return;
+                            return new List<UserAccount>();
                         }
                     }
 
+                    var users = new List<UserAccount>();
                     query = "SELECT * FROM UserAccount";
                     using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
@@ -78,15 +90,17 @@ namespace Y.controller
                                 int followerCount = Convert.ToInt32(reader["followerCount"]);
 
                                 UserAccount user = new UserAccount(id, name, email, password, followerCount);
-                                UserAccounts.Add(user);
+                                users.Add(user);
                             }
                         }
                     }
+                    return users;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading users: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<UserAccount>();
             }
         }
     }

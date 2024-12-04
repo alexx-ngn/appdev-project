@@ -17,10 +17,8 @@ namespace Y
         private int id;
         public UserOverview(int id)
         {
-            UserOverviewSystem.LoadPosts();
             InitializeComponent();
             this.id = id;
-            //UserOverviewSystem.LoadUsers();
         }
         private void loadFeed()
         {
@@ -35,8 +33,8 @@ namespace Y
             //}
             for (int i = 0; i < UserOverviewSystem.UserPosts.Count; i++)
             {
-                int id = UserOverviewSystem.UserPosts[i].Id;
-                UserPostProfile post = new UserPostProfile(id);
+                //int id = UserOverviewSystem.UserPosts[i].Id;
+                UserPostProfile post = new UserPostProfile(UserOverviewSystem.UserPosts[i]);
                 overviewFlowLayoutPanel.Controls.Add(post);
             }
         }
@@ -56,6 +54,7 @@ namespace Y
 
         private void UserOverview_Load(object sender, EventArgs e)
         {
+            //hideTabs();
             loadFeed();
         }
 

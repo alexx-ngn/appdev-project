@@ -12,9 +12,13 @@ namespace Y.view.user
     {
         private int userId { get; set; }
 
-        public UserPostProfile(int userId) : base(userId)
+        public UserPostProfile()
         {
-            this.userId = userId;
+            InitializeComponent();
+        }
+
+        public UserPostProfile(Post post) : base(post)
+        {
             InitializeComponent();
         }
         private void reportButton_Click(object sender, EventArgs e)
