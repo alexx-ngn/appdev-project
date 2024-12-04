@@ -47,6 +47,19 @@ namespace Y
             }
         }
 
+        public void loadProfile()
+        {
+            MyPostsFlowLayoutPanel.Controls.Clear();
+            for (int i = UserOverviewSystem.UserPosts.Count - 1; i >= 0; i--)
+            {
+                if (UserOverviewSystem.UserPosts[i].accountId == id)
+                {
+                    MyPost post = new MyPost(UserOverviewSystem.UserPosts[i]);
+                    MyPostsFlowLayoutPanel.Controls.Add(post);
+                }
+            }
+        }
+
         private void hideTabs()
         {
             OverviewTabControl.Appearance = TabAppearance.FlatButtons;
@@ -69,6 +82,7 @@ namespace Y
         {
             hideTabs();
             loadFeed();
+            loadProfile();
         }
 
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)

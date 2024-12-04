@@ -10,7 +10,13 @@ namespace Y
 {
     public partial class MyPost : Y.UserPost
     {
-        public MyPost(int id)
+
+        public MyPost(Post post) : base(post)
+        {
+            InitializeComponent();
+        }
+
+        public MyPost()
         {
             InitializeComponent();
         }
