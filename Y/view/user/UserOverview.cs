@@ -57,6 +57,10 @@ namespace Y
         private void postButton_Click(object sender, EventArgs e)
         {
             NewPost post = new NewPost(id);
+            post.PostButton += (s, ev) =>
+            {
+                loadFeed();
+            };
             post.ShowDialog();
         }
 

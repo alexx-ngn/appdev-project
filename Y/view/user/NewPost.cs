@@ -14,6 +14,7 @@ namespace Y
     public partial class NewPost : Form
     {
         private int accountId { get; set; }
+        public EventHandler PostButton;
         public NewPost(int accountId)
         {
             InitializeComponent();
@@ -50,11 +51,7 @@ namespace Y
                 var post = new Post(postRichTextBox.Text, accountId);
                 UserOverviewSystem.Instance.AddPost(post);
 
-                var userOverviewForm = Application.OpenForms.OfType<UserOverview>().FirstOrDefault();
-                if (userOverviewForm != null)
-                {
-                    userOverviewForm.loadFeed();
-                }
+                PostButton?.Invoke(this, EventArgs.Empty);
                 this.Close();
             }
         }
