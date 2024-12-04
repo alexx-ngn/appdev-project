@@ -149,9 +149,6 @@
   <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
     <value>textBox1</value>
   </data>
-  <data name="dateOfBirthLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;YLabel.Name" xml:space="preserve">
     <value>YLabel</value>
   </data>
@@ -166,6 +163,9 @@
   </data>
   <data name="enterButton.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
+  </data>
+  <data name="&gt;&gt;enterButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="usernameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 20</value>
@@ -200,17 +200,14 @@
   <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>281, 370</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="YLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, -5</value>
-  </data>
   <data name="&gt;&gt;enterButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;usernameTextBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="emailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 195</value>
   </data>
   <data name="usernameTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 38</value>
@@ -227,14 +224,14 @@
   <data name="usernameLabel.Text" xml:space="preserve">
     <value>Username:</value>
   </data>
-  <data name="&gt;&gt;dateOfBirthLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="YLabel.Text" xml:space="preserve">
+    <value>𝕐</value>
   </data>
   <data name="&gt;&gt;usernameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dateOfBirthLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="languageComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>637, 12</value>
   </data>
   <data name="&gt;&gt;emailLabel.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -284,14 +281,17 @@
   <data name="languageComboBox.Text" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="&gt;&gt;languageComboBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;loginLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;emailTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="&gt;&gt;usernameLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="languageComboBox.Items" xml:space="preserve">
     <value>English</value>
@@ -302,8 +302,8 @@
   <data name="&gt;&gt;enterButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="emailLabel.Text" xml:space="preserve">
-    <value>Email:</value>
+  <data name="usernameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="YLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 135</value>
@@ -317,6 +317,9 @@
   <data name="&gt;&gt;dateOfBirthLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="passwordTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 450</value>
   </data>
@@ -326,20 +329,17 @@
   <data name="languageComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 24</value>
   </data>
+  <data name="&gt;&gt;usernameLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="&gt;&gt;enterButton.Name" xml:space="preserve">
     <value>enterButton</value>
   </data>
   <data name="emailTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="languageComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>637, 12</value>
-  </data>
-  <data name="&gt;&gt;languageComboBox.Name" xml:space="preserve">
-    <value>languageComboBox</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+  <data name="emailLabel.Text" xml:space="preserve">
+    <value>Email:</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -365,8 +365,8 @@
   <data name="&gt;&gt;emailTextBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;usernameTextBox.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 38</value>
@@ -374,8 +374,8 @@
   <data name="loginLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="YLabel.Text" xml:space="preserve">
-    <value>𝕐</value>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="emailLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt</value>
@@ -392,11 +392,14 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Register</value>
   </data>
-  <data name="emailLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 195</value>
+  <data name="&gt;&gt;dateOfBirthLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="&gt;&gt;usernameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dateOfBirthLabel.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -404,17 +407,14 @@
   <data name="dateOfBirthLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>280, 259</value>
   </data>
-  <data name="enterButton.Text" xml:space="preserve">
-    <value>Enter</value>
-  </data>
-  <data name="enterButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>443, 383</value>
+  <data name="&gt;&gt;languageComboBox.Name" xml:space="preserve">
+    <value>languageComboBox</value>
   </data>
   <data name="YLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 72pt</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;dateOfBirthLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -440,17 +440,17 @@
   <data name="&gt;&gt;languageComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="passwordTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="enterButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>443, 383</value>
   </data>
   <data name="emailLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="usernameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
   </data>
-  <data name="&gt;&gt;enterButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="enterButton.Text" xml:space="preserve">
+    <value>Enter</value>
   </data>
   <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16.2pt</value>
@@ -458,11 +458,11 @@
   <data name="passwordTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16.2pt</value>
   </data>
-  <data name="&gt;&gt;usernameLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;usernameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dateOfBirthLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="usernameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -470,14 +470,14 @@
   <data name="&gt;&gt;passwordTextBox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;languageComboBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="&gt;&gt;dateOfBirthPicker.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;usernameLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="YLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, -5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

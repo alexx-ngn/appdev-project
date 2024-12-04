@@ -59,7 +59,7 @@ namespace Y
             NewPost post = new NewPost(id);
             post.PostButton += (s, ev) =>
             {
-                //UserOverviewSystem.Instance.ReloadUsers();
+                UserOverviewSystem.Instance.ReloadUsers();
                 loadFeed();
             };
             post.ShowDialog();
