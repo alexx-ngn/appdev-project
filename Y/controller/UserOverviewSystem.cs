@@ -78,7 +78,7 @@ namespace Y.controller
                             DateTime date = DateTimeOffset.FromUnixTimeSeconds(reader.GetInt64(2)).DateTime;
                             int likes = reader.GetInt32(3);
                             int accountId = reader.GetInt32(4);
-                            Post post = new Post(id, text, likes, date);
+                            Post post = new Post(id, text, likes, date, accountId);
                             posts.Add(post);
                         }
                     }
@@ -130,6 +130,46 @@ namespace Y.controller
                 //    MessageBox.Show($"Error loading users: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //    return new List<UserAccount>();
                 //}
+            }
+        }
+
+        public String GetPostUsername(int postId)
+        {
+            using (SQLiteConnection connection = GetConnection())
+            {
+                connection.Open();
+                string query = @"
+                    SELECT UserAccount.name 
+                    FROM Post 
+                    INNER JOIN UserAccount ON Post.account_id = UserAccount.id 
+                    WHERE Post.id = @postId";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@postId", postId);
+                    object result = command.ExecuteScalar();
+                    return result != null ? result.ToString() : null;
+                }
+            }
+        }
+
+        public void AddPost(Post post)
+        {
+            UserPosts.Add(post);
+            using (SQLiteConnection connection = GetConnection())
+            {
+                connection.Open();
+                string query = @"
+                    INSERT INTO Post (text, date, likes, account_id) 
+                    VALUES (@text, @date, @likes, @account_id)";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    //command.Parameters.AddWithValue("@id", post.Id);
+                    command.Parameters.AddWithValue("@text", post.Text);
+                    command.Parameters.AddWithValue("@date", new DateTimeOffset(post.DatePosted).ToUnixTimeSeconds());
+                    command.Parameters.AddWithValue("@likes", post.Likes);
+                    command.Parameters.AddWithValue("@account_id", post.accountId);
+                    command.ExecuteNonQuery();
+                }
             }
         }
     }

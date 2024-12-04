@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Y.controller;
 
 namespace Y
 {
     public partial class NewPost : Form
     {
-        public NewPost()
+        private int accountId { get; set; }
+        public NewPost(int accountId)
         {
             InitializeComponent();
+            this.accountId = accountId;
         }
 
         private void postButton_Click(object sender, EventArgs e)
@@ -43,6 +46,8 @@ namespace Y
                         MessageBox.Show("Post submitted.");
                         break;
                 }
+                var post = new Post(postRichTextBox.Text, accountId);
+                UserOverviewSystem.Instance.AddPost(post);
                 this.Close();
             }
         }

@@ -58,7 +58,7 @@ namespace Y
 
         public void post(String text)
         {
-            Post post = new Post(text);
+            Post post = new Post(text, this.Id);
             Posts.Add(post);
         }
 

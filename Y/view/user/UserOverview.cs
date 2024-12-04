@@ -32,9 +32,16 @@ namespace Y
             //    MyPost post = new MyPost();
             //    MyPostsFlowLayoutPanel.Controls.Add(post);
             //}
-            for (int i = 0; i < UserOverviewSystem.UserPosts.Count; i++)
+            //for (int i = 0; i < UserOverviewSystem.UserPosts.Count; i++)
+            //{
+                
+            //    //int id = UserOverviewSystem.UserPosts[i].Id;
+            //    UserPostProfile post = new UserPostProfile(UserOverviewSystem.UserPosts[i]);
+            //    overviewFlowLayoutPanel.Controls.Add(post);
+            //}
+
+            for (int i = UserOverviewSystem.UserPosts.Count - 1; i >= 0; i--)
             {
-                //int id = UserOverviewSystem.UserPosts[i].Id;
                 UserPostProfile post = new UserPostProfile(UserOverviewSystem.UserPosts[i]);
                 overviewFlowLayoutPanel.Controls.Add(post);
             }
@@ -49,7 +56,7 @@ namespace Y
 
         private void postButton_Click(object sender, EventArgs e)
         {
-            NewPost post = new NewPost();
+            NewPost post = new NewPost(id);
             post.ShowDialog();
         }
 

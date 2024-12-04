@@ -51,14 +51,28 @@ namespace Y.controller
 
         public int FetchUserIdFromUsername(String username)
         {
-            for (int i = 0; i < UserAccounts.Count; i++)
+            try
             {
-                if (UserAccounts[i].Name == username)
+                using (SQLiteConnection connection = GetConnection())
                 {
-                    return UserAccounts[i].Id;
+                    connection.Open();
+                    string query = "SELECT id FROM UserAccount WHERE name = @username";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
+                        object result = command.ExecuteScalar();
+                        if (result != null)
+                        {
+                            return Convert.ToInt32(result);
+                        }
+                    }
                 }
             }
-            return -1;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error fetching user ID: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return -1; // Return -1 if user not found or error occurs
         }
 
         private SQLiteConnection GetConnection()

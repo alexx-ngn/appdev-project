@@ -39,8 +39,7 @@ namespace Y
 
         private void setUsernameLabel()
         {
-            var user = UserOverviewSystem.UserAccounts.FirstOrDefault(x => x.Id == userId);
-            String username = user != null ? user.Name : "Unknown";
+            String username = UserOverviewSystem.Instance.GetPostUsername(id);
             usernameLabel.Text = username;
         }
 
