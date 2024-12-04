@@ -15,9 +15,7 @@ namespace Overview
     {
         public Overview()
         {
-            {
-                InitializeComponent(); // Add try-catch to identify specific initialization errors
-            }
+            InitializeComponent(); // Add try-catch to identify specific initialization errors
         }
 
         private void logoutButton_Click(object sender, EventArgs e)

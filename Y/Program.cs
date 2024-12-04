@@ -16,7 +16,7 @@ namespace Y
         [STAThread]
         static void Main()
         {
-            var language = "fr-CA";
+            var language = "en-US";
             Thread.CurrentThread.CurrentCulture = new global::System.Globalization.CultureInfo(language);
             Thread.CurrentThread.CurrentUICulture = new global::System.Globalization.CultureInfo(language);
 

@@ -76,7 +76,18 @@ namespace Y
             }
             else
             {
-                MessageBox.Show("Invalid credentials ");
+                switch(Thread.CurrentThread.CurrentUICulture.Name)
+                {
+                    case "en-US":
+                        MessageBox.Show("Invalid username or password");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Nom d'utilisateur ou mot de passe invalide");
+                        break;
+                    default:
+                        MessageBox.Show("Invalid username or password");
+                        break;
+                }
             }
         }
     }

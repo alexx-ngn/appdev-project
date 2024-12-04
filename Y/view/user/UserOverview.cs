@@ -49,9 +49,9 @@ namespace Y
 
         private void hideTabs()
         {
-            OverviewTabControl.TabPages.Remove(homeTab);
-            OverviewTabControl.TabPages.Remove(searchTab);
-            OverviewTabControl.TabPages.Remove(profileTab);
+            OverviewTabControl.Appearance = TabAppearance.FlatButtons;
+            OverviewTabControl.ItemSize = new Size(0, 1);
+            OverviewTabControl.SizeMode = TabSizeMode.Fixed;
         }
 
         private void postButton_Click(object sender, EventArgs e)
@@ -59,6 +59,7 @@ namespace Y
             NewPost post = new NewPost(id);
             post.PostButton += (s, ev) =>
             {
+                //UserOverviewSystem.Instance.ReloadUsers();
                 loadFeed();
             };
             post.ShowDialog();
@@ -66,7 +67,7 @@ namespace Y
 
         private void UserOverview_Load(object sender, EventArgs e)
         {
-            //hideTabs();
+            hideTabs();
             loadFeed();
         }
 
