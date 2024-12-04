@@ -2,27 +2,55 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Y.controller
 {
     internal class UserOverviewSystem
     {
-        public static List<UserAccount> UserAccounts { get; set; } = LoadUsers();
-        public static List<Post> UserPosts { get; set; } = LoadPosts();
+        // Singleton instance
+        private static UserOverviewSystem _instance;
+        private static readonly object _lock = new object();
 
-        private static SQLiteConnection GetConnection()
+        // Instance properties
+        public List<UserAccount> UserAccounts { get; private set; }
+        public List<Post> UserPosts { get; private set; }
+
+        // Private constructor
+        private UserOverviewSystem()
+        {
+            UserAccounts = LoadUsers();
+            UserPosts = LoadPosts();
+        }
+
+        // Public accessor for the singleton instance
+        public static UserOverviewSystem Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    lock (_lock)
+                    {
+                        if (_instance == null)
+                        {
+                            _instance = new UserOverviewSystem();
+                        }
+                    }
+                }
+                return _instance;
+            }
+        }
+
+        // Instance methods
+        private SQLiteConnection GetConnection()
         {
             string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"database\Y_DB.sqlite");
-            //string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={databasePath};Integrated Security=True;";
             string connectionString = $@"Data Source={databasePath};";
             return new SQLiteConnection(connectionString);
         }
 
-        public static List<Post> LoadPosts()
+        private List<Post> LoadPosts()
         {
             using (SQLiteConnection connection = GetConnection())
             {
@@ -36,7 +64,7 @@ namespace Y.controller
                         return new List<Post>();
                     }
                 }
-                
+
                 var posts = new List<Post>();
                 query = "SELECT * FROM Post";
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
@@ -58,7 +86,8 @@ namespace Y.controller
                 return posts;
             }
         }
-        public static List<UserAccount> LoadUsers()
+
+        private List<UserAccount> LoadUsers()
         {
             try
             {
