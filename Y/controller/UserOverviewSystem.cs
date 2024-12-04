@@ -75,7 +75,8 @@ namespace Y.controller
                         {
                             int id = reader.GetInt32(0);
                             string text = reader.GetString(1);
-                            DateTime date = DateTimeOffset.FromUnixTimeSeconds(reader.GetInt64(2)).DateTime;
+                            DateTime date = DateTimeOffset.FromUnixTimeSeconds(reader.GetInt64(2)).UtcDateTime;
+                            date = TimeZoneInfo.ConvertTimeFromUtc(date, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
                             int likes = reader.GetInt32(3);
                             int accountId = reader.GetInt32(4);
                             Post post = new Post(id, text, likes, date, accountId);
