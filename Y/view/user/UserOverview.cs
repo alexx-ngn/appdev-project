@@ -21,7 +21,7 @@ namespace Y
             InitializeComponent();
             this.id = id;
         }
-        private void loadFeed()
+        public void loadFeed()
         {
             //for (int i = 0; i < 5; i++)
             //{
@@ -34,12 +34,12 @@ namespace Y
             //}
             //for (int i = 0; i < UserOverviewSystem.UserPosts.Count; i++)
             //{
-                
+
             //    //int id = UserOverviewSystem.UserPosts[i].Id;
             //    UserPostProfile post = new UserPostProfile(UserOverviewSystem.UserPosts[i]);
             //    overviewFlowLayoutPanel.Controls.Add(post);
             //}
-
+            overviewFlowLayoutPanel.Controls.Clear();
             for (int i = UserOverviewSystem.UserPosts.Count - 1; i >= 0; i--)
             {
                 UserPostProfile post = new UserPostProfile(UserOverviewSystem.UserPosts[i]);

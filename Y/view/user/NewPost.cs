@@ -23,8 +23,9 @@ namespace Y
         private void postButton_Click(object sender, EventArgs e)
         {
             var culture = global::System.Globalization.CultureInfo.CurrentUICulture.ToString();
-            
-            if (postRichTextBox.Text == "") {
+
+            if (postRichTextBox.Text == "")
+            {
                 switch (culture)
                 {
                     case "fr-CA":
@@ -48,6 +49,12 @@ namespace Y
                 }
                 var post = new Post(postRichTextBox.Text, accountId);
                 UserOverviewSystem.Instance.AddPost(post);
+
+                var userOverviewForm = Application.OpenForms.OfType<UserOverview>().FirstOrDefault();
+                if (userOverviewForm != null)
+                {
+                    userOverviewForm.loadFeed();
+                }
                 this.Close();
             }
         }
