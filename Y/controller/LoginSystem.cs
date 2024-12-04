@@ -2,26 +2,21 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
-using System.Security.Cryptography;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Y.Controller
+namespace Y.controller
 {
     internal class LoginSystem
     {
-        // Singleton instance
         private static LoginSystem _instance;
         private static readonly object _lock = new object();
 
-        // Instance properties
-        private Dictionary<string, string> UserCredentials { get; } = new Dictionary<string, string>();
-        private List<UserAccount> UserAccounts { get; } = new List<UserAccount>();
+        private Dictionary<String, String> UserCredentials { get; set; } = new Dictionary<String, String>();
+        private List<UserAccount> UserAccounts { get; set; } = new List<UserAccount>();
 
-        // Private constructor
-        private LoginSystem() { }
-
-        // Public accessor for the singleton instance
         public static LoginSystem Instance
         {
             get
@@ -40,51 +35,40 @@ namespace Y.Controller
             }
         }
 
-        /// <summary>
-        /// Adds a new user's credentials securely.
-        /// </summary>
-        public void AddUserCredentials(string username, string password)
+        public void AddUserCredentials(String username, String password)
         {
-            if (UserCredentials.ContainsKey(username))
-            {
-                MessageBox.Show("Username already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string hashedPassword = HashPassword(password);
-            UserCredentials[username] = hashedPassword;
+            UserCredentials.Add(username, password);
         }
 
-        /// <summary>
-        /// Validates a user's credentials against stored data.
-        /// </summary>
-        public bool ValidateUser(string username, string password)
+        public bool ValidateUser(String userName, String password)
         {
-            if (UserCredentials.TryGetValue(username, out string storedHashedPassword))
+            if (UserCredentials.ContainsKey(userName))
             {
-                return VerifyPassword(password, storedHashedPassword);
+                return UserCredentials[userName] == password;
             }
             return false;
         }
 
-        /// <summary>
-        /// Fetches the User ID for a given username.
-        /// </summary>
-        public int FetchUserIdFromUsername(string username)
+        public int FetchUserIdFromUsername(String username)
         {
-            foreach (var user in UserAccounts)
+            for (int i = 0; i < UserAccounts.Count; i++)
             {
-                if (user.Name.Equals(username, StringComparison.OrdinalIgnoreCase))
+                if (UserAccounts[i].Name == username)
                 {
-                    return user.Id;
+                    return UserAccounts[i].Id;
                 }
             }
-            return -1; // User not found
+            return -1;
         }
 
-        /// <summary>
-        /// Loads users from the database into in-memory structures.
-        /// </summary>
+        private SQLiteConnection GetConnection()
+        {
+            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"database\Y_DB.sqlite");
+            //string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={databasePath};Integrated Security=True;";
+            string connectionString = $@"Data Source={databasePath};";
+            return new SQLiteConnection(connectionString);
+        }
+
         public void LoadUsers()
         {
             try
@@ -92,8 +76,17 @@ namespace Y.Controller
                 using (SQLiteConnection connection = GetConnection())
                 {
                     connection.Open();
+                    string query = "SELECT COUNT(*) FROM UserAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        if (count == 0)
+                        {
+                            return;
+                        }
+                    }
 
-                    string query = "SELECT * FROM UserAccount";
+                    query = "SELECT * FROM UserAccount";
                     using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         using (SQLiteDataReader reader = command.ExecuteReader())
@@ -108,9 +101,6 @@ namespace Y.Controller
 
                                 UserAccount user = new UserAccount(id, name, email, password, followerCount);
                                 UserAccounts.Add(user);
-
-                                // Populate credentials dictionary
-                                UserCredentials[name] = password;
                             }
                         }
                     }
@@ -122,43 +112,9 @@ namespace Y.Controller
             }
         }
 
-        /// <summary>
-        /// Retrieves all loaded user accounts.
-        /// </summary>
         public List<UserAccount> GetUserAccounts()
         {
-            return new List<UserAccount>(UserAccounts);
-        }
-
-        /// <summary>
-        /// Hashes a password securely using SHA256.
-        /// </summary>
-        private string HashPassword(string password)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(bytes);
-            }
-        }
-
-        /// <summary>
-        /// Verifies a password against a stored hash.
-        /// </summary>
-        private bool VerifyPassword(string password, string hashedPassword)
-        {
-            string hashOfInput = HashPassword(password);
-            return hashOfInput.Equals(hashedPassword);
-        }
-
-        /// <summary>
-        /// Creates and returns a SQLite connection object.
-        /// </summary>
-        private SQLiteConnection GetConnection()
-        {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"database\Y_DB.sqlite");
-            string connectionString = $@"Data Source={databasePath};";
-            return new SQLiteConnection(connectionString);
+            return UserAccounts;
         }
     }
 }

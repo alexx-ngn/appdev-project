@@ -9,7 +9,7 @@ namespace Y.controller
     public class ReportSystem
     {
         private static ReportSystem _instance;
-        private static readonly object Lock = new object();
+        private static readonly object _lock = new object();
 
         private List<UserAccount> UserAccounts { get; set; } = new List<UserAccount>();
         private List<AdminAccount> AdminAccounts { get; set; } = new List<AdminAccount>();
@@ -202,6 +202,152 @@ namespace Y.controller
                 {
                     Console.WriteLine($"Error removing admin: {ex.Message}");
                 }
+            }
+        }
+
+        public int GetLastAdminID()
+        {
+            try
+            {
+                using (SQLiteConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM UserAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        if (count == 0)
+                        {
+                            return 0;
+                        }
+                    }
+
+                    query = "SELECT MAX(id) FROM AdminAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        return Convert.ToInt32(command.ExecuteScalar());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error getting last admin ID: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+
+
+        public void FileReport(Report report)
+        {
+            using (SQLiteConnection connection = GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = string.Empty;
+
+                    if (report is UserReport userReport)
+                    {
+                        // UserReport: Insert into UserReport table
+                        query = "INSERT INTO UserReport (id, reportingUserId, reason, reportedUserId) VALUES (@id, @reportingUserId, @reason, @reportedUserId)";
+                        using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@id", userReport.Id);
+                            command.Parameters.AddWithValue("@reportingUserId", userReport.ReportingUserId);
+                            command.Parameters.AddWithValue("@reason", userReport.Reason);
+                            command.Parameters.AddWithValue("@reportedUserId", userReport.ReportedUserId);
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    else if (report is PostReport postReport)
+                    {
+                        // PostReport: Insert into PostReport table
+                        query = "INSERT INTO PostReport (id, reportingUserId, reason, reportedPostId) VALUES (@id, @reportingUserId, @reason, @reportedPostId)";
+                        using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@id", postReport.Id);
+                            command.Parameters.AddWithValue("@reportingUserId", postReport.ReportingUserId);
+                            command.Parameters.AddWithValue("@reason", postReport.Reason);
+                            command.Parameters.AddWithValue("@reportedPostId", postReport.ReportedPostId);
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+
+                    Console.WriteLine("Report filed successfully.");
+                    OpenReports.Enqueue(report);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error filing report: {ex.Message}");
+                }
+            }
+        }
+
+        public Report FetchNextOpenReport()
+        {
+            if (OpenReports.Count > 0)
+            {
+                Report report = OpenReports.Dequeue();
+                ProcessingReports.Enqueue(report);
+                return report;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public void FetchProcessingToClose()
+        {
+            if (ProcessingReports.Count > 0)
+            {
+                Report report = ProcessingReports.Dequeue();
+
+                using (SQLiteConnection connection = GetConnection())
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        string query = string.Empty;
+
+                        if (report is UserReport userReport)
+                        {
+                            // Delete the report from UserReport table
+                            query = "DELETE FROM UserReport WHERE id = @id";
+                            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@id", userReport.Id);
+                                command.ExecuteNonQuery();
+                            }
+                        }
+                        else if (report is PostReport postReport)
+                        {
+                            // Delete the report from PostReport table
+                            query = "DELETE FROM PostReport WHERE id = @id";
+                            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@id", postReport.Id);
+                                command.ExecuteNonQuery();
+                            }
+                        }
+
+                        // Add the report to the ClosedReports list after removing it from the database
+                        ClosedReports.Add(report);
+                        Console.WriteLine("Report processed and closed successfully.");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error processing and closing the report: {ex.Message}");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No reports in the processing queue.");
             }
         }
 
