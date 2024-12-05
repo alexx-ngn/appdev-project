@@ -11,15 +11,23 @@ namespace Y
         public int Id {  get; set; }
         public int ReportingUserId { get; set; }
         public String Reason { get; set; }
-        public Status Status { get; set; }
-        public DateTime DateReported { get;}
+        //public Status Status { get; set; }
+        public DateTime DateReported { get;} 
+
+        public Report(int id, int reportingUserId, string reason, DateTime dateReported)
+        {
+            Id = id;
+            ReportingUserId = reportingUserId;
+            Reason = reason;
+            DateReported = dateReported;
+        }
 
         public Report(int id, int reportingUserId, string reason)
         {
             Id = id;
             ReportingUserId = reportingUserId;
             Reason = reason;
-            Status = Status.Created;
+            //Status = Status.Created;
             DateReported = DateTime.Now;
         }
 
@@ -28,7 +36,7 @@ namespace Y
         {
             ReportingUserId = reportingUserId;
             Reason = reason;
-            Status = Status.Created;
+            //Status = Status.Created;
             DateReported = DateTime.Now;
         }
 
@@ -38,10 +46,10 @@ namespace Y
         //    AdminId = adminId; // Set AdminId
         //}
 
-        public void ChangeStatus(Status status)
-        {
-            Status = status; 
-        }
+        //public void ChangeStatus(Status status)
+        //{
+        //    Status = status; 
+        //}
 
         ////  Method to retrieve AdminId for debugging or logs
         //public int GetAdminId()

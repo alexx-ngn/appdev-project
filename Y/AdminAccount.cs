@@ -45,10 +45,10 @@ namespace Y
         //    }
         //}
 
-        public void changeReportStatus(Report report, Status status)
-        {
-            report.ChangeStatus(status);
-        }
+        //public void changeReportStatus(Report report, Status status)
+        //{
+        //    report.ChangeStatus(status);
+        //}
 
         //public void closeReport(Report report)
         //{

@@ -254,14 +254,14 @@ namespace Y.controller
                     if (report is UserReport userReport)
                     {
                         // UserReport: Insert into UserReport table
-                        query = "INSERT INTO UserReport (reportingUserId, reason, reportedUserId) VALUES (@reportingUserId, @reason, @reportedUserId)";
+                        query = "INSERT INTO UserReport (reportingUserId, reason, reportedUserId, date) VALUES (@reportingUserId, @reason, @reportedUserId, @date)";
                         using (SQLiteCommand command = new SQLiteCommand(query, connection))
                         {
                             //command.Parameters.AddWithValue("@id", userReport.Id);
                             command.Parameters.AddWithValue("@reportingUserId", userReport.ReportingUserId);
                             command.Parameters.AddWithValue("@reason", userReport.Reason);
                             command.Parameters.AddWithValue("@reportedUserId", userReport.ReportedUserId);
-
+                            command.Parameters.AddWithValue("@date", new DateTimeOffset(userReport.DateReported).ToUnixTimeSeconds());
                             command.ExecuteNonQuery();
                         }
                         UserReports.Add(report as UserReport);
@@ -270,13 +270,14 @@ namespace Y.controller
                     else if (report is PostReport postReport)
                     {
                         // PostReport: Insert into PostReport table
-                        query = "INSERT INTO PostReport (reportingUserId, reason, reportedPostId) VALUES (@reportingUserId, @reason, @reportedPostId)";
+                        query = "INSERT INTO PostReport (reportingUserId, reason, reportedPostId, date) VALUES (@reportingUserId, @reason, @reportedPostId, @date)";
                         using (SQLiteCommand command = new SQLiteCommand(query, connection))
                         {
                             //command.Parameters.AddWithValue("@id", postReport.Id);
                             command.Parameters.AddWithValue("@reportingUserId", postReport.ReportingUserId);
                             command.Parameters.AddWithValue("@reason", postReport.Reason);
                             command.Parameters.AddWithValue("@reportedPostId", postReport.ReportedPostId);
+                            command.Parameters.AddWithValue("@date", new DateTimeOffset(postReport.DateReported).ToUnixTimeSeconds());
 
                             command.ExecuteNonQuery();
                         }
