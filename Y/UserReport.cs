@@ -18,10 +18,9 @@ namespace Y
             ReportedUserId = reportedUserId;
         }
 
-        public UserReport(int id, int reportingUserId, string reason, int reportedUserId, DateTime dateTime) : base(id, reportingUserId, reason)
+        public UserReport(int id, int reportingUserId, string reason, int reportedUserId, DateTime dateReported) : base(id, reportingUserId, reason, dateReported)
         {
             ReportedUserId = reportedUserId;
-            this.dateTime = dateTime;
         }
     }
 }

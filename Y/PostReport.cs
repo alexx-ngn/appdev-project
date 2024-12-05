@@ -19,8 +19,7 @@ namespace Y
         //    ReportedPostId = reportedPostId;
         //}
 
-        public PostReport(int id, int reportingUserId, string reason, DateTime dateReported, int reportedPostId)
-            : base(id, reportingUserId, reason, dateReported)
+        public PostReport(int id, int reportingUserId, string reason, DateTime dateReported, int reportedPostId) : base(id, reportingUserId, reason, dateReported)
         {
             ReportedPostId = reportedPostId;
         }

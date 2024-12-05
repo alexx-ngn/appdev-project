@@ -158,7 +158,8 @@ namespace Y.controller
                                 DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader["date"])).DateTime;
                                 dateTime = TimeZoneInfo.ConvertTimeFromUtc(dateTime, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
 
-                                UserReports.Add(new UserReport(id, reportingUserId, reason, reportedUserId, dateTime));
+                                var userReport = new UserReport(id, reportingUserId, reason, reportedUserId, dateTime);
+                                UserReports.Add(userReport);
                             }
                         }
                     }
@@ -193,7 +194,8 @@ namespace Y.controller
                                 DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader["date"])).DateTime;
                                 dateTime = TimeZoneInfo.ConvertTimeFromUtc(dateTime, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
 
-                                PostReports.Add(new PostReport(id, reportingUserId, reason, reportedPostId, dateTime));
+                                var postReport = new PostReport(id, reportingUserId, reason, dateTime, reportedPostId);
+                                PostReports.Add(postReport);
                             }
                         }
                     }

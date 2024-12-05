@@ -44,7 +44,7 @@ namespace Y.view.admin
             foreach (var report in ReportSystem.Instance.PostReports)
             {
                 ListViewItem item = new ListViewItem($"{report.Id.ToString()}");
-                item.SubItems.Add($"{report.DateReported.ToString()}");
+                item.SubItems.Add(report.DateReported.ToString());
                 postReportsListView.Items.Add(item);
             }
         }
@@ -57,7 +57,8 @@ namespace Y.view.admin
             foreach (var report in ReportSystem.Instance.UserReports)
             {
                 ListViewItem item = new ListViewItem($"{report.Id.ToString()}");
-                item.SubItems.Add($"{report.DateReported.ToString()}");
+                //MessageBox.Show(report.DateReported.ToString());
+                item.SubItems.Add(report.DateReported.ToString());
                 userReportsListView.Items.Add(item);
             }
         }
