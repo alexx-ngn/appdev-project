@@ -74,6 +74,7 @@ namespace Y
             {
                 UserOverviewSystem.Instance.ReloadUsers();
                 loadFeed();
+                loadProfile();
             };
             post.ShowDialog();
         }

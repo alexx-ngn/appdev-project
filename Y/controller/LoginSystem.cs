@@ -192,9 +192,13 @@ namespace Y.controller
                         {
                             while (reader.Read())
                             {
+                                int id = Convert.ToInt32(reader["id"]);
                                 string name = reader["name"].ToString();
+                                string email = reader["email"].ToString();
                                 string password = reader["password"].ToString();
 
+                                AdminAccount admin = new AdminAccount(id, name, email, password);
+                                AdminAccounts.Add(admin);
                                 AddAdminCredentials(name, password);
                             }
                         }
