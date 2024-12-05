@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using Y.controller;
 using Y.view.admin;
 
 namespace Y.view.admin
@@ -25,8 +26,8 @@ namespace Y.view.admin
             InitializeComponent();
         }
 
-        private List<(String, String)> postReports = new List<(String, String)>();
-        private List<(String, String)> userReports = new List<(String, String)>();
+        //private List<(String, String)> postReports = new List<(String, String)>();
+        //private List<(String, String)> userReports = new List<(String, String)>();
 
         private void loadPostReports()
         {
@@ -34,10 +35,16 @@ namespace Y.view.admin
             //{
             //    postReports.Add(("Post " + i, "Date " + i));
             //}
-            foreach ((String, String) report in postReports)
+            //this.postReports.Clear();
+            //foreach (var report in Y.controller.ReportSystem.Instance.PostReports)
+            //{
+            //    postReports.Add((report.Id.ToString(), report.DateReported.ToString()));
+            //}
+            postReportsListView.Items.Clear();
+            foreach (var report in ReportSystem.Instance.PostReports)
             {
-                ListViewItem item = new ListViewItem($"{report.Item1}");
-                item.SubItems.Add($"{report.Item2}");
+                ListViewItem item = new ListViewItem($"{report.Id.ToString()}");
+                item.SubItems.Add($"{report.DateReported.ToString()}");
                 postReportsListView.Items.Add(item);
             }
         }
@@ -47,10 +54,10 @@ namespace Y.view.admin
             //for (int i = 0; i < 50; i++) {
             //    userReports.Add(("User " + i, "Date " + i));
             //}
-            foreach ((String, String) report in userReports)
+            foreach (var report in ReportSystem.Instance.UserReports)
             {
-                ListViewItem item = new ListViewItem($"{report.Item1}");
-                item.SubItems.Add($"{report.Item2}");
+                ListViewItem item = new ListViewItem($"{report.Id.ToString()}");
+                item.SubItems.Add($"{report.DateReported.ToString()}");
                 userReportsListView.Items.Add(item);
             }
         }
@@ -148,6 +155,8 @@ namespace Y.view.admin
 
         private void AdminOverview_Load(object sender, EventArgs e)
         {
+            ReportSystem.Instance.loadUserReports();
+            ReportSystem.Instance.loadPostReports();
             loadPostReports();
             loadUserReports();
         }

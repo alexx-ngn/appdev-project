@@ -17,8 +17,8 @@ namespace Y.controller
         //private Queue<Report> OpenReports { get; set; } = new Queue<Report>();
         //private Queue<Report> ProcessingReports { get; set; } = new Queue<Report>();
         //private List<Report> ClosedReports { get; set; } = new List<Report>();
-        private List<PostReport> PostReports { get; set; } = new List<PostReport>();
-        private List<UserReport> UserReports { get; set; } = new List<UserReport>();
+        public List<PostReport> PostReports { get; set; } = new List<PostReport>();
+        public List<UserReport> UserReports { get; set; } = new List<UserReport>();
 
         private ReportSystem() { }
 
@@ -132,6 +132,76 @@ namespace Y.controller
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading users: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void loadUserReports()
+        {
+            UserReports.Clear();
+            try
+            {
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM UserReport";
+                    using (var command = new SQLiteCommand(query, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int id = Convert.ToInt32(reader["id"]);
+                                int reportingUserId = Convert.ToInt32(reader["reportingUserId"]);
+                                string reason = reader["reason"].ToString();
+                                int reportedUserId = Convert.ToInt32(reader["reportedUserId"]);
+                                DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader["date"])).DateTime;
+                                dateTime = TimeZoneInfo.ConvertTimeFromUtc(dateTime, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
+
+                                UserReports.Add(new UserReport(id, reportingUserId, reason, reportedUserId, dateTime));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading user reports: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void loadPostReports()
+        {
+            PostReports.Clear();
+            try
+            {
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM PostReport";
+                    using (var command = new SQLiteCommand(query, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int id = Convert.ToInt32(reader["id"]);
+                                int reportingUserId = Convert.ToInt32(reader["reportingUserId"]);
+                                string reason = reader["reason"].ToString();
+                                int reportedPostId = Convert.ToInt32(reader["reportedPostId"]);
+                                DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader["date"])).DateTime;
+                                dateTime = TimeZoneInfo.ConvertTimeFromUtc(dateTime, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
+
+                                PostReports.Add(new PostReport(id, reportingUserId, reason, reportedPostId, dateTime));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading post reports: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

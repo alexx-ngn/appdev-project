@@ -10,6 +10,9 @@ namespace Y
     {
         public int ReportedPostId { get; set; }
         private static int idCount = 1;
+        private int reportedUserId;
+        private DateTime dateTime;
+
         //public PostReport(int reportingUserId, string reason, int reportedPostId) : base(reportingUserId, reason)
         //{
         //    Id = idCount++;
@@ -25,6 +28,12 @@ namespace Y
         public PostReport(int reportingUserId, string reason, int reportedPostId) : base(reportingUserId, reason)
         {
             ReportedPostId = reportedPostId;
+        }
+
+        public PostReport(int id, int reportingUserId, string reason, int reportedUserId, DateTime dateTime) : base(id, reportingUserId, reason)
+        {
+            this.reportedUserId = reportedUserId;
+            this.dateTime = dateTime;
         }
     }
 }
