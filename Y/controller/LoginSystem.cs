@@ -15,8 +15,9 @@ namespace Y.controller
         private static readonly object _lock = new object();
 
         private Dictionary<String, String> UserCredentials { get; set; } = new Dictionary<String, String>();
+        private Dictionary<String, String> AdminCredentials { get; set; } = new Dictionary<String, String>();
         private List<UserAccount> UserAccounts { get; set; } = new List<UserAccount>();
-
+        private List<AdminAccount> AdminAccounts { get; set; } = new List<AdminAccount>();
         public static LoginSystem Instance
         {
             get
@@ -40,11 +41,25 @@ namespace Y.controller
             UserCredentials.Add(username, password);
         }
 
+        public void AddAdminCredentials(String username, String password)
+        {
+            AdminCredentials.Add(username, password);
+        }
+
         public bool ValidateUser(String userName, String password)
         {
             if (UserCredentials.ContainsKey(userName))
             {
                 return UserCredentials[userName] == password;
+            }
+            return false;
+        }
+
+        public bool ValidateAdmin(String userName, String password)
+        {
+            if (AdminCredentials.ContainsKey(userName))
+            {
+                return AdminCredentials[userName] == password;
             }
             return false;
         }
@@ -73,6 +88,32 @@ namespace Y.controller
                 MessageBox.Show($"Error fetching user ID: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return -1; // Return -1 if user not found or error occurs
+        }
+
+        public int FetchAdminIdFromUsername(String username)
+        {
+            try
+            {
+                using (SQLiteConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT id FROM AdminAccount WHERE name = @username";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
+                        object result = command.ExecuteScalar();
+                        if (result != null)
+                        {
+                            return Convert.ToInt32(result);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error fetching admin ID: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return -1; // Return -1 if admin not found or error occurs
         }
 
         private SQLiteConnection GetConnection()
@@ -127,9 +168,53 @@ namespace Y.controller
             }
         }
 
+        public void LoadAdmins()
+        {
+            try
+            {
+                using (SQLiteConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM AdminAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        if (count == 0)
+                        {
+                            return;
+                        }
+                    }
+
+                    query = "SELECT * FROM AdminAccount";
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string name = reader["name"].ToString();
+                                string password = reader["password"].ToString();
+
+                                AddAdminCredentials(name, password);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading admins: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public List<UserAccount> GetUserAccounts()
         {
             return UserAccounts;
+        }
+
+        public List<AdminAccount> GetAdminAccounts()
+        {
+            return AdminAccounts;
         }
     }
 }

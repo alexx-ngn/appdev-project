@@ -124,11 +124,8 @@
   <data name="profile10.Size" type="System.Drawing.Size, System.Drawing">
     <value>1200, 57</value>
   </data>
-  <data name="&gt;&gt;profile9.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="homeTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1304, 721</value>
+  <data name="profileTab.Text" xml:space="preserve">
+    <value>My Profile</value>
   </data>
   <data name="searchFlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 62</value>
@@ -145,7 +142,13 @@
   <data name="sideListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="&gt;&gt;MyPostsFlowLayoutPanel.Name" xml:space="preserve">
+    <value>MyPostsFlowLayoutPanel</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="postButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="OverviewTabControl.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
@@ -160,6 +163,9 @@
   </data>
   <data name="profile2.Size" type="System.Drawing.Size, System.Drawing">
     <value>1200, 57</value>
+  </data>
+  <data name="searchEnterButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 0</value>
   </data>
   <data name="&gt;&gt;postButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -188,8 +194,8 @@
   <data name="profile2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 66</value>
   </data>
-  <data name="&gt;&gt;profile2.Parent" xml:space="preserve">
-    <value>searchFlowLayoutPanel</value>
+  <data name="postButton.Text" xml:space="preserve">
+    <value>Post</value>
   </data>
   <data name="&gt;&gt;logoutButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -219,11 +225,11 @@
   <data name="YLabel.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
+  <data name="homeTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
   <data name="&gt;&gt;sideViewPanel.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="searchTab.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;MyPostsLabel.Parent" xml:space="preserve">
     <value>profilePanel</value>
@@ -264,8 +270,8 @@
   <data name="sideViewPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 413</value>
   </data>
-  <data name="profile8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 57</value>
+  <data name="&gt;&gt;languageComboBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="profile9.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -276,6 +282,9 @@
   <data name="&gt;&gt;homeTab.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="overviewLabel.Text" xml:space="preserve">
+    <value>Overview</value>
+  </data>
   <data name="&gt;&gt;searchPanel.Parent" xml:space="preserve">
     <value>searchTab</value>
   </data>
@@ -285,17 +294,11 @@
   <data name="&gt;&gt;profile11.Parent" xml:space="preserve">
     <value>searchFlowLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;searchTextBox.Name" xml:space="preserve">
-    <value>searchTextBox</value>
-  </data>
   <data name="searchTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 25</value>
   </data>
-  <data name="homePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1298, 715</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Overview.Overview, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;searchPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="languageComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -324,14 +327,20 @@
   <data name="&gt;&gt;profile7.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="languageComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1395, 14</value>
+  <data name="&gt;&gt;searchTab.Name" xml:space="preserve">
+    <value>searchTab</value>
   </data>
   <data name="&gt;&gt;profile4.Type" xml:space="preserve">
     <value>Y.Profile, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;overviewFlowLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="MyPostsFlowLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;MyPostsFlowLayoutPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="profile4.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 192</value>
@@ -396,8 +405,8 @@
   <data name="&gt;&gt;searchEnterButton.Parent" xml:space="preserve">
     <value>searchPanel</value>
   </data>
-  <data name="&gt;&gt;sideListView.Name" xml:space="preserve">
-    <value>sideListView</value>
+  <data name="&gt;&gt;profileTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="homeTab.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -411,6 +420,9 @@
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 100</value>
   </data>
+  <data name="&gt;&gt;homePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;profile4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
@@ -420,14 +432,17 @@
   <data name="&gt;&gt;profile8.Type" xml:space="preserve">
     <value>Y.Profile, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;overviewFlowLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="overviewLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16.2pt, style=Bold</value>
   </data>
-  <data name="profileTab.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="homePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1298, 715</value>
   </data>
   <data name="&gt;&gt;MyPostsLabel.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;profile11.Name" xml:space="preserve">
+    <value>profile11</value>
   </data>
   <data name="&gt;&gt;profile10.Name" xml:space="preserve">
     <value>profile10</value>
@@ -438,14 +453,20 @@
   <data name="sideListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="profile6.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <data name="&gt;&gt;profile7.Name" xml:space="preserve">
     <value>profile7</value>
   </data>
-  <data name="overviewLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16.2pt, style=Bold</value>
+  <data name="&gt;&gt;OverviewTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="welcomeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="overviewLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="languageComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 24</value>
   </data>
   <data name="&gt;&gt;profile4.Name" xml:space="preserve">
     <value>profile4</value>
@@ -459,17 +480,11 @@
   <data name="searchPanel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 386</value>
-  </data>
   <data name="profile5.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="&gt;&gt;profile3.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;profile3.Parent" xml:space="preserve">
-    <value>searchFlowLayoutPanel</value>
   </data>
   <data name="&gt;&gt;searchLabel.Name" xml:space="preserve">
     <value>searchLabel</value>
@@ -477,14 +492,11 @@
   <data name="$this.Text" xml:space="preserve">
     <value>User Overview</value>
   </data>
-  <data name="profile7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 57</value>
+  <data name="&gt;&gt;profile4.Parent" xml:space="preserve">
+    <value>searchFlowLayoutPanel</value>
   </data>
   <data name="sideListView.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="postButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="searchLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -495,8 +507,8 @@
   <data name="&gt;&gt;profile6.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="profile3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;postButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;overviewFlowLayoutPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -525,12 +537,6 @@
   <data name="&gt;&gt;welcomeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="YLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, -24</value>
-  </data>
-  <data name="searchEnterButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 35</value>
-  </data>
   <data name="searchTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16.2pt</value>
   </data>
@@ -546,11 +552,8 @@
   <data name="&gt;&gt;languageComboBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;profile1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;searchFlowLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;languageComboBox.Name" xml:space="preserve">
+    <value>languageComboBox</value>
   </data>
   <data name="&gt;&gt;searchTab.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -558,8 +561,8 @@
   <data name="searchPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;languageComboBox.Name" xml:space="preserve">
-    <value>languageComboBox</value>
+  <data name="profileTab.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;profile2.Type" xml:space="preserve">
     <value>Y.Profile, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
@@ -576,8 +579,8 @@
   <data name="&gt;&gt;YLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;profile11.Name" xml:space="preserve">
-    <value>profile11</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Overview.Overview, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -585,20 +588,17 @@
   <data name="searchPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1298, 715</value>
   </data>
-  <data name="homePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
   <data name="welcomeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>39, 205</value>
   </data>
   <data name="&gt;&gt;overviewLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;sideListView.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="profile5.Size" type="System.Drawing.Size, System.Drawing">
     <value>1200, 57</value>
+  </data>
+  <data name="profileTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1304, 721</value>
   </data>
   <data name="&gt;&gt;profilePanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -630,23 +630,20 @@
   <data name="overviewLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 32</value>
   </data>
-  <data name="&gt;&gt;searchLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="searchEnterButton.Text" xml:space="preserve">
     <value>🔍</value>
   </data>
   <data name="MyPostsFlowLayoutPanel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="postButton.Text" xml:space="preserve">
-    <value>Post</value>
+  <data name="&gt;&gt;profile2.Parent" xml:space="preserve">
+    <value>searchFlowLayoutPanel</value>
   </data>
   <data name="profile9.Size" type="System.Drawing.Size, System.Drawing">
     <value>1200, 57</value>
   </data>
-  <data name="profileTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1304, 721</value>
+  <data name="profile8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 57</value>
   </data>
   <data name="profile1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1200, 57</value>
@@ -675,26 +672,32 @@
   <data name="&gt;&gt;profile5.Name" xml:space="preserve">
     <value>profile5</value>
   </data>
+  <data name="&gt;&gt;sideListView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;profileTab.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="searchFlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1301, 650</value>
   </data>
   <data name="MyPostsFlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1304, 686</value>
   </data>
-  <data name="&gt;&gt;searchTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;profile3.Type" xml:space="preserve">
+    <value>Y.Profile, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;profile6.Parent" xml:space="preserve">
     <value>searchFlowLayoutPanel</value>
   </data>
-  <data name="homeTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="&gt;&gt;searchFlowLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;profile7.Parent" xml:space="preserve">
     <value>searchFlowLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;MyPostsFlowLayoutPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;searchLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;searchFlowLayoutPanel.Name" xml:space="preserve">
     <value>searchFlowLayoutPanel</value>
@@ -711,8 +714,8 @@
   <data name="searchTab.Text" xml:space="preserve">
     <value>Search</value>
   </data>
-  <data name="overviewLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;profile1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>Post</value>
@@ -723,32 +726,29 @@
   <data name="&gt;&gt;sideViewPanel.Name" xml:space="preserve">
     <value>sideViewPanel</value>
   </data>
-  <data name="&gt;&gt;OverviewTabControl.Name" xml:space="preserve">
-    <value>OverviewTabControl</value>
+  <data name="&gt;&gt;profile9.Parent" xml:space="preserve">
+    <value>searchFlowLayoutPanel</value>
   </data>
   <data name="MyPostsFlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 35</value>
   </data>
-  <data name="&gt;&gt;profile3.Type" xml:space="preserve">
-    <value>Y.Profile, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="searchFlowLayoutPanel.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;searchTextBox.Name" xml:space="preserve">
+    <value>searchTextBox</value>
   </data>
   <data name="MyPostsFlowLayoutPanel.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;postButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;sideListView.Name" xml:space="preserve">
+    <value>sideListView</value>
   </data>
-  <data name="&gt;&gt;profileTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="YLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, -24</value>
   </data>
   <data name="&gt;&gt;profile5.Type" xml:space="preserve">
     <value>Y.Profile, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;profilePanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="homeTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1304, 721</value>
   </data>
   <data name="languageComboBox.Text" xml:space="preserve">
     <value>Language</value>
@@ -768,6 +768,9 @@
   <data name="&gt;&gt;profile2.Name" xml:space="preserve">
     <value>profile2</value>
   </data>
+  <data name="sideListView.Alignment" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
   <data name="sideListView.Items1" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
@@ -786,11 +789,11 @@
         AAMAAAAL
 </value>
   </data>
-  <data name="&gt;&gt;MyPostsFlowLayoutPanel.Name" xml:space="preserve">
-    <value>MyPostsFlowLayoutPanel</value>
+  <data name="&gt;&gt;sideListView.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="searchEnterButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>395, 0</value>
+  <data name="searchFlowLayoutPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;profileTab.Name" xml:space="preserve">
     <value>profileTab</value>
@@ -837,35 +840,32 @@
   <data name="&gt;&gt;button1.Name" xml:space="preserve">
     <value>button1</value>
   </data>
-  <data name="postButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;profile9.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="profile9.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 507</value>
   </data>
-  <data name="&gt;&gt;searchTab.Name" xml:space="preserve">
-    <value>searchTab</value>
+  <data name="languageComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1395, 14</value>
   </data>
-  <data name="profile6.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;searchPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="profile3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="homePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="languageComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 24</value>
+  <data name="postButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;languageComboBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="searchEnterButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
   </data>
   <data name="searchEnterButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="&gt;&gt;homePanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;profile3.Parent" xml:space="preserve">
+    <value>searchFlowLayoutPanel</value>
   </data>
   <data name="&gt;&gt;searchTab.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -876,8 +876,8 @@
   <data name="MyPostsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="sideListView.Alignment" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
-    <value>Left</value>
+  <data name="welcomeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
   <data name="&gt;&gt;searchPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -888,8 +888,8 @@
   <data name="overviewLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
-  <data name="&gt;&gt;profile9.Parent" xml:space="preserve">
-    <value>searchFlowLayoutPanel</value>
+  <data name="&gt;&gt;searchTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="sideViewPanel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -909,17 +909,17 @@
   <data name="&gt;&gt;searchFlowLayoutPanel.Parent" xml:space="preserve">
     <value>searchPanel</value>
   </data>
-  <data name="&gt;&gt;OverviewTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;overviewFlowLayoutPanel.Parent" xml:space="preserve">
+    <value>homePanel</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 386</value>
   </data>
   <data name="&gt;&gt;profile10.Parent" xml:space="preserve">
     <value>searchFlowLayoutPanel</value>
   </data>
-  <data name="profileTab.Text" xml:space="preserve">
-    <value>My Profile</value>
-  </data>
-  <data name="logoutButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 297</value>
+  <data name="homePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
   <data name="&gt;&gt;overviewLabel.Name" xml:space="preserve">
     <value>overviewLabel</value>
@@ -936,8 +936,8 @@
   <data name="MyPostsLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16.2pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;overviewFlowLayoutPanel.Parent" xml:space="preserve">
-    <value>homePanel</value>
+  <data name="logoutButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 297</value>
   </data>
   <data name="button1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -948,8 +948,8 @@
   <data name="&gt;&gt;welcomeLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="overviewLabel.Text" xml:space="preserve">
-    <value>Overview</value>
+  <data name="searchTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="overviewFlowLayoutPanel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -981,8 +981,8 @@
   <data name="overviewFlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1298, 677</value>
   </data>
-  <data name="&gt;&gt;profile4.Parent" xml:space="preserve">
-    <value>searchFlowLayoutPanel</value>
+  <data name="profile7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 57</value>
   </data>
   <data name="overviewFlowLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -993,14 +993,14 @@
   <data name="&gt;&gt;YLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="searchFlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1301, 650</value>
+  <data name="&gt;&gt;profilePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="homePanel.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;sideListView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;OverviewTabControl.Name" xml:space="preserve">
+    <value>OverviewTabControl</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -13,11 +13,16 @@ namespace Y.view.admin
 {
     public partial class AdminOverview : Overview.Overview
     {
+        private int id;
         public AdminOverview()
         {
             InitializeComponent();
-            loadPostReports();
-            loadUserReports();
+        }
+
+        public AdminOverview(int id)
+        {
+            this.id = id;
+            InitializeComponent();
         }
 
         private List<(String, String)> postReports = new List<(String, String)>();
@@ -139,6 +144,12 @@ namespace Y.view.admin
         private void clearButton_Click(object sender, EventArgs e)
         {
             searchListView.Items.Clear();
+        }
+
+        private void AdminOverview_Load(object sender, EventArgs e)
+        {
+            loadPostReports();
+            loadUserReports();
         }
     }
 }

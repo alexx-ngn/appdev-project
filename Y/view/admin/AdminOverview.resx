@@ -161,8 +161,8 @@
   <data name="&gt;&gt;userReportsListView.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;searchEnterButton.Parent" xml:space="preserve">
-    <value>searchPanel</value>
+  <data name="sideViewPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 372</value>
   </data>
   <data name="searchLabel.Text" xml:space="preserve">
     <value>Search:</value>
@@ -236,6 +236,9 @@
   </data>
   <data name="&gt;&gt;searchEnterButton.Name" xml:space="preserve">
     <value>searchEnterButton</value>
+  </data>
+  <data name="&gt;&gt;languageComboBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;postReportsListView.Parent" xml:space="preserve">
     <value>overviewFlowLayoutPanel</value>
@@ -315,8 +318,8 @@
   <data name="searchLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 32</value>
   </data>
-  <data name="&gt;&gt;PostReportPostColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;searchEnterButton.Parent" xml:space="preserve">
+    <value>searchPanel</value>
   </data>
   <data name="&gt;&gt;languageComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -350,6 +353,9 @@
   </data>
   <data name="sideListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="PostReportDateColumn.Text" xml:space="preserve">
+    <value>Date</value>
   </data>
   <data name="&gt;&gt;postReportsListView.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -405,9 +411,6 @@
   <data name="&gt;&gt;PostReportDateColumn.Name" xml:space="preserve">
     <value>PostReportDateColumn</value>
   </data>
-  <data name="searchEnterButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 35</value>
-  </data>
   <data name="searchTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16.2pt</value>
   </data>
@@ -447,14 +450,8 @@
   <data name="UserReportUserColumn.Text" xml:space="preserve">
     <value>User</value>
   </data>
-  <data name="reportsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>homePanel</value>
-  </data>
-  <data name="reportsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="searchListView.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -495,6 +492,9 @@
   <data name="reportsTab.Text" xml:space="preserve">
     <value>Reports</value>
   </data>
+  <data name="&gt;&gt;sideListView.Parent" xml:space="preserve">
+    <value>sideViewPanel</value>
+  </data>
   <data name="&gt;&gt;reportsTab.Name" xml:space="preserve">
     <value>reportsTab</value>
   </data>
@@ -504,8 +504,8 @@
   <data name="&gt;&gt;overviewTabControl.Name" xml:space="preserve">
     <value>overviewTabControl</value>
   </data>
-  <data name="&gt;&gt;reportsLabel.Parent" xml:space="preserve">
-    <value>homePanel</value>
+  <data name="&gt;&gt;searchPanel.Name" xml:space="preserve">
+    <value>searchPanel</value>
   </data>
   <data name="&gt;&gt;overviewTabControl.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -518,9 +518,6 @@
   </data>
   <data name="UserReportDateColumn.Text" xml:space="preserve">
     <value>Date</value>
-  </data>
-  <data name="UserColumn.Width" type="System.Int32, mscorlib">
-    <value>154</value>
   </data>
   <data name="&gt;&gt;sideListView.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -576,20 +573,23 @@
   <data name="&gt;&gt;clearButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="PostReportDateColumn.Text" xml:space="preserve">
-    <value>Date</value>
+  <data name="reportsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="userReportsListView.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="&gt;&gt;sideListView.Parent" xml:space="preserve">
-    <value>sideViewPanel</value>
+  <data name="UserColumn.Width" type="System.Int32, mscorlib">
+    <value>154</value>
   </data>
-  <data name="&gt;&gt;searchPanel.Name" xml:space="preserve">
-    <value>searchPanel</value>
+  <data name="&gt;&gt;overviewFlowLayoutPanel.Parent" xml:space="preserve">
+    <value>homePanel</value>
   </data>
-  <data name="sideViewPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 372</value>
+  <data name="reportsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;reportsLabel.Parent" xml:space="preserve">
+    <value>homePanel</value>
   </data>
   <data name="searchListView.Alignment" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
     <value>Left</value>
@@ -606,14 +606,17 @@
   <data name="languageComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>1362, 12</value>
   </data>
+  <data name="PostReportPostColumn.Text" xml:space="preserve">
+    <value>Post</value>
+  </data>
   <data name="homePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="languageComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 24</value>
   </data>
-  <data name="&gt;&gt;languageComboBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="searchEnterButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
   </data>
   <data name="searchEnterButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -641,9 +644,6 @@
   </data>
   <data name="sideViewPanel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
-  </data>
-  <data name="homePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
   </data>
   <data name="sideListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -684,8 +684,8 @@
   <data name="&gt;&gt;reportsLabel.Name" xml:space="preserve">
     <value>reportsLabel</value>
   </data>
-  <data name="&gt;&gt;overviewFlowLayoutPanel.Parent" xml:space="preserve">
-    <value>homePanel</value>
+  <data name="&gt;&gt;PostReportPostColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;UserReportUserColumn.Name" xml:space="preserve">
     <value>UserReportUserColumn</value>
@@ -720,8 +720,8 @@
   <data name="searchListView.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="PostReportPostColumn.Text" xml:space="preserve">
-    <value>Post</value>
+  <data name="homePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

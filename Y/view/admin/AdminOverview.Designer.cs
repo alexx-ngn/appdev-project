@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            global::System.ComponentModel.ComponentResourceManager resources = new global::System.ComponentModel.ComponentResourceManager(typeof(AdminOverview));
-            this.sideViewPanel = new global::System.Windows.Forms.Panel();
-            this.sideListView = new global::System.Windows.Forms.ListView();
-            this.overviewTabControl = new global::System.Windows.Forms.TabControl();
-            this.reportsTab = new global::System.Windows.Forms.TabPage();
-            this.homePanel = new global::System.Windows.Forms.Panel();
-            this.label1 = new global::System.Windows.Forms.Label();
-            this.reportsLabel = new global::System.Windows.Forms.Label();
-            this.overviewFlowLayoutPanel = new global::System.Windows.Forms.FlowLayoutPanel();
-            this.postReportsListView = new global::System.Windows.Forms.ListView();
-            this.PostReportPostColumn = ((global::System.Windows.Forms.ColumnHeader)(new global::System.Windows.Forms.ColumnHeader()));
-            this.PostReportDateColumn = ((global::System.Windows.Forms.ColumnHeader)(new global::System.Windows.Forms.ColumnHeader()));
-            this.userReportsListView = new global::System.Windows.Forms.ListView();
-            this.UserReportUserColumn = ((global::System.Windows.Forms.ColumnHeader)(new global::System.Windows.Forms.ColumnHeader()));
-            this.UserReportDateColumn = ((global::System.Windows.Forms.ColumnHeader)(new global::System.Windows.Forms.ColumnHeader()));
-            this.searchTab = new global::System.Windows.Forms.TabPage();
-            this.searchPanel = new global::System.Windows.Forms.Panel();
-            this.searchListView = new global::System.Windows.Forms.ListView();
-            this.UserColumn = ((global::System.Windows.Forms.ColumnHeader)(new global::System.Windows.Forms.ColumnHeader()));
-            this.clearButton = new global::System.Windows.Forms.Button();
-            this.searchLabel = new global::System.Windows.Forms.Label();
-            this.searchTextBox = new global::System.Windows.Forms.TextBox();
-            this.searchEnterButton = new global::System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminOverview));
+            this.sideViewPanel = new System.Windows.Forms.Panel();
+            this.sideListView = new System.Windows.Forms.ListView();
+            this.overviewTabControl = new System.Windows.Forms.TabControl();
+            this.reportsTab = new System.Windows.Forms.TabPage();
+            this.homePanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.reportsLabel = new System.Windows.Forms.Label();
+            this.overviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.postReportsListView = new System.Windows.Forms.ListView();
+            this.PostReportPostColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PostReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.userReportsListView = new System.Windows.Forms.ListView();
+            this.UserReportUserColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UserReportDateColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.searchTab = new System.Windows.Forms.TabPage();
+            this.searchPanel = new System.Windows.Forms.Panel();
+            this.searchListView = new System.Windows.Forms.ListView();
+            this.UserColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clearButton = new System.Windows.Forms.Button();
+            this.searchLabel = new System.Windows.Forms.Label();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.searchEnterButton = new System.Windows.Forms.Button();
             this.sideViewPanel.SuspendLayout();
             this.overviewTabControl.SuspendLayout();
             this.reportsTab.SuspendLayout();
@@ -70,14 +70,14 @@
             // 
             resources.ApplyResources(this.sideListView, "sideListView");
             this.sideListView.HideSelection = false;
-            this.sideListView.Items.AddRange(new global::System.Windows.Forms.ListViewItem[] {
-            ((global::System.Windows.Forms.ListViewItem)(resources.GetObject("sideListView.Items"))),
-            ((global::System.Windows.Forms.ListViewItem)(resources.GetObject("sideListView.Items1")))});
+            this.sideListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            ((System.Windows.Forms.ListViewItem)(resources.GetObject("sideListView.Items"))),
+            ((System.Windows.Forms.ListViewItem)(resources.GetObject("sideListView.Items1")))});
             this.sideListView.Name = "sideListView";
             this.sideListView.Scrollable = false;
             this.sideListView.UseCompatibleStateImageBehavior = false;
-            this.sideListView.View = global::System.Windows.Forms.View.Tile;
-            this.sideListView.SelectedIndexChanged += new global::System.EventHandler(this.sideListView_SelectedIndexChanged);
+            this.sideListView.View = System.Windows.Forms.View.Tile;
+            this.sideListView.SelectedIndexChanged += new System.EventHandler(this.sideListView_SelectedIndexChanged);
             // 
             // overviewTabControl
             // 
@@ -122,14 +122,14 @@
             // postReportsListView
             // 
             resources.ApplyResources(this.postReportsListView, "postReportsListView");
-            this.postReportsListView.Columns.AddRange(new global::System.Windows.Forms.ColumnHeader[] {
+            this.postReportsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.PostReportPostColumn,
             this.PostReportDateColumn});
             this.postReportsListView.HideSelection = false;
             this.postReportsListView.Name = "postReportsListView";
             this.postReportsListView.UseCompatibleStateImageBehavior = false;
-            this.postReportsListView.View = global::System.Windows.Forms.View.Details;
-            this.postReportsListView.Click += new global::System.EventHandler(this.postReportsListView_Click);
+            this.postReportsListView.View = System.Windows.Forms.View.Details;
+            this.postReportsListView.Click += new System.EventHandler(this.postReportsListView_Click);
             // 
             // PostReportPostColumn
             // 
@@ -142,14 +142,14 @@
             // userReportsListView
             // 
             resources.ApplyResources(this.userReportsListView, "userReportsListView");
-            this.userReportsListView.Columns.AddRange(new global::System.Windows.Forms.ColumnHeader[] {
+            this.userReportsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.UserReportUserColumn,
             this.UserReportDateColumn});
             this.userReportsListView.HideSelection = false;
             this.userReportsListView.Name = "userReportsListView";
             this.userReportsListView.UseCompatibleStateImageBehavior = false;
-            this.userReportsListView.View = global::System.Windows.Forms.View.Details;
-            this.userReportsListView.Click += new global::System.EventHandler(this.userReportsListView_Click);
+            this.userReportsListView.View = System.Windows.Forms.View.Details;
+            this.userReportsListView.Click += new System.EventHandler(this.userReportsListView_Click);
             // 
             // UserReportUserColumn
             // 
@@ -179,13 +179,13 @@
             // searchListView
             // 
             resources.ApplyResources(this.searchListView, "searchListView");
-            this.searchListView.Columns.AddRange(new global::System.Windows.Forms.ColumnHeader[] {
+            this.searchListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.UserColumn});
             this.searchListView.HideSelection = false;
             this.searchListView.Name = "searchListView";
             this.searchListView.UseCompatibleStateImageBehavior = false;
-            this.searchListView.View = global::System.Windows.Forms.View.Details;
-            this.searchListView.Click += new global::System.EventHandler(this.searchListView_Click);
+            this.searchListView.View = System.Windows.Forms.View.Details;
+            this.searchListView.Click += new System.EventHandler(this.searchListView_Click);
             // 
             // UserColumn
             // 
@@ -196,7 +196,7 @@
             resources.ApplyResources(this.clearButton, "clearButton");
             this.clearButton.Name = "clearButton";
             this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new global::System.EventHandler(this.clearButton_Click);
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // searchLabel
             // 
@@ -213,7 +213,7 @@
             resources.ApplyResources(this.searchEnterButton, "searchEnterButton");
             this.searchEnterButton.Name = "searchEnterButton";
             this.searchEnterButton.UseVisualStyleBackColor = true;
-            this.searchEnterButton.Click += new global::System.EventHandler(this.searchEnterButton_Click);
+            this.searchEnterButton.Click += new System.EventHandler(this.searchEnterButton_Click);
             // 
             // AdminOverview
             // 
@@ -221,6 +221,7 @@
             this.Controls.Add(this.overviewTabControl);
             this.Controls.Add(this.sideViewPanel);
             this.Name = "AdminOverview";
+            this.Load += new System.EventHandler(this.AdminOverview_Load);
             this.Controls.SetChildIndex(this.sideViewPanel, 0);
             this.Controls.SetChildIndex(this.overviewTabControl, 0);
             this.sideViewPanel.ResumeLayout(false);

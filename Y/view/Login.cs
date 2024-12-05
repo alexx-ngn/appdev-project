@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Y.controller;
+using Y.view.admin;
 
 namespace Y
 {
@@ -38,11 +39,23 @@ namespace Y
             this.Close();
         }
 
+        public void loadAdminOverview(int id)
+        {
+            this.Hide();
+            AdminOverview overview = new AdminOverview(id);
+            overview.ShowDialog();
+            this.Close();
+        }
+
         private void Login_Load(object sender, EventArgs e)
         {
             if (LoginSystem.GetUserAccounts().Count == 0)
             {
                 LoginSystem.LoadUsers();
+            }
+            if (LoginSystem.GetAdminAccounts().Count == 0)
+            {
+                LoginSystem.LoadAdmins();
             }
         }
 
@@ -74,6 +87,12 @@ namespace Y
                 int id = LoginSystem.FetchUserIdFromUsername(usernameTextBox.Text);
                 loadUserOverview(id);
             }
+            if (LoginSystem.ValidateAdmin(usernameTextBox.Text, passwordTextBox.Text))
+            {
+                int id = LoginSystem.FetchAdminIdFromUsername(usernameTextBox.Text);
+                loadAdminOverview(id);
+            }
+
             else
             {
                 switch(Thread.CurrentThread.CurrentUICulture.Name)
