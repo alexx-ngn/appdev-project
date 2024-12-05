@@ -20,6 +20,7 @@ namespace Y
         {
             InitializeComponent();
             this.id = id;
+            UserOverviewSystem.CurrentUserId = id;
         }
         public void loadFeed()
         {

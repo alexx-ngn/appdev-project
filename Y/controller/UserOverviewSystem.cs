@@ -15,6 +15,7 @@ namespace Y.controller
         // Instance properties
         public List<UserAccount> UserAccounts { get; private set; }
         public List<Post> UserPosts { get; private set; }
+        public int CurrentUserId { get; set; }
 
         // Private constructor
         private UserOverviewSystem()

@@ -31,35 +31,35 @@ namespace Y
                 ReportSystem.RemoveUser(account);
             }
         }
-        public Report fetchNewReport()
-        {
-            Report report = ReportSystem.FetchNextOpenReport();
-            if (report != null)
-            {
-                report.AssignAdmin(this.Id);
-                changeReportStatus(report,Status.Processing);
-                return report;
-            } else
-            {
-                return null;
-            }
-        }
+        //public Report fetchNewReport()
+        //{
+        //    Report report = ReportSystem.FetchNextOpenReport();
+        //    if (report != null)
+        //    {
+        //        report.AssignAdmin(this.Id);
+        //        changeReportStatus(report,Status.Processing);
+        //        return report;
+        //    } else
+        //    {
+        //        return null;
+        //    }
+        //}
 
         public void changeReportStatus(Report report, Status status)
         {
             report.ChangeStatus(status);
         }
 
-        public void closeReport(Report report)
-        {
-            changeReportStatus(report, Status.Closed);
-            ReportSystem.FetchProcessingToClose();
-        }
+        //public void closeReport(Report report)
+        //{
+        //    changeReportStatus(report, Status.Closed);
+        //    ReportSystem.FetchProcessingToClose();
+        //}
 
-        public void assignReportTo(Report report, AdminAccount adminAccount)
-        {
-            report.AssignAdmin(adminAccount.Id);
-        }
+        //public void assignReportTo(Report report, AdminAccount adminAccount)
+        //{
+        //    report.AssignAdmin(adminAccount.Id);
+        //}
         public override void removePost(Post post)
         {
             UserAccount user = FindAccountWithPost(post); 

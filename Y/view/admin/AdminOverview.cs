@@ -30,10 +30,10 @@ namespace Y.view.admin
 
         private void loadPostReports()
         {
-            for (int i = 0; i < 50; i++)
-            {
-                postReports.Add(("Post " + i, "Date " + i));
-            }
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    postReports.Add(("Post " + i, "Date " + i));
+            //}
             foreach ((String, String) report in postReports)
             {
                 ListViewItem item = new ListViewItem($"{report.Item1}");
@@ -44,9 +44,9 @@ namespace Y.view.admin
 
         private void loadUserReports()
         {
-            for (int i = 0; i < 50; i++) {
-                userReports.Add(("User " + i, "Date " + i));
-            }
+            //for (int i = 0; i < 50; i++) {
+            //    userReports.Add(("User " + i, "Date " + i));
+            //}
             foreach ((String, String) report in userReports)
             {
                 ListViewItem item = new ListViewItem($"{report.Item1}");
@@ -57,12 +57,12 @@ namespace Y.view.admin
 
         private void loadSearchResults()
         {
-            for (int i = 0; i < 50; i++)
-            {
-                ListViewItem item = new ListViewItem("User " + i);
-                item.SubItems.Add("User " + i);
-                searchListView.Items.Add(item);
-            }
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    ListViewItem item = new ListViewItem("User " + i);
+            //    item.SubItems.Add("User " + i);
+            //    searchListView.Items.Add(item);
+            //}
         }
 
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)

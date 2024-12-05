@@ -18,7 +18,7 @@ namespace Y
         private DateTime date { get; set; }
         private int likes { get; set; }
         private int userId { get; set; }
-        
+
         public UserPost()
         {
             InitializeComponent();

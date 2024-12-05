@@ -8,20 +8,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Y.controller;
 
 namespace Y
 {
     public partial class NewUserReport : Form
     {
+        private int userId { get; set; }
+        private int reportedUserId { get; set; }
         public NewUserReport()
         {
             InitializeComponent();
+        }
+        public NewUserReport(int userId, int reportedUserId)
+        {
+            InitializeComponent();
+            this.userId = userId;
+            this.reportedUserId = reportedUserId;
         }
 
         private void reportButton_Click(object sender, EventArgs e)
         {
             var culture = CultureInfo.CurrentUICulture.ToString();
-            if (reportRichTextBox.Text == "")
+            if (reportTextBox.Text == "")
             {
                 switch (culture)
                 {
@@ -44,8 +53,15 @@ namespace Y
                         MessageBox.Show("User has been reported.");
                         break;
                 }
+                SendReport();
                 this.Close();
             }
+        }
+        private void SendReport()
+        {
+            // Send report to ReportSystem
+            var report = new PostReport(userId, reportTextBox.Text, reportedUserId);
+            ReportSystem.Instance.FileReport(report);
         }
     }
 }
