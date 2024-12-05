@@ -48,6 +48,18 @@ namespace Y
             }
         }
 
+        public void loadSearch()
+        {
+            searchFlowLayoutPanel.Controls.Clear();
+            for (int i = 0; i < UserOverviewSystem.UserAccounts.Count; i++)
+            {
+                Profile profile = new Profile(UserOverviewSystem.UserAccounts[i]);
+                searchFlowLayoutPanel.Controls.Add(profile);
+                //UserSearch user = new UserSearch(UserOverviewSystem.UserAccounts[i]);
+                //searchFlowLayoutPanel.Controls.Add(user);
+            }
+        }
+
         public void loadProfile()
         {
             MyPostsFlowLayoutPanel.Controls.Clear();
@@ -85,6 +97,7 @@ namespace Y
             hideTabs();
             loadFeed();
             loadProfile();
+            loadSearch();
         }
 
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)

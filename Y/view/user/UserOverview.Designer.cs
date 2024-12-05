@@ -60,9 +60,9 @@
             // 
             // sideViewPanel
             // 
-            resources.ApplyResources(this.sideViewPanel, "sideViewPanel");
             this.sideViewPanel.Controls.Add(this.postButton);
             this.sideViewPanel.Controls.Add(this.sideListView);
+            resources.ApplyResources(this.sideViewPanel, "sideViewPanel");
             this.sideViewPanel.Name = "sideViewPanel";
             // 
             // postButton
@@ -116,11 +116,11 @@
             // 
             // searchPanel
             // 
-            resources.ApplyResources(this.searchPanel, "searchPanel");
             this.searchPanel.Controls.Add(this.searchLabel);
             this.searchPanel.Controls.Add(this.searchTextBox);
             this.searchPanel.Controls.Add(this.searchEnterButton);
             this.searchPanel.Controls.Add(this.searchFlowLayoutPanel);
+            resources.ApplyResources(this.searchPanel, "searchPanel");
             this.searchPanel.Name = "searchPanel";
             // 
             // searchFlowLayoutPanel
@@ -131,9 +131,9 @@
             // 
             // homePanel
             // 
-            resources.ApplyResources(this.homePanel, "homePanel");
             this.homePanel.Controls.Add(this.overviewFlowLayoutPanel);
             this.homePanel.Controls.Add(this.overviewLabel);
+            resources.ApplyResources(this.homePanel, "homePanel");
             this.homePanel.Name = "homePanel";
             // 
             // overviewLabel
@@ -143,9 +143,9 @@
             // 
             // profilePanel
             // 
-            resources.ApplyResources(this.profilePanel, "profilePanel");
             this.profilePanel.Controls.Add(this.MyPostsLabel);
             this.profilePanel.Controls.Add(this.MyPostsFlowLayoutPanel);
+            resources.ApplyResources(this.profilePanel, "profilePanel");
             this.profilePanel.Name = "profilePanel";
             // 
             // MyPostsLabel
@@ -160,31 +160,31 @@
             // 
             // OverviewTabControl
             // 
-            resources.ApplyResources(this.OverviewTabControl, "OverviewTabControl");
             this.OverviewTabControl.Controls.Add(this.homeTab);
             this.OverviewTabControl.Controls.Add(this.searchTab);
             this.OverviewTabControl.Controls.Add(this.profileTab);
+            resources.ApplyResources(this.OverviewTabControl, "OverviewTabControl");
             this.OverviewTabControl.Name = "OverviewTabControl";
             this.OverviewTabControl.SelectedIndex = 0;
             // 
             // homeTab
             // 
-            resources.ApplyResources(this.homeTab, "homeTab");
             this.homeTab.Controls.Add(this.homePanel);
+            resources.ApplyResources(this.homeTab, "homeTab");
             this.homeTab.Name = "homeTab";
             this.homeTab.UseVisualStyleBackColor = true;
             // 
             // searchTab
             // 
-            resources.ApplyResources(this.searchTab, "searchTab");
             this.searchTab.Controls.Add(this.searchPanel);
+            resources.ApplyResources(this.searchTab, "searchTab");
             this.searchTab.Name = "searchTab";
             this.searchTab.UseVisualStyleBackColor = true;
             // 
             // profileTab
             // 
-            resources.ApplyResources(this.profileTab, "profileTab");
             this.profileTab.Controls.Add(this.profilePanel);
+            resources.ApplyResources(this.profileTab, "profileTab");
             this.profileTab.Name = "profileTab";
             this.profileTab.UseVisualStyleBackColor = true;
             // 

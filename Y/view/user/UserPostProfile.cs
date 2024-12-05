@@ -28,7 +28,7 @@ namespace Y.view.user
             int reporterUserId = UserOverviewSystem.Instance.CurrentUserId;
             int reportedUserId = userId;
             
-            NewUserReport reportForm = new NewUserReport(reporterUserId, reportedUserId);
+            NewUserReport reportForm = new NewUserReport(reporterUserId, reportedUserId, false);
             reportForm.Show();
         }
     }

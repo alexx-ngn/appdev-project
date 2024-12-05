@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            global::System.ComponentModel.ComponentResourceManager resources = new global::System.ComponentModel.ComponentResourceManager(typeof(DetailedProfile));
-            this.label1 = new global::System.Windows.Forms.Label();
-            this.PostsFlowLayoutPanel = new global::System.Windows.Forms.FlowLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailedProfile));
+            this.profileLabel = new System.Windows.Forms.Label();
+            this.PostsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.post1 = new Y.UserPost();
             this.post2 = new Y.UserPost();
             this.post3 = new Y.UserPost();
             this.PostsFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // profileLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.profileLabel, "profileLabel");
+            this.profileLabel.Name = "profileLabel";
             // 
             // PostsFlowLayoutPanel
             // 
@@ -53,28 +53,29 @@
             // post1
             // 
             resources.ApplyResources(this.post1, "post1");
-            this.post1.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
+            this.post1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.post1.Name = "post1";
             // 
             // post2
             // 
             resources.ApplyResources(this.post2, "post2");
-            this.post2.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
+            this.post2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.post2.Name = "post2";
             // 
             // post3
             // 
             resources.ApplyResources(this.post3, "post3");
-            this.post3.BorderStyle = global::System.Windows.Forms.BorderStyle.Fixed3D;
+            this.post3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.post3.Name = "post3";
             // 
             // DetailedProfile
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PostsFlowLayoutPanel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.profileLabel);
             this.Name = "DetailedProfile";
+            this.Load += new System.EventHandler(this.DetailedProfile_Load);
             this.PostsFlowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -83,7 +84,7 @@
 
         #endregion
 
-        private global::System.Windows.Forms.Label label1;
+        private global::System.Windows.Forms.Label profileLabel;
         private global::System.Windows.Forms.FlowLayoutPanel PostsFlowLayoutPanel;
         private UserPost post1;
         private UserPost post2;

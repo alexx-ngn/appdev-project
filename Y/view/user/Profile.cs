@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Y.controller;
 
 namespace Y
 {
     public partial class Profile : UserControl
     {
+        private UserAccount userAccount;
+
         public Profile()
         {
             InitializeComponent();
+        }
+
+        public Profile(UserAccount userAccount)
+        {
+            this.userAccount = userAccount;
+            InitializeComponent();
+            usernameLinkLabel.Text = userAccount.Name;
         }
 
         private void followButton_Click(object sender, EventArgs e)
@@ -38,14 +48,17 @@ namespace Y
 
         private void usernameLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            DetailedProfile detailedProfile = new DetailedProfile();
+            DetailedProfile detailedProfile = new DetailedProfile(userAccount);
             detailedProfile.ShowDialog();
         }
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            NewUserReport report = new NewUserReport();
-            report.ShowDialog();
+            int reporterUserId = UserOverviewSystem.Instance.CurrentUserId;
+            int reportedUserId = userAccount.Id;
+
+            NewUserReport reportForm = new NewUserReport(reporterUserId, reportedUserId, true);
+            reportForm.ShowDialog();
         }
     }
 }

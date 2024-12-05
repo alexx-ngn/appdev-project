@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="post2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 300</value>
+  </data>
+  <data name="profileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 9</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 32</value>
   </data>
@@ -140,12 +146,11 @@
   <data name="&gt;&gt;post3.Name" xml:space="preserve">
     <value>post3</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="post3.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
+  <data name="PostsFlowLayoutPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="post3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 615</value>
+  <data name="&gt;&gt;post3.Type" xml:space="preserve">
+    <value>Y.UserPost, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="PostsFlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 44</value>
@@ -153,11 +158,11 @@
   <data name="&gt;&gt;post2.Type" xml:space="preserve">
     <value>Y.UserPost, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;post3.Type" xml:space="preserve">
-    <value>Y.UserPost, Y, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;profileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;post1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>USERNAME Profile</value>
   </data>
   <data name="&gt;&gt;post1.Parent" xml:space="preserve">
     <value>PostsFlowLayoutPanel</value>
@@ -165,8 +170,8 @@
   <data name="&gt;&gt;PostsFlowLayoutPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>USERNAME Profile</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DetailedProfile</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -176,9 +181,6 @@
   </data>
   <data name="post1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1200, 300</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>USERNAME PROFILE</value>
@@ -201,29 +203,39 @@
   <data name="post2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="post3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="profileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;profileLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;post1.Name" xml:space="preserve">
     <value>post1</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="post1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
+  <data name="post3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 615</value>
   </data>
   <data name="post1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="post1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="&gt;&gt;PostsFlowLayoutPanel.Name" xml:space="preserve">
     <value>PostsFlowLayoutPanel</value>
   </data>
   <data name="&gt;&gt;PostsFlowLayoutPanel.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;post1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;post2.Parent" xml:space="preserve">
     <value>PostsFlowLayoutPanel</value>
@@ -237,26 +249,32 @@
   <data name="&gt;&gt;post3.Parent" xml:space="preserve">
     <value>PostsFlowLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>DetailedProfile</value>
-  </data>
   <data name="post1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;PostsFlowLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PostsFlowLayoutPanel.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="post2.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
   </data>
   <data name="PostsFlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1282, 394</value>
   </data>
-  <data name="post2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 300</value>
+  <data name="&gt;&gt;PostsFlowLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="post3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="post2.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;profileLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="post3.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;profileLabel.Name" xml:space="preserve">
+    <value>profileLabel</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="post3.Size" type="System.Drawing.Size, System.Drawing">
     <value>1200, 300</value>

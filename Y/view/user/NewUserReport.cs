@@ -16,15 +16,17 @@ namespace Y
     {
         private int userId { get; set; }
         private int reportedUserId { get; set; }
+        private bool userReport { get; set; }
         public NewUserReport()
         {
             InitializeComponent();
         }
-        public NewUserReport(int userId, int reportedUserId)
+        public NewUserReport(int userId, int reportedUserId, bool userReport)
         {
             InitializeComponent();
             this.userId = userId;
             this.reportedUserId = reportedUserId;
+            this.userReport = userReport;
         }
 
         private void reportButton_Click(object sender, EventArgs e)
@@ -59,8 +61,15 @@ namespace Y
         }
         private void SendReport()
         {
-            // Send report to ReportSystem
-            var report = new PostReport(userId, reportTextBox.Text, reportedUserId);
+            Report report;
+            if (userReport)
+            {
+                report = new UserReport(userId, reportTextBox.Text, reportedUserId);
+            }
+            else
+            {
+                report = new PostReport(userId, reportTextBox.Text, reportedUserId);
+            }
             ReportSystem.Instance.FileReport(report);
         }
     }
