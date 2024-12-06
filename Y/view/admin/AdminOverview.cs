@@ -96,9 +96,9 @@ namespace Y.view.admin
             if (userReportsListView.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = userReportsListView.SelectedItems[0];
-                int reportId = int.Parse(selectedItem.Text);
+                int userReportId = int.Parse(selectedItem.Text);
 
-                var userReport = new UserReport();
+                var userReport = new UserReport(ReportSystem.Instance.getUserReportFromId(userReportId));
                 userReport.dismissClicked += (s, args) => remove();
                 userReport.banClicked += (s, args) => remove();
                 userReport.ShowDialog();

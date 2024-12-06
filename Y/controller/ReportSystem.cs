@@ -102,6 +102,42 @@ namespace Y.controller
             }
         }
 
+        public List<Post> getUserPosts(int id)
+        {
+            List<Post> userPosts = new List<Post>();
+            using (var connection = GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Post WHERE account_id = @accountId";
+                    using (var command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@accountId", id);
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int postId = Convert.ToInt32(reader["id"]);
+                                string text = reader["text"].ToString();
+                                DateTime date = DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader["date"])).DateTime;
+                                int likes = Convert.ToInt32(reader["likes"]);
+                                int accountId = Convert.ToInt32(reader["account_id"]);
+                                Post post = new Post(postId, text, likes, date, accountId);
+                                userPosts.Add(post);
+                            }
+                        }
+                        return userPosts;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading user posts: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            return userPosts;
+        }
+
         public void removePost(int reportedPostId)
         {
             using (var connection = GetConnection())

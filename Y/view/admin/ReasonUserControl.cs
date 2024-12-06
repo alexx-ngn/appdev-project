@@ -15,6 +15,7 @@ namespace Y.view
     public partial class ReasonUserControl : UserControl
     {
         private PostReport PostReport { get; set; }
+        private UserReport UserReport { get; set; }
         public ReasonUserControl()
         {
             InitializeComponent();
@@ -29,6 +30,23 @@ namespace Y.view
             var reporter = getReporter(postReport.ReportingUserId);
             switch (CultureInfo.CurrentUICulture.ToString())
             {
+                case "fr-CA":
+                    reporterLabel.Text = "Signalé par: " + reporter.Name;
+                    break;
+                default:
+                    reporterLabel.Text = "Reported by: " + reporter.Name;
+                    break;
+            }
+        }
+
+        public ReasonUserControl(UserReport userReport)
+        {
+            InitializeComponent();
+            UserReport = userReport;
+            reasonLabel.Text = userReport.Reason;
+            dateLabel.Text = userReport.DateReported.ToString();
+            var reporter = getReporter(userReport.ReportingUserId);
+            switch (CultureInfo.CurrentUICulture.ToString()) {
                 case "fr-CA":
                     reporterLabel.Text = "Signalé par: " + reporter.Name;
                     break;

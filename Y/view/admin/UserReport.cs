@@ -8,15 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Y.controller;
 using Y.view.admin;
 
 namespace Y.view.admin
 {
     public partial class UserReport : Form
     {
+        private Y.UserReport userReport;
+
         public UserReport()
         {
             InitializeComponent();
+        }
+
+        public UserReport(Y.UserReport userReport)
+        {
+            this.userReport = userReport;
+            InitializeComponent();
+
         }
 
         public event EventHandler dismissClicked;
@@ -52,6 +62,24 @@ namespace Y.view.admin
                     break;
             }
             this.Close();
+        }
+
+        private void UserReport_Load(object sender, EventArgs e)
+        {
+            var ReasonUserControl = new ReasonUserControl(userReport);
+            PostsFlowLayoutPanel.Controls.Add(ReasonUserControl);
+            loadProfile(userReport.ReportedUserId);
+        }
+
+        private void loadProfile(int id)
+        {
+            //usernameProfile.Hide();
+            PostsFlowLayoutPanel.Controls.Add(usernameProfile);
+            for (int i = ReportSystem.Instance.getUserPosts(id).Count - 1; i >= 0; i--)
+            {
+                UserPost post = new UserPost(ReportSystem.Instance.getUserPosts(id)[i]);
+                PostsFlowLayoutPanel.Controls.Add(post);
+            }
         }
     }
 }
