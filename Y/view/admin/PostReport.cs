@@ -60,7 +60,7 @@ namespace Y.view.admin
             }
             ReportSystem.Instance.removeReport(postReport);
             ReportSystem.Instance.removePost(postReport.ReportedPostId);
-            UserOverviewSystem.Instance.removePost(postReport.ReportedPostId);
+            UserOverviewSystem.Instance.removePosts(postReport.ReportedPostId);
             this.Close();
         }
 

@@ -180,9 +180,14 @@ namespace Y.controller
             UserPosts.Add(post);
         }
 
-        public void removePost(int reportedPostId)
+        public void removePosts(int reportedPostId)
         {
             UserPosts.RemoveAll(post => post.Id == reportedPostId);
+        }
+
+        public void removePostsFromUserId(int userId)
+        {
+            UserPosts.RemoveAll(post => post.accountId == userId);
         }
     }
 }

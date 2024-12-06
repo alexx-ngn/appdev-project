@@ -23,14 +23,6 @@ namespace Y
         public void removeReport(Report ticket)
         {          
         }
-
-        public void ban(UserAccount account)
-        {
-            if (ReportSystem.GetUserAccounts().Contains(account))
-            {
-                ReportSystem.RemoveUser(account);
-            }
-        }
         //public Report fetchNewReport()
         //{
         //    Report report = ReportSystem.FetchNextOpenReport();

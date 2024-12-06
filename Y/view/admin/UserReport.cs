@@ -45,6 +45,7 @@ namespace Y.view.admin
                     MessageBox.Show("The report has been dismissed.");
                     break;
             }
+            ReportSystem.Instance.removeReport(userReport);
             this.Close();
         }
 
@@ -61,6 +62,8 @@ namespace Y.view.admin
                     MessageBox.Show("The user is banned.");
                     break;
             }
+            ReportSystem.Instance.removeReport(userReport);
+            ReportSystem.Instance.RemoveUser(userReport.ReportedUserId);
             this.Close();
         }
 

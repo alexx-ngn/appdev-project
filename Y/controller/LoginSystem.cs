@@ -220,5 +220,24 @@ namespace Y.controller
         {
             return AdminAccounts;
         }
+
+        public void RemoveUserCredentials(int id)
+        {
+            var user = UserAccounts.FirstOrDefault(u => u.Id == id);
+            if (user != null)
+            {
+                UserCredentials.Remove(user.Name);
+                UserAccounts.Remove(user);
+            }
+        }
+
+        public void RemoveUser(int id)
+        {
+            var user = UserAccounts.FirstOrDefault(u => u.Id == id);
+            if (user != null)
+            {
+                UserAccounts.Remove(user);
+            }
+        }
     }
 }

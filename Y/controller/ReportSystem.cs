@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -77,7 +78,7 @@ namespace Y.controller
             }
         }
 
-        public void RemoveUser(UserAccount user)
+        public void RemoveUser(int id)
         {
             using (var connection = GetConnection())
             {
@@ -88,11 +89,19 @@ namespace Y.controller
                     string query = "DELETE FROM UserAccount WHERE id = @id";
                     using (var command = new SQLiteCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@id", user.Id);
+                        command.Parameters.AddWithValue("@id", id);
                         command.ExecuteNonQuery();
                     }
 
-                    UserAccounts.Remove(user);
+                    var userToRemove = UserAccounts.FirstOrDefault(u => u.Id == id);
+                    if (userToRemove != null)
+                    {
+                        UserAccounts.Remove(userToRemove);
+                    }
+
+                    LoginSystem.Instance.RemoveUserCredentials(id);
+                    LoginSystem.Instance.RemoveUser(id);
+                    UserOverviewSystem.Instance.removePostsFromUserId(id);
                     MessageBox.Show("User removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
