@@ -93,6 +93,13 @@ namespace Y.controller
                         command.ExecuteNonQuery();
                     }
 
+                    query = "DELETE FROM Post WHERE account_id = @id";
+                    using (var command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", id);
+                        command.ExecuteNonQuery();
+                    }
+
                     var userToRemove = UserAccounts.FirstOrDefault(u => u.Id == id);
                     if (userToRemove != null)
                     {
@@ -161,6 +168,8 @@ namespace Y.controller
                         command.Parameters.AddWithValue("@id", reportedPostId);
                         command.ExecuteNonQuery();
                     }
+
+                    
 
                     MessageBox.Show("Post removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
