@@ -64,6 +64,7 @@ namespace Y.view.admin
             }
             ReportSystem.Instance.removeReport(userReport);
             ReportSystem.Instance.RemoveUser(userReport.ReportedUserId);
+            UserOverviewSystem.Instance.ReloadUsers();
             this.Close();
         }
 

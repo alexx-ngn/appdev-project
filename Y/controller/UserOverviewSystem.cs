@@ -138,6 +138,7 @@ namespace Y.controller
         public void ReloadUsers()
         {
            UserPosts = LoadPosts();
+           UserAccounts = LoadUsers();
         }
 
         public String GetPostUsername(int postId)

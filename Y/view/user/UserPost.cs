@@ -53,7 +53,7 @@ namespace Y
         private void setDateLabel()
         {
             //String date = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).GetPosts()[0].DatePosted.ToShortDateString
-            dateLabel.Text = date.ToString();
+            dateLabel.Text = date.AddHours(-5).ToString();
         }
 
         private void likeButton_Click(object sender, EventArgs e)
