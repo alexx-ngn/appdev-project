@@ -230,6 +230,30 @@ namespace Y.controller
             }
         }
 
+        public UserReport getUserReportFromId(int id)
+        {
+            for (int i = 0; i < UserReports.Count; i++)
+            {
+                if (UserReports[i].Id == id)
+                {
+                    return UserReports[i];
+                }
+            }
+            return null;
+        }
+
+        public PostReport getPostReportFromId(int id)
+        {
+            for (int i = 0; i < PostReports.Count; i++)
+            {
+                if (PostReports[i].Id == id)
+                {
+                    return PostReports[i];
+                }
+            }
+            return null;
+        }
+
         public void AddAdmin(AdminAccount admin)
         {
             using (var connection = GetConnection())
@@ -362,6 +386,33 @@ namespace Y.controller
                     MessageBox.Show($"Error filing report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        public Post getPostFromId(int id)
+        {
+            using (SQLiteConnection connection = GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT * FROM Post WHERE id = @id";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int postId = Convert.ToInt32(reader["id"]);
+                            string text = reader["text"].ToString();
+                            DateTime date = DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader["date"])).DateTime;
+                            int likes = Convert.ToInt32(reader["likes"]);
+                            int accountId = Convert.ToInt32(reader["account_id"]);
+                            Post post = new Post(postId, text, likes, date, accountId);
+                            return post;
+                        }
+                    }
+                }
+            }
+            return null;
         }
 
         //public Report FetchNextOpenReport()

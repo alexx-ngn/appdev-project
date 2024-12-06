@@ -118,16 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="userPost.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
+  <data name="banButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="userPost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 242</value>
-  </data>
-  <data name="reasonUserControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 262</value>
-  </data>
   <data name="banButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>1084, 547</value>
   </data>
@@ -137,6 +131,9 @@
   <data name="banButton.Text" xml:space="preserve">
     <value>BANNIR</value>
   </data>
+  <data name="allowButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="allowButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>954, 547</value>
   </data>
@@ -145,6 +142,21 @@
   </data>
   <data name="allowButton.Text" xml:space="preserve">
     <value>REJETER</value>
+  </data>
+  <data name="userPost.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="userPost.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 287</value>
+  </data>
+  <data name="userPost.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 242</value>
+  </data>
+  <data name="reasonUserControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 19</value>
+  </data>
+  <data name="reasonUserControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 262</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Publication Signal</value>

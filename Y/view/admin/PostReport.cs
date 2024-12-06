@@ -8,17 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Y.controller;
 
 namespace Y.view.admin
 {
     public partial class PostReport : Form
     {
+        private Y.PostReport postReport;
 
         public event EventHandler dismissClicked;
         public event EventHandler banClicked;
         public PostReport()
         {
             InitializeComponent();
+        }
+
+        public PostReport(Y.PostReport postReport)
+        {
+            InitializeComponent();
+            this.postReport = postReport;
         }
 
         private void allowButton_Click(object sender, EventArgs e)
@@ -50,6 +58,17 @@ namespace Y.view.admin
                     break;
             }
             this.Close();
+        }
+
+        private void PostReport_Load(object sender, EventArgs e)
+        {
+            reasonUserControl.Hide();
+            userPost.Hide();
+            reasonUserControl = new ReasonUserControl(postReport);
+            userPost = new UserPost(ReportSystem.Instance.getPostFromId(postReport.ReportedPostId));
+            userPost.Location = new Point(userPost.Location.X, userPost.Location.Y + 240);
+            this.Controls.Add(reasonUserControl);
+            this.Controls.Add(userPost);
         }
     }
 }

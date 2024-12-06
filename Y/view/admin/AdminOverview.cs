@@ -51,13 +51,9 @@ namespace Y.view.admin
 
         private void loadUserReports()
         {
-            //for (int i = 0; i < 50; i++) {
-            //    userReports.Add(("User " + i, "Date " + i));
-            //}
             foreach (var report in ReportSystem.Instance.UserReports)
             {
                 ListViewItem item = new ListViewItem($"{report.Id.ToString()}");
-                //MessageBox.Show(report.DateReported.ToString());
                 item.SubItems.Add(report.DateReported.ToString());
                 userReportsListView.Items.Add(item);
             }
@@ -99,6 +95,8 @@ namespace Y.view.admin
             if (userReportsListView.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = userReportsListView.SelectedItems[0];
+                int reportId = int.Parse(selectedItem.Text);
+
                 var userReport = new UserReport();
                 userReport.dismissClicked += (s, args) => remove();
                 userReport.banClicked += (s, args) => remove();
@@ -116,7 +114,9 @@ namespace Y.view.admin
             if (postReportsListView.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = postReportsListView.SelectedItems[0];
-                var postReport = new PostReport();
+                int postReportId = int.Parse(selectedItem.Text);
+
+                var postReport = new PostReport(ReportSystem.Instance.getPostReportFromId(postReportId));
                 postReport.dismissClicked += (s, args) => remove();
                 postReport.banClicked += (s, args) => remove();
                 postReport.ShowDialog();
@@ -158,6 +158,7 @@ namespace Y.view.admin
         {
             ReportSystem.Instance.loadUserReports();
             ReportSystem.Instance.loadPostReports();
+            ReportSystem.Instance.LoadUsers();
             loadPostReports();
             loadUserReports();
         }
