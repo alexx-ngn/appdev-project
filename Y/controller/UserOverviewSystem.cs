@@ -179,5 +179,10 @@ namespace Y.controller
             }
             UserPosts.Add(post);
         }
+
+        public void removePost(int reportedPostId)
+        {
+            UserPosts.RemoveAll(post => post.Id == reportedPostId);
+        }
     }
 }

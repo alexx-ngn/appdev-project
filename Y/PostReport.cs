@@ -28,11 +28,5 @@ namespace Y
         {
             ReportedPostId = reportedPostId;
         }
-
-        public PostReport(int id, int reportingUserId, string reason, int reportedUserId, DateTime dateTime) : base(id, reportingUserId, reason)
-        {
-            this.reportedUserId = reportedUserId;
-            this.dateTime = dateTime;
-        }
     }
 }

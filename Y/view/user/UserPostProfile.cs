@@ -11,7 +11,7 @@ namespace Y.view.user
 {
     public partial class UserPostProfile : Y.UserPost
     {
-        private int userId { get; set; }
+        private Post post;
 
         public UserPostProfile()
         {
@@ -20,15 +20,15 @@ namespace Y.view.user
 
         public UserPostProfile(Post post) : base(post)
         {
+            this.post = post;
             InitializeComponent();
-            userId = post.accountId;
         }
         private void reportButton_Click(object sender, EventArgs e)
         {
             int reporterUserId = UserOverviewSystem.Instance.CurrentUserId;
-            int reportedUserId = userId;
+            int reportedPostId = post.Id; 
             
-            NewUserReport reportForm = new NewUserReport(reporterUserId, reportedUserId, false);
+            NewPostReport reportForm = new NewPostReport(reporterUserId, reportedPostId);
             reportForm.Show();
         }
     }

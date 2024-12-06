@@ -17,8 +17,8 @@ namespace Y
         public EventHandler PostButton;
         public NewPost(int accountId)
         {
-            InitializeComponent();
             this.accountId = accountId;
+            InitializeComponent();
         }
 
         private void postButton_Click(object sender, EventArgs e)

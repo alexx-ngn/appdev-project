@@ -51,6 +51,7 @@ namespace Y.view.admin
 
         private void loadUserReports()
         {
+            userReportsListView.Items.Clear();
             foreach (var report in ReportSystem.Instance.UserReports)
             {
                 ListViewItem item = new ListViewItem($"{report.Id.ToString()}");
@@ -105,6 +106,7 @@ namespace Y.view.admin
                 void remove()
                 {
                     userReportsListView.Items.Remove(selectedItem);
+                    //loadUserReports();
                 }
             }
         }
@@ -124,6 +126,7 @@ namespace Y.view.admin
                 void remove()
                 {
                     postReportsListView.Items.Remove(selectedItem);
+                    //loadPostReports();
                 }
             }
         }

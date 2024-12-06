@@ -102,6 +102,30 @@ namespace Y.controller
             }
         }
 
+        public void removePost(int reportedPostId)
+        {
+            using (var connection = GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "DELETE FROM Post WHERE id = @id";
+                    using (var command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", reportedPostId);
+                        command.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Post removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error removing post: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         public void LoadUsers()
         {
             try
@@ -384,6 +408,44 @@ namespace Y.controller
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error filing report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        public void removeReport(Report report)
+        {
+            using (SQLiteConnection connection = GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    string query = string.Empty;
+                    if (report is UserReport userReport)
+                    {
+                        // UserReport: Delete from UserReport table
+                        query = "DELETE FROM UserReport WHERE id = @id";
+                        using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@id", userReport.Id);
+                            command.ExecuteNonQuery();
+                        }
+                        UserReports.Remove(userReport);
+                    }
+                    else if (report is PostReport postReport)
+                    {
+                        // PostReport: Delete from PostReport table
+                        query = "DELETE FROM PostReport WHERE id = @id";
+                        using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@id", postReport.Id);
+                            command.ExecuteNonQuery();
+                        }
+                        PostReports.Remove(postReport);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error removing report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

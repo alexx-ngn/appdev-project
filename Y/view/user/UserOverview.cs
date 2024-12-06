@@ -94,6 +94,7 @@ namespace Y
 
         private void UserOverview_Load(object sender, EventArgs e)
         {
+            overviewFlowLayoutPanel.Controls.Clear();
             hideTabs();
             loadFeed();
             loadProfile();

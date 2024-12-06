@@ -72,6 +72,12 @@
     <Compile Include="view\admin\UserReport.Designer.cs">
       <DependentUpon>UserReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\user\NewPostReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\user\NewPostReport.Designer.cs">
+      <DependentUpon>NewPostReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\user\UserPostProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\user\NewPost.fr-CA.resx">
       <DependentUpon>NewPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\NewPostReport.fr-CA.resx">
+      <DependentUpon>NewPostReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user\NewPostReport.resx">
+      <DependentUpon>NewPostReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\user\NewUserReport.fr-CA.resx">
       <DependentUpon>NewUserReport.cs</DependentUpon>

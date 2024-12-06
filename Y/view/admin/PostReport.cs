@@ -42,6 +42,7 @@ namespace Y.view.admin
                     MessageBox.Show("The report has been dismissed.");
                     break;
             }
+            ReportSystem.Instance.removeReport(postReport);
             this.Close();
         }
         private void banButton_Click(object sender, EventArgs e)
@@ -57,6 +58,9 @@ namespace Y.view.admin
                     MessageBox.Show("The post is removed.");
                     break;
             }
+            ReportSystem.Instance.removeReport(postReport);
+            ReportSystem.Instance.removePost(postReport.ReportedPostId);
+            UserOverviewSystem.Instance.removePost(postReport.ReportedPostId);
             this.Close();
         }
 
