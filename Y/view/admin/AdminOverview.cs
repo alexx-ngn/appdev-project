@@ -60,14 +60,25 @@ namespace Y.view.admin
             }
         }
 
-        private void loadSearchResults()
+        //private void loadSearchResults()
+        //{
+        //    for (int i = 0; i < 50; i++)
+        //    {
+        //        ListViewItem item = new ListViewItem("User " + i);
+        //        item.SubItems.Add("User " + i);
+        //        searchListView.Items.Add(item);
+        //    }
+        //}
+
+        private void loadSearch()
         {
-            //for (int i = 0; i < 50; i++)
-            //{
-            //    ListViewItem item = new ListViewItem("User " + i);
-            //    item.SubItems.Add("User " + i);
-            //    searchListView.Items.Add(item);
-            //}
+            searchListView.Items.Clear();
+            for (int i = 0; i < UserOverviewSystem.Instance.UserAccounts.Count; i++)
+            {
+                var account = UserOverviewSystem.Instance.UserAccounts[i];
+                ListViewItem item = new ListViewItem(account.Name);
+                searchListView.Items.Add(item);
+            }
         }
 
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -83,6 +94,7 @@ namespace Y.view.admin
                         break;
                     case "Search":
                     case "Recherche":
+                        loadSearch();
                         overviewTabControl.SelectedTab = searchTab;
                         break;
                     default:
@@ -149,7 +161,7 @@ namespace Y.view.admin
 
         private void searchEnterButton_Click(object sender, EventArgs e)
         {
-            loadSearchResults();
+            //loadSearchResults();
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -164,6 +176,7 @@ namespace Y.view.admin
             ReportSystem.Instance.LoadUsers();
             loadPostReports();
             loadUserReports();
+            loadSearch();
         }
     }
 }

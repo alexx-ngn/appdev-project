@@ -65,6 +65,7 @@ namespace Y
             {
                 UserAccount newUserAccount = new UserAccount(usernameTextBox.Text, emailTextBox.Text, passwordTextBox.Text);
                 ReportSystem.AddUser(newUserAccount);
+                UserOverviewSystem.Instance.UserAccounts.Add(newUserAccount);
                 this.Hide();
                 Login login = new Login();
                 login.ShowDialog();
