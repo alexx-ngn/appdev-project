@@ -214,5 +214,23 @@ namespace Y.controller
         {
             UserPosts.RemoveAll(post => post.accountId == userId);
         }
+
+        public void updateLikes(Post post)
+        {
+            using (SQLiteConnection connection = GetConnection())
+            {
+                connection.Open();
+                string query = @"
+                    UPDATE Post
+                    SET likes = @likes
+                    WHERE id = @postId";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@likes", post.Likes);
+                    command.Parameters.AddWithValue("@postId", post.Id);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }
