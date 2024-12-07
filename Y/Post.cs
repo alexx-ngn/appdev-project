@@ -39,6 +39,9 @@ namespace Y
             this.accountId = accountId;
         }
 
+        /// <summary>
+        /// like method for a post to add user to its set of likedByUsers and updated its num liked
+        /// </summary>
         public void Like(int userId)
         {
             if (!likedByUsers.Contains(userId))

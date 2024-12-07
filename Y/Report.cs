@@ -11,7 +11,6 @@ namespace Y
         public int Id {  get; set; }
         public int ReportingUserId { get; set; }
         public String Reason { get; set; }
-        //public Status Status { get; set; }
         public DateTime DateReported { get;} 
 
         public Report(int id, int reportingUserId, string reason, DateTime dateReported)
@@ -31,7 +30,6 @@ namespace Y
             DateReported = DateTime.Now;
         }
 
-        //this is what is created in the userAccount class, not sure about other one and how to handle them
         public Report(int reportingUserId, string reason)
         {
             ReportingUserId = reportingUserId;
@@ -39,22 +37,5 @@ namespace Y
             //Status = Status.Created;
             DateReported = DateTime.Now;
         }
-
-        //method to assign admin and change status
-        //public void AssignAdmin(int adminId)
-        //{
-        //    AdminId = adminId; // Set AdminId
-        //}
-
-        //public void ChangeStatus(Status status)
-        //{
-        //    Status = status; 
-        //}
-
-        ////  Method to retrieve AdminId for debugging or logs
-        //public int GetAdminId()
-        //{
-        //    return AdminId;
-        //}
     }
 }
