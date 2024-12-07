@@ -37,9 +37,10 @@
             // reportButton
             // 
             this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportButton.Location = new System.Drawing.Point(3, 237);
+            this.reportButton.Location = new System.Drawing.Point(3, 296);
+            this.reportButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(66, 66);
+            this.reportButton.Size = new System.Drawing.Size(74, 82);
             this.reportButton.TabIndex = 15;
             this.reportButton.Text = "⚠️";
             this.reportButton.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // repostButton
             // 
             this.repostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repostButton.Location = new System.Drawing.Point(1091, 237);
+            this.repostButton.Location = new System.Drawing.Point(1227, 296);
+            this.repostButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.repostButton.Name = "repostButton";
-            this.repostButton.Size = new System.Drawing.Size(66, 66);
+            this.repostButton.Size = new System.Drawing.Size(74, 82);
             this.repostButton.TabIndex = 13;
             this.repostButton.Text = "🔁";
             this.repostButton.UseVisualStyleBackColor = true;
@@ -60,31 +62,35 @@
             // 
             this.likeCounterLabel.AutoSize = true;
             this.likeCounterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.likeCounterLabel.Location = new System.Drawing.Point(1055, 256);
+            this.likeCounterLabel.Location = new System.Drawing.Point(1187, 320);
             this.likeCounterLabel.Name = "likeCounterLabel";
-            this.likeCounterLabel.Size = new System.Drawing.Size(30, 32);
+            this.likeCounterLabel.Size = new System.Drawing.Size(35, 38);
             this.likeCounterLabel.TabIndex = 12;
             this.likeCounterLabel.Text = "0";
             // 
             // likeButton
             // 
             this.likeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.likeButton.Location = new System.Drawing.Point(983, 237);
+            this.likeButton.Location = new System.Drawing.Point(1106, 296);
+            this.likeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.likeButton.Name = "likeButton";
-            this.likeButton.Size = new System.Drawing.Size(66, 66);
+            this.likeButton.Size = new System.Drawing.Size(74, 82);
             this.likeButton.TabIndex = 11;
             this.likeButton.Text = "👍";
             this.likeButton.UseVisualStyleBackColor = true;
+            this.likeButton.Click += new System.EventHandler(this.likeButton_Click);
             // 
             // UserPostProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.repostButton);
             this.Controls.Add(this.likeCounterLabel);
             this.Controls.Add(this.likeButton);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "UserPostProfile";
-            this.Size = new System.Drawing.Size(1196, 310);
+            this.Size = new System.Drawing.Size(1346, 388);
+            this.Load += new System.EventHandler(this.UserPostProfile_Load);
             this.Controls.SetChildIndex(this.likeButton, 0);
             this.Controls.SetChildIndex(this.likeCounterLabel, 0);
             this.Controls.SetChildIndex(this.repostButton, 0);

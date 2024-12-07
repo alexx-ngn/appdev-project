@@ -42,5 +42,16 @@ namespace Y.view.user
             //UserOverviewSystem.Instance.SavePosts();
             RepostButtonClicked?.Invoke(this, EventArgs.Empty);
         }
+
+        private void likeButton_Click(object sender, EventArgs e)
+        {
+            post.Like(UserOverviewSystem.Instance.CurrentUserId);
+            likeCounterLabel.Text = "" + post.Likes;
+        }
+
+        private void UserPostProfile_Load(object sender, EventArgs e)
+        {
+            likeCounterLabel.Text = "" + post.Likes;
+        }
     }
 }

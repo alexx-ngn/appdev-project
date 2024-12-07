@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Y.controller;
 
 namespace Y
 {
@@ -11,6 +12,7 @@ namespace Y
         public int Likes { get; set; }
         public DateTime DatePosted { get; set; }
         public int accountId { get; set; }
+        public HashSet<int> likedByUsers { get; set; } = new HashSet<int>();
 
         public Post(int id, string text, int likes, DateTime datePosted, int accountId) : this(id, text, accountId)
         {
@@ -37,9 +39,14 @@ namespace Y
             this.accountId = accountId;
         }
 
-        //public void AddLike(Account account)
-        //{
-        //    Likes.Add(account);
-        //}
+        public void Like(int userId)
+        {
+            if (!likedByUsers.Contains(userId))
+            {
+                likedByUsers.Add(userId);
+                Likes = likedByUsers.Count;
+                UserOverviewSystem.Instance.updateLikes(this);
+            }
+        }
     }
 }
