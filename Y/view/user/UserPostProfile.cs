@@ -11,8 +11,8 @@ namespace Y.view.user
 {
     public partial class UserPostProfile : Y.UserPost
     {
+        public event EventHandler RepostButtonClicked;
         private Post post;
-
         public UserPostProfile()
         {
             InitializeComponent();
@@ -22,6 +22,7 @@ namespace Y.view.user
         {
             this.post = post;
             InitializeComponent();
+            repostButton.Click += RepostButtonClicked;
         }
         private void reportButton_Click(object sender, EventArgs e)
         {
@@ -30,6 +31,16 @@ namespace Y.view.user
             
             NewPostReport reportForm = new NewPostReport(reporterUserId, reportedPostId);
             reportForm.Show();
+        }
+
+        private void repostButton_Click(object sender, EventArgs e)
+        {
+            var rePost = post;
+            rePost.Text = "REPOST: " + post.Text;
+            rePost.DatePosted = DateTime.Now;
+            UserOverviewSystem.Instance.AddPost(rePost);
+            //UserOverviewSystem.Instance.SavePosts();
+            RepostButtonClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

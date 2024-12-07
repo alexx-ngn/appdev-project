@@ -16,6 +16,7 @@ namespace Y
     {
         UserOverviewSystem UserOverviewSystem = UserOverviewSystem.Instance;
         private int id;
+
         public UserOverview(int id)
         {
             InitializeComponent();
@@ -45,6 +46,12 @@ namespace Y
             {
                 UserPostProfile post = new UserPostProfile(UserOverviewSystem.UserPosts[i]);
                 overviewFlowLayoutPanel.Controls.Add(post);
+                post.RepostButtonClicked += (s, ev) =>
+                {
+                    UserOverviewSystem.ReloadUsers();
+                    loadFeed();
+                    loadProfile();
+                };
             }
         }
 
