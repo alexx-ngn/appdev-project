@@ -129,6 +129,16 @@ namespace Y
         private void searchEnterButton_Click(object sender, EventArgs e)
         {
             searchFlowLayoutPanel.Controls.Clear();
+            for (int i = 0; i < UserOverviewSystem.UserAccounts.Count; i++)
+            {
+                if (searchTextBox.Text == UserOverviewSystem.UserAccounts[i].Name)
+                {
+                    Profile profile = new Profile(UserOverviewSystem.UserAccounts[i]);
+                    searchFlowLayoutPanel.Controls.Add(profile);
+                    //UserSearch user = new UserSearch(UserOverviewSystem.UserAccounts[i]);
+                    //searchFlowLayoutPanel.Controls.Add(user);
+                }
+            }
         }
     }
 }
