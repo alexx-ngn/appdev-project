@@ -28,50 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.deleteButton = new global::System.Windows.Forms.Button();
-            this.reportButton = new global::System.Windows.Forms.Button();
-            this.repostCounterLabel = new global::System.Windows.Forms.Label();
-            this.repostButton = new global::System.Windows.Forms.Button();
-            this.likeCounterLabel = new global::System.Windows.Forms.Label();
-            this.likeButton = new global::System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.reportButton = new System.Windows.Forms.Button();
+            this.repostButton = new System.Windows.Forms.Button();
+            this.likeCounterLabel = new System.Windows.Forms.Label();
+            this.likeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // deleteButton
             // 
-            this.deleteButton.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 19.8F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new global::System.Drawing.Point(75, 231);
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.Location = new System.Drawing.Point(75, 231);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new global::System.Drawing.Size(66, 66);
+            this.deleteButton.Size = new System.Drawing.Size(66, 66);
             this.deleteButton.TabIndex = 11;
             this.deleteButton.Text = "🗑️";
             this.deleteButton.UseVisualStyleBackColor = true;
             // 
             // reportButton
             // 
-            this.reportButton.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 19.8F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportButton.Location = new global::System.Drawing.Point(3, 231);
+            this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportButton.Location = new System.Drawing.Point(3, 231);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new global::System.Drawing.Size(66, 66);
+            this.reportButton.Size = new System.Drawing.Size(66, 66);
             this.reportButton.TabIndex = 16;
             this.reportButton.Text = "⚠️";
             this.reportButton.UseVisualStyleBackColor = true;
             // 
-            // repostCounterLabel
-            // 
-            this.repostCounterLabel.AutoSize = true;
-            this.repostCounterLabel.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 16.2F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repostCounterLabel.Location = new global::System.Drawing.Point(1163, 250);
-            this.repostCounterLabel.Name = "repostCounterLabel";
-            this.repostCounterLabel.Size = new global::System.Drawing.Size(30, 32);
-            this.repostCounterLabel.TabIndex = 15;
-            this.repostCounterLabel.Text = "0";
-            // 
             // repostButton
             // 
-            this.repostButton.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 19.8F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repostButton.Location = new global::System.Drawing.Point(1091, 231);
+            this.repostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repostButton.Location = new System.Drawing.Point(1091, 231);
             this.repostButton.Name = "repostButton";
-            this.repostButton.Size = new global::System.Drawing.Size(66, 66);
+            this.repostButton.Size = new System.Drawing.Size(66, 66);
             this.repostButton.TabIndex = 14;
             this.repostButton.Text = "🔁";
             this.repostButton.UseVisualStyleBackColor = true;
@@ -79,39 +68,37 @@
             // likeCounterLabel
             // 
             this.likeCounterLabel.AutoSize = true;
-            this.likeCounterLabel.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 16.2F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.likeCounterLabel.Location = new global::System.Drawing.Point(1055, 250);
+            this.likeCounterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.likeCounterLabel.Location = new System.Drawing.Point(1055, 250);
             this.likeCounterLabel.Name = "likeCounterLabel";
-            this.likeCounterLabel.Size = new global::System.Drawing.Size(30, 32);
+            this.likeCounterLabel.Size = new System.Drawing.Size(30, 32);
             this.likeCounterLabel.TabIndex = 13;
             this.likeCounterLabel.Text = "0";
             // 
             // likeButton
             // 
-            this.likeButton.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 19.8F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.likeButton.Location = new global::System.Drawing.Point(983, 231);
+            this.likeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.likeButton.Location = new System.Drawing.Point(983, 231);
             this.likeButton.Name = "likeButton";
-            this.likeButton.Size = new global::System.Drawing.Size(66, 66);
+            this.likeButton.Size = new System.Drawing.Size(66, 66);
             this.likeButton.TabIndex = 12;
             this.likeButton.Text = "👍";
             this.likeButton.UseVisualStyleBackColor = true;
             // 
             // MyPost
             // 
-            this.AutoScaleDimensions = new global::System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.Controls.Add(this.reportButton);
-            this.Controls.Add(this.repostCounterLabel);
             this.Controls.Add(this.repostButton);
             this.Controls.Add(this.likeCounterLabel);
             this.Controls.Add(this.likeButton);
             this.Controls.Add(this.deleteButton);
             this.Name = "MyPost";
-            this.Size = new global::System.Drawing.Size(1196, 307);
+            this.Size = new System.Drawing.Size(1196, 307);
             this.Controls.SetChildIndex(this.deleteButton, 0);
             this.Controls.SetChildIndex(this.likeButton, 0);
             this.Controls.SetChildIndex(this.likeCounterLabel, 0);
             this.Controls.SetChildIndex(this.repostButton, 0);
-            this.Controls.SetChildIndex(this.repostCounterLabel, 0);
             this.Controls.SetChildIndex(this.reportButton, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -122,7 +109,6 @@
 
         private global::System.Windows.Forms.Button deleteButton;
         private global::System.Windows.Forms.Button reportButton;
-        private global::System.Windows.Forms.Label repostCounterLabel;
         private global::System.Windows.Forms.Button repostButton;
         private global::System.Windows.Forms.Label likeCounterLabel;
         private global::System.Windows.Forms.Button likeButton;

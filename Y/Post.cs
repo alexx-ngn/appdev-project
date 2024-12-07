@@ -9,7 +9,7 @@ namespace Y
         public string Text { get; set; }
         private static int idCount = 1;
         public int Likes { get; set; }
-        public DateTime DatePosted { get;}
+        public DateTime DatePosted { get; set; }
         public int accountId { get; set; }
 
         public Post(int id, string text, int likes, DateTime datePosted, int accountId) : this(id, text, accountId)
