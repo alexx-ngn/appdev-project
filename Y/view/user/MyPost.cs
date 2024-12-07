@@ -55,5 +55,16 @@ namespace Y
             // Invoking the DeleteButtonClicked event
             DeleteButtonClicked?.Invoke(this, EventArgs.Empty);
         }
+
+        private void MyPost_Load(object sender, EventArgs e)
+        {
+            likeCounterLabel.Text = "" + post.Likes;
+        }
+
+        private void likeButton_Click(object sender, EventArgs e)
+        {
+            post.Like(UserOverviewSystem.Instance.CurrentUserId);
+            likeCounterLabel.Text = "" + post.Likes;
+        }
     }
 }
