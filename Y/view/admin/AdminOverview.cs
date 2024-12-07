@@ -161,7 +161,16 @@ namespace Y.view.admin
 
         private void searchEnterButton_Click(object sender, EventArgs e)
         {
-            //loadSearchResults();
+            searchListView.Items.Clear();
+            for (int i = 0; i < UserOverviewSystem.Instance.UserAccounts.Count; i++)
+            {
+                if (searchTextBox.Text == UserOverviewSystem.Instance.UserAccounts[i].Name)
+                {
+                    var account = UserOverviewSystem.Instance.UserAccounts[i];
+                    ListViewItem item = new ListViewItem(account.Name);
+                    searchListView.Items.Add(item);
+                }
+            }
         }
 
         private void clearButton_Click(object sender, EventArgs e)
