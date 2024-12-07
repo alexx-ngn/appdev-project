@@ -64,6 +64,7 @@
             this.repostButton.TabIndex = 14;
             this.repostButton.Text = "🔁";
             this.repostButton.UseVisualStyleBackColor = true;
+            this.repostButton.Click += new System.EventHandler(this.repostButton_Click);
             // 
             // likeCounterLabel
             // 

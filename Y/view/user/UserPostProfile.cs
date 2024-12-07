@@ -38,6 +38,7 @@ namespace Y.view.user
             var rePost = post;
             rePost.Text = "REPOST: " + post.Text;
             rePost.DatePosted = DateTime.Now;
+            rePost.accountId = UserOverviewSystem.Instance.CurrentUserId;
             UserOverviewSystem.Instance.AddPost(rePost);
             //UserOverviewSystem.Instance.SavePosts();
             RepostButtonClicked?.Invoke(this, EventArgs.Empty);

@@ -76,6 +76,12 @@ namespace Y
                 {
                     MyPost post = new MyPost(UserOverviewSystem.UserPosts[i]);
                     MyPostsFlowLayoutPanel.Controls.Add(post);
+                    post.RepostButtonClicked += (s, ev) =>
+                    {
+                        UserOverviewSystem.ReloadUsers();
+                        loadFeed();
+                        loadProfile();
+                    };
                 }
             }
         }
