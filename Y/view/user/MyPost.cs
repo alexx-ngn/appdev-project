@@ -12,6 +12,7 @@ namespace Y
     public partial class MyPost : Y.UserPost
     {
         public event EventHandler RepostButtonClicked;
+        public event EventHandler DeleteButtonClicked;
         private Post post;
         public MyPost(Post post) : base(post)
         {
@@ -34,6 +35,12 @@ namespace Y
             UserOverviewSystem.Instance.AddPost(rePost);
             //UserOverviewSystem.Instance.SavePosts();
             RepostButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            UserOverviewSystem.Instance.removePost(post);
+            DeleteButtonClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

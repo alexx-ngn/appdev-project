@@ -82,6 +82,12 @@ namespace Y
                         loadFeed();
                         loadProfile();
                     };
+                    post.DeleteButtonClicked += (s, ev) =>
+                    {
+                        UserOverviewSystem.ReloadUsers();
+                        loadFeed();
+                        loadProfile();
+                    };
                 }
             }
         }

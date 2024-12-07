@@ -181,6 +181,30 @@ namespace Y.controller
             UserPosts.Add(post);
         }
 
+        public void removePost(Post post)
+        {
+            using (var connection = GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "DELETE FROM Post WHERE id = @id";
+                    using (var command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", post.Id);
+                        command.ExecuteNonQuery();
+                    }
+                    UserPosts.Remove(post);
+                    MessageBox.Show("Post removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error removing post: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         public void removePosts(int reportedPostId)
         {
             UserPosts.RemoveAll(post => post.Id == reportedPostId);

@@ -44,6 +44,7 @@
             this.deleteButton.TabIndex = 11;
             this.deleteButton.Text = "🗑️";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // reportButton
             // 
