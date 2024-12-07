@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Y.controller;
 
 namespace Y
@@ -72,20 +69,6 @@ namespace Y
 
             // Return null if no user is found to own the post
             return null;
-        }
-    }
-}
-
-private UserAccount FindAccountWithPost(Post post)
-        {
-            foreach (UserAccount user in ReportSystem.GetUserAccounts()) // Assuming GetUserAccounts fetches all users
-            {
-                if (user.GetPosts().Contains(post)) // Check if the user's posts contain the given post
-                {
-                    return user; // Return the user that owns the post
-                }
-            }
-            return null; // Return null if no user owns the post
         }
     }
 }
