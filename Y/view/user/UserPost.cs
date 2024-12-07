@@ -46,24 +46,12 @@ namespace Y
 
         private void setPostText()
         {
-            //String postText = UserOverviewSystem.UserAccounts[0].GetPosts()[0].Text;
              postTextLabel.Text = postText;
         }
 
         private void setDateLabel()
         {
-            //String date = UserOverviewSystem.UserAccounts.Find(x => x.Id == userId).GetPosts()[0].DatePosted.ToShortDateString
             dateLabel.Text = date.ToString();
-        }
-
-        private void likeButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void likeCounterLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void reportButton_Click(object sender, EventArgs e)
