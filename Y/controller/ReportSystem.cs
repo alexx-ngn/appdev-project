@@ -66,7 +66,6 @@ namespace Y.controller
 
                     UserAccounts.Add(user);
                     LoginSystem.Instance.AddUserCredentials(user.Name, user.Password);
-                    MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
@@ -106,7 +105,6 @@ namespace Y.controller
                     LoginSystem.Instance.RemoveUserCredentials(id);
                     LoginSystem.Instance.RemoveUser(id);
                     UserOverviewSystem.Instance.removePostsFromUserId(id);
-                    MessageBox.Show("User removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
@@ -165,10 +163,6 @@ namespace Y.controller
                         command.Parameters.AddWithValue("@id", reportedPostId);
                         command.ExecuteNonQuery();
                     }
-
-                    
-
-                    MessageBox.Show("Post removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
@@ -428,7 +422,6 @@ namespace Y.controller
                         query = "INSERT INTO UserReport (reportingUserId, reason, reportedUserId, date) VALUES (@reportingUserId, @reason, @reportedUserId, @date)";
                         using (SQLiteCommand command = new SQLiteCommand(query, connection))
                         {
-                            //command.Parameters.AddWithValue("@id", userReport.Id);
                             command.Parameters.AddWithValue("@reportingUserId", userReport.ReportingUserId);
                             command.Parameters.AddWithValue("@reason", userReport.Reason);
                             command.Parameters.AddWithValue("@reportedUserId", userReport.ReportedUserId);
@@ -436,15 +429,12 @@ namespace Y.controller
                             command.ExecuteNonQuery();
                         }
                         UserReports.Add(report as UserReport);
-                        //MessageBox.Show("User Report filed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else if (report is PostReport postReport)
                     {
-                        // PostReport: Insert into PostReport table
                         query = "INSERT INTO PostReport (reportingUserId, reason, reportedPostId, date) VALUES (@reportingUserId, @reason, @reportedPostId, @date)";
                         using (SQLiteCommand command = new SQLiteCommand(query, connection))
                         {
-                            //command.Parameters.AddWithValue("@id", postReport.Id);
                             command.Parameters.AddWithValue("@reportingUserId", postReport.ReportingUserId);
                             command.Parameters.AddWithValue("@reason", postReport.Reason);
                             command.Parameters.AddWithValue("@reportedPostId", postReport.ReportedPostId);
@@ -453,7 +443,6 @@ namespace Y.controller
                             command.ExecuteNonQuery();
                         }
                         PostReports.Add(report as PostReport);
-                        //MessageBox.Show("Post Report filed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception ex)

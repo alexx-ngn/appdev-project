@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -46,6 +47,30 @@ namespace Y
                         break;
                 }
             }
+            else if (!verifyEmail(emailTextBox.Text) || !VerifyPassword(passwordTextBox.Text))
+            {
+                switch (Thread.CurrentThread.CurrentUICulture.Name)
+                {
+                    case "en-US":
+                        MessageBox.Show("Please enter a valid email or password.\nPassword must be at least 8 characters long.",
+                                        "Invalid Email Or Password",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Error);
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Veuillez écrire un courriel valide.\nLe mot de passe doit contenir au moins 8 caractères.",
+                                        "Courriel Ou Mot de Passe Invalide",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                        break;
+                    default:
+                        MessageBox.Show("Please enter a valid email or password.\nPassword must be at least 8 characters long.",
+                                        "Invalid Email Or Password",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Error);
+                        break;
+                }
+            }
             else if (usernameTextBox.Text.Equals("admin"))
             {
                 switch (Thread.CurrentThread.CurrentUICulture.Name)
@@ -65,17 +90,11 @@ namespace Y
             {
                 UserAccount newUserAccount = new UserAccount(usernameTextBox.Text, emailTextBox.Text, passwordTextBox.Text);
                 ReportSystem.AddUser(newUserAccount);
-                UserOverviewSystem.Instance.UserAccounts.Add(newUserAccount);
                 this.Hide();
                 Login login = new Login();
                 login.ShowDialog();
                 this.Close();
             }
-        }
-
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,6 +116,16 @@ namespace Y
             }
             this.Controls.Clear();
             InitializeComponent();
+        }
+
+        private Boolean verifyEmail(String text)
+        {
+            string emailRegex = @"^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$";
+            return Regex.IsMatch(text, emailRegex);
+        }
+        private bool VerifyPassword(string password)
+        {
+            return password.Length >= 8;
         }
     }
 }

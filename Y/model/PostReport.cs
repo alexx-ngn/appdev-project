@@ -9,9 +9,6 @@ namespace Y
     public class PostReport : Report
     {
         public int ReportedPostId { get; set; }
-        private static int idCount = 1;
-        private int reportedUserId;
-        private DateTime dateTime;
 
         public PostReport(int id, int reportingUserId, string reason, DateTime dateReported, int reportedPostId) : base(id, reportingUserId, reason, dateReported)
         {

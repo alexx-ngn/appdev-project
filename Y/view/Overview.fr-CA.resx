@@ -125,7 +125,7 @@
     <value>173, 89</value>
   </data>
   <data name="welcomeLabel.Text" xml:space="preserve">
-    <value>Bienvenue Utilisateur</value>
+    <value>Bienvenue</value>
   </data>
   <data name="logoutButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 13.8pt, style=Bold</value>

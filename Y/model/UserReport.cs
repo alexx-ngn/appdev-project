@@ -10,7 +10,6 @@ namespace Y
     {
         public int ReportedUserId { get; set; }
         private static int idCount = 1;
-        private DateTime dateTime;
 
         public UserReport(int reportingUserId, string reason, int reportedUserId) : base(reportingUserId, reason)
         {
