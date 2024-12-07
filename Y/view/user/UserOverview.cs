@@ -14,33 +14,22 @@ namespace Y
 {
     public partial class UserOverview : Overview.Overview
     {
+        // Instance of UserOverviewSystem
         UserOverviewSystem UserOverviewSystem = UserOverviewSystem.Instance;
+        // User ID
         private int id;
 
+        // Constructor initializing the UserOverview with a user ID
         public UserOverview(int id)
         {
             InitializeComponent();
             this.id = id;
             UserOverviewSystem.CurrentUserId = id;
         }
+
+        // Method to load the feed
         public void loadFeed()
         {
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    UserPostProfile post = new UserPostProfile();
-            //    overviewFlowLayoutPanel.Controls.Add(post);
-            //}
-            //for (int i = 0; i < 5 ; i++) {
-            //    MyPost post = new MyPost();
-            //    MyPostsFlowLayoutPanel.Controls.Add(post);
-            //}
-            //for (int i = 0; i < UserOverviewSystem.UserPosts.Count; i++)
-            //{
-
-            //    //int id = UserOverviewSystem.UserPosts[i].Id;
-            //    UserPostProfile post = new UserPostProfile(UserOverviewSystem.UserPosts[i]);
-            //    overviewFlowLayoutPanel.Controls.Add(post);
-            //}
             overviewFlowLayoutPanel.Controls.Clear();
             for (int i = UserOverviewSystem.UserPosts.Count - 1; i >= 0; i--)
             {
@@ -55,6 +44,7 @@ namespace Y
             }
         }
 
+        // Method to load the search results
         public void loadSearch()
         {
             searchFlowLayoutPanel.Controls.Clear();
@@ -62,11 +52,10 @@ namespace Y
             {
                 Profile profile = new Profile(UserOverviewSystem.UserAccounts[i]);
                 searchFlowLayoutPanel.Controls.Add(profile);
-                //UserSearch user = new UserSearch(UserOverviewSystem.UserAccounts[i]);
-                //searchFlowLayoutPanel.Controls.Add(user);
             }
         }
 
+        // Method to load the user's profile
         public void loadProfile()
         {
             MyPostsFlowLayoutPanel.Controls.Clear();
@@ -92,6 +81,7 @@ namespace Y
             }
         }
 
+        // Method to hide tabs
         private void hideTabs()
         {
             OverviewTabControl.Appearance = TabAppearance.FlatButtons;
@@ -99,6 +89,7 @@ namespace Y
             OverviewTabControl.SizeMode = TabSizeMode.Fixed;
         }
 
+        // Event handler for post button click
         private void postButton_Click(object sender, EventArgs e)
         {
             NewPost post = new NewPost(id);
@@ -111,6 +102,7 @@ namespace Y
             post.ShowDialog();
         }
 
+        // Event handler for UserOverview load
         private void UserOverview_Load(object sender, EventArgs e)
         {
             overviewFlowLayoutPanel.Controls.Clear();
@@ -120,6 +112,7 @@ namespace Y
             loadSearch();
         }
 
+        // Event handler for side list view selection change
         private void sideListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (sideListView.SelectedItems.Count > 0)
@@ -145,6 +138,7 @@ namespace Y
             }
         }
 
+        // Event handler for search enter button click
         private void searchEnterButton_Click(object sender, EventArgs e)
         {
             searchFlowLayoutPanel.Controls.Clear();
@@ -154,8 +148,6 @@ namespace Y
                 {
                     Profile profile = new Profile(UserOverviewSystem.UserAccounts[i]);
                     searchFlowLayoutPanel.Controls.Add(profile);
-                    //UserSearch user = new UserSearch(UserOverviewSystem.UserAccounts[i]);
-                    //searchFlowLayoutPanel.Controls.Add(user);
                 }
             }
         }

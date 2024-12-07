@@ -14,13 +14,19 @@ namespace Y.view
 {
     public partial class ReasonUserControl : UserControl
     {
+        // Property to hold PostReport object
         private PostReport PostReport { get; set; }
+
+        // Property to hold UserReport object
         private UserReport UserReport { get; set; }
+
+        // Default constructor
         public ReasonUserControl()
         {
             InitializeComponent();
         }
 
+        // Constructor that initializes with a PostReport object
         public ReasonUserControl(PostReport postReport)
         {
             InitializeComponent();
@@ -39,6 +45,7 @@ namespace Y.view
             }
         }
 
+        // Constructor that initializes with a UserReport object
         public ReasonUserControl(UserReport userReport)
         {
             InitializeComponent();
@@ -46,7 +53,8 @@ namespace Y.view
             reasonLabel.Text = userReport.Reason;
             dateLabel.Text = userReport.DateReported.ToString();
             var reporter = getReporter(userReport.ReportingUserId);
-            switch (CultureInfo.CurrentUICulture.ToString()) {
+            switch (CultureInfo.CurrentUICulture.ToString())
+            {
                 case "fr-CA":
                     reporterLabel.Text = "Signalé par: " + reporter.Name;
                     break;
@@ -56,6 +64,7 @@ namespace Y.view
             }
         }
 
+        // Method to get the reporter's UserAccount object by ID
         private UserAccount getReporter(int id)
         {
             for (int i = 0; i < ReportSystem.Instance.GetUserAccounts().Count; i++)

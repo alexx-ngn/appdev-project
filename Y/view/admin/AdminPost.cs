@@ -15,6 +15,7 @@ namespace Y.view.admin
             InitializeComponent();
         }
 
+        // Event handler when the delete button is clicked
         private void deleteButton_Click(object sender, EventArgs e)
         {
             if (sender is Button button)

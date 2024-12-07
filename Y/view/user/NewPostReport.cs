@@ -15,9 +15,11 @@ namespace Y.view.user
 {
     public partial class NewPostReport : Form
     {
+        // Private fields to store user ID and reported post ID
         private int userId;
         private int reportedPostId;
 
+        // Constructor to initialize the form with user ID and reported post ID
         public NewPostReport(int userId, int reportedPostId)
         {
             InitializeComponent();
@@ -25,11 +27,16 @@ namespace Y.view.user
             this.reportedPostId = reportedPostId;
         }
 
+        // Event handler for the report button click event
         private void reportButton_Click(object sender, EventArgs e)
         {
+            // Get the current UI culture
             var culture = CultureInfo.CurrentUICulture.ToString();
+
+            // Check if the report text box is empty
             if (reportTextBox.Text == "")
             {
+                // Show message based on the current culture
                 switch (culture)
                 {
                     case "fr-CA":
@@ -42,6 +49,7 @@ namespace Y.view.user
             }
             else
             {
+                // Show message based on the current culture
                 switch (culture)
                 {
                     case "fr-CA":
@@ -51,13 +59,18 @@ namespace Y.view.user
                         MessageBox.Show("Post has been reported.");
                         break;
                 }
+                // Send the report and close the form
                 SendReport();
                 this.Close();
             }
         }
+
+        // Method to send the report
         private void SendReport()
         {
+            // Create a new report object
             Report report = new PostReport(userId, reportTextBox.Text, reportedPostId);
+            // File the report using the report system
             ReportSystem.Instance.FileReport(report);
         }
     }
