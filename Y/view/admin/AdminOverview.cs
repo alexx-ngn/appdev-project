@@ -203,7 +203,7 @@ namespace Y.view.admin
         private void clearButton_Click(object sender, EventArgs e)
         {
             // Clear existing items in searchListView
-            searchListView.Items.Clear();
+            searchTextBox.Text = "";
         }
 
         // Event handler for AdminOverview load
